@@ -384,6 +384,10 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom"
+  },
   "sections": {
     "all": {
       "padding": {
@@ -3235,6 +3239,44 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "banners-benefits": {
+      "name": "Banners benefits",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "svg": {
+          "label": "Svg icon"
+        },
+        "title": {
+          "label": "Title"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "text_line1": {
+              "label": "Text (line 1)"
+            },
+            "text_line2": {
+              "label": "Text (line 2)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Banners benefits"
       }
     }
   }
