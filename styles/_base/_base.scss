@@ -1,0 +1,138 @@
+@import "variables";
+@import "reset";
+@import "fonts";
+@import "typography";
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body.no-scroll {
+	overflow: hidden;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+svg.icon {
+	width: 20px;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+picture {
+	img {
+		filter: blur(0);
+		transition-property: filter;
+		transition-duration: 0.3s;
+	}
+}
+
+.lazy {
+	img {
+		// width: 100%; // may need to rework the solution
+		filter: blur(10px);
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	&.container--full-width {
+		max-width: 100%;
+	}
+
+	&.container--skinny {
+		@include breakpoint("medium") {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+
+		@include breakpoint("large") {
+			padding-left: 160px;
+			padding-right: 160px;
+		}
+
+		@include breakpoint("extra-large") {
+			padding-left: 8px;
+			padding-right: 8px;
+			max-width: 800px;
+		}
+	}
+
+	&.container--no-padding {
+		padding: 0;
+	}
+
+	&.container--fluid {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		&.swiper-container {
+			overflow: visible;
+			transform: translateX(-10px);
+		}
+
+		@include breakpoint("small") {
+			padding-left: 120px;
+			padding-right: 120px;
+		}
+
+		@include breakpoint("large") {
+			.container.container--fluid {
+				max-width: 100%;
+				width: 100%;
+				padding-left: 80px;
+				padding-right: 80px;
+			}
+		}
+
+		@include breakpoint("extra-large") {
+			.container.container--fluid {
+				width: 75%;
+				padding: 0;
+				max-width: 1486px;
+			}
+		}
+	}
+}
+
+@include breakpoint(medium) {
+	.container {
+		padding: 0 60px;
+
+		&.container--small {
+			padding: 0 80px;
+		}
+	}
+}
+
+@include breakpoint(extra-large) {
+	.container {
+		padding: 0 80px;
+	}
+}
