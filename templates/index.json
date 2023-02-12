@@ -261,11 +261,31 @@
         "subtitle": "When asking Notox Babes about their experience with the Selfie Line, 82% stated that they have seen an improvement in theur skin because of Notox Skin Products on a daily basis.",
         "image": "shopify:\/\/shop_images\/doc-skin.png"
       }
+    },
+    "newsletter-2": {
+      "type": "newsletter-2",
+      "settings": {
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 118,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 94,
+        "margin_top_desktop": 42,
+        "margin_bottom_desktop": 138,
+        "image": "shopify:\/\/shop_images\/DSC7753.png",
+        "image_mobile": "shopify:\/\/shop_images\/DSC7753_e6716486-6e61-4a52-8f6c-885917488050.png",
+        "show_circles": true,
+        "color": "#936ed4",
+        "title": "Get 10% off your first purchase",
+        "subtitle": "Subscribe below and we will keep you up to date with events, discounts, and fun things!",
+        "placeholder": "Your email",
+        "button_text": "Go"
+      }
     }
   },
   "order": [
     "banners-benefits",
     "stuff-info",
-    "positive-result"
+    "positive-result",
+    "newsletter-2"
   ]
 }

@@ -3356,6 +3356,48 @@
       "presets": {
         "name": "Positive result"
       }
+    },
+    "newsletter-2": {
+      "name": "Newsletter",
+      "settings": {
+        "margin_top_desktop": {
+          "label": "Margin top"
+        },
+        "margin_bottom_desktop": {
+          "label": "Margin bottom"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "image_mobile": {
+          "label": "Image (mobile)"
+        },
+        "show_circles": {
+          "label": "Show circles"
+        },
+        "color": {
+          "label": "Color",
+          "info": "For no color at all, set it to #000000."
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "form": {
+          "header": "Form settings",
+          "placeholder": {
+            "label": "Placeholder"
+          },
+          "button_text": {
+            "label": "Button text"
+          }
+        }
+      },
+      "presets": {
+        "name": "Newsletter (new)"
+      }
     }
   }
 }
