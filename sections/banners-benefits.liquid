@@ -1,23 +1,23 @@
-{% liquid
+{%- liquid
     assign banner_image = section.settings.svg | default: section.settings.image | default: blank
     assign title = section.settings.title
-%}
-{% capture variables %}
-    --margin_top_desktop: {{ section.settings.padding_top_desktop | default: 116 }}px;
-    --margin_bottom_desktop: {{ section.settings.padding_bottom_desktop | default: 24 }}px;
-{% endcapture %}
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 116 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 24 -}}px;
+{%- endcapture -%}
 
-{% capture blocks_container %}
+{%- capture blocks_container -%}
     <div class="banner-benefits__block-list">
-        {% for block in section.blocks %}
-            {% liquid
+        {%- for block in section.blocks -%}
+            {%- liquid
                 assign image = block.settings.svg | default: block.settings.image | default: blank
                 assign text_line1 = block.settings.text_line1
                 assign text_line2 = block.settings.text_line2
-            %}
+            -%}
 
             <div class="banner-benefits__block">
-                {% if image != blank and image.media_type %}
+                {%- if image != blank and image.media_type -%}
                     <picture class="banner-benefits__block-img">
                         <source media="(max-width: 480px)" srcset="{{- image | img_url: '32x' }} 1x, {{ image | img_url: '64x' }} 2x"/>
                         <img
@@ -27,33 +27,33 @@
                                 srcset="{{ image | img_url: '48x' }} 1x, {{ image | img_url: '48x' }} 2x"
                         />
                     </picture>
-                {% elsif image != blank %}
+                {%- elsif image != blank -%}
                     <div class="banner-benefits__block-svg">
-                        {{ image }}
+                        {{- image -}}
                     </div>
-                {% else %}
+                {%- else -%}
                     <div class="banner-benefits__block-svg">
-                        {{ "image" | placeholder_svg_tag: 'placeholder-svg' }}
+                        {{- "image" | placeholder_svg_tag: 'placeholder-svg' -}}
                     </div>
-                {% endif %}
+                {%- endif -%}
 
-                {% if text_line1 != blank %}
+                {%- if text_line1 != blank or text_line2 != blank -%}
                     <div class="banner-benefits__block-text">
-                        {% if text_line1 != blank %}
-                            <span class="banner-benefits__block-line">{{ text_line1 }}</span>
-                        {% endif %}
-                        {% if text_line2 != blank %}
-                            <span class="banner-benefits__block-line">{{ text_line2 }}</span>
-                        {% endif %}
+                        {%- if text_line1 != blank -%}
+                            <span class="banner-benefits__block-line">{{- text_line1 -}}</span>
+                        {%- endif %}
+                        {%- if text_line2 != blank -%}
+                            <span class="banner-benefits__block-line">{{- text_line2 -}}</span>
+                        {%- endif -%}
                     </div>
-                {% endif %}
+                {%- endif -%}
             </div>
-        {% endfor %}
+        {%- endfor -%}
     </div>
-{% endcapture %}
+{%- endcapture -%}
 
-<div class="banner-benefits" data-section-id="{{- section-id -}}" data-section-type="banner-benefits" style="{{ variables }}">
-    {% if banner_image != blank and banner_image.media_type %}
+<div class="banner-benefits" data-section-id="{{- section-id -}}" data-section-type="banner-benefits" style="{{- variables -}}">
+    {%- if banner_image != blank and banner_image.media_type -%}
         <picture class="banner-benefits__img">
             <source media="(max-width: 480px)" srcset="{{- banner_image | img_url: '140x' }} 1x, {{ banner_image | img_url: '280x' }} 2x">
             <img
@@ -62,19 +62,19 @@
                     srcset="{{- banner_image | img_url: '170x' }} 1x, {{ banner_image | img_url: '340x' }} 2x"
             />
         </picture>
-    {% elsif banner_image != blank %}
+    {%- elsif banner_image != blank -%}
         <div class="banner-benefits__svg">
-            {{ banner_image }}
+            {{- banner_image -}}
         </div>
-    {% endif %}
+    {%- endif -%}
 
     <div class="banner-benefits__container">
 
-        {% if title != blank %}
-            <h3 class="banner-benefits__title">{{ title }}</h3>
-        {% endif %}
+        {%- if title != blank -%}
+            <h3 class="banner-benefits__title">{{- title -}}</h3>
+        {%- endif -%}
 
-        {{ blocks_container }}
+        {{- blocks_container -}}
     </div>
 </div>
 
