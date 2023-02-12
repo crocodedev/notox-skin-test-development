@@ -3318,6 +3318,44 @@
       "presets": {
         "name": "Stuff info"
       }
+    },
+    "positive-result": {
+      "name": "Positive result",
+      "settings": {
+        "above_title": {
+          "label": "Above title"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "image": {
+          "label": "Image"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "title": {
+              "label": "Title"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Positive result"
+      }
     }
   }
 }

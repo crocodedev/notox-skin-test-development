@@ -1,0 +1,182 @@
+{%- liquid
+    assign above_title = section.settings.above_title
+    assign title = section.settings.title
+    assign subtitle = section.settings.subtitle
+    assign image = section.settings.image
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 140 -}}px;
+    --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 58 -}}px;
+    --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 126 -}}px;
+{%- endcapture -%}
+
+{%- capture blocks_container -%}
+    <div class="positive-result__block-list">
+        {%- for block in section.blocks -%}
+            {%- liquid
+                assign block_image = block.settings.svg | default: block.settings.image | default: blank
+                assign block_title = block.settings.title
+            -%}
+
+            <div class="positive-result__block">
+                {%- if block_image != blank and block_image.media_type -%}
+                    <picture class="positive-result__block-img">
+                        <source media="(max-width: 480px)" srcset="{{- block_image | img_url: '32x' }} 1x, {{ block_image | img_url: '64x' }} 2x"/>
+                        <img
+                                alt="{{- block_image.alt -}}"
+                                class="image"
+                                src="{{- block_image | img_url: '42x' -}}"
+                                srcset="{{ block_image | img_url: '42x' }} 1x, {{ block_image | img_url: '84x' }} 2x"
+                        />
+                    </picture>
+                {%- elsif block_image != blank -%}
+                    <div class="positive-result__block-svg">
+                        {{- block_image -}}
+                    </div>
+                {%- else -%}
+                    <div class="positive-result__block-svg">
+                        {{- "image" | placeholder_svg_tag: 'placeholder-svg' -}}
+                    </div>
+                {%- endif -%}
+
+                {%- if block_title != blank -%}
+                    <span class="positive-result__block-title">{{- block_title -}}</span>
+                {%- endif -%}
+            </div>
+        {%- endfor -%}
+   </div>
+{%- endcapture -%}
+
+<div class="positive-result" data-section-id="{{- section-id -}}" data-section-type="positive-result" style="{{- variables -}}">
+    <div class="positive-result__content">
+        <div class="positive-result__header">
+            {%- if above_title != blank -%}
+                <h4 class="positive-result__above-title">{{- above_title -}}</h4>
+            {%- endif -%}
+            {%- if title != blank -%}
+                <h3 class="positive-result__title">{{- title -}}</h3>
+            {%- endif -%}
+            {%- if subtitle != blank -%}
+                <span class="positive-result__subtitle">{{- subtitle -}}</span>
+            {%- endif -%}
+        </div>
+
+        {{- blocks_container -}}
+    </div>
+
+    {%- if image != blank -%}
+        <picture class="positive-result__image">
+            <source data-srcset="{{ image | img_url: '480x' }} 1x, {{ image | img_url: '960x' }} 2x" media="(max-width: 480px)">
+            <source data-srcset="{{ image | img_url: '575x' }} 1x, {{ image | img_url: '1150x' }} 2x" media="(max-width: 575px)">
+            <source data-srcset="{{ image | img_url: '767x' }} 1x, {{ image | img_url: '1534x' }} 2x" media="(max-width: 767px)">
+            <source data-srcset="{{ image | img_url: '991x' }} 1x, {{ image | img_url: '1982x' }} 2x" media="(max-width: 991px)">
+            <source data-srcset="{{ image | img_url: '1199x' }} 1x, {{ image | img_url: '2398x' }} 2x" media="(max-width: 1199px)">
+            <source data-srcset="{{ image | img_url: '1440x' }} 1x, {{ image | img_url: '2880x' }} 2x" media="(max-width: 1440px)">
+            <source data-srcset="{{ image | img_url: '1920x' }} 1x, {{ image | img_url: '3840x' }} 2x" media="(max-width: 1920px)">
+
+            <img
+                    srcset="{{ image | img_url: '1920x' }} 1x, {{ image | img_url: '3840x' }} 2x"
+                    src="{{ image | img_url: '1920x' }}"
+                    class="image"
+                    alt="{{ image.alt }}"
+            >
+        </picture>
+    {%- endif -%}
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.positive-result.name",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 118
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 140
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:global.padding-top-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 58
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:global.padding-bottom-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 126
+        },
+        {
+            "type": "text",
+            "id": "above_title",
+            "label": "t:sections.positive-result.settings.above_title.label"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.positive-result.settings.title.label"
+        },
+        {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "t:sections.positive-result.settings.subtitle.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.positive-result.settings.image.label"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "banner",
+            "name": "t:sections.positive-result.blocks.heading.name",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:sections.positive-result.blocks.banner.settings.image.label"
+                },
+                {
+                    "type": "textarea",
+                    "id": "svg",
+                    "label": "t:sections.positive-result.blocks.banner.settings.svg.label"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "t:sections.positive-result.blocks.banner.settings.title.label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.positive-result.presets.name"
+        }
+    ]
+}
+{% endschema %}

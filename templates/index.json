@@ -28,17 +28,17 @@
             "svg": "",
             "text_line1": "Fight Acne &",
             "text_line2": "Breakouts"
-          }
-        },
+        }
+      },
         "c4788009-c980-43b2-a3b3-9f0135e084a4": {
           "type": "banner",
-          "settings": {
+      "settings": {
             "image": "shopify:\/\/shop_images\/2.png",
             "svg": "",
             "text_line1": "Reduce",
             "text_line2": "Oily Skin"
-          }
-        },
+      }
+    },
         "0d731c2b-3426-42f0-8edd-e6ca2bf47736": {
           "type": "banner",
           "settings": {
@@ -199,10 +199,73 @@
         "title": "The magic stuff",
         "subtitle": "We have sourced the finest ingredients from all of the world."
       }
+    },
+    "positive-result": {
+      "type": "positive-result",
+      "blocks": {
+        "4ad9305b-7491-4839-be0e-44ac6c272088": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/leaves.png",
+            "svg": "",
+            "title": "Paraben free"
+          }
+        },
+        "53df764b-56b1-480c-8c22-85249fb3d8b7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/essential-oil.png",
+            "svg": "",
+            "title": "Sulfate free"
+          }
+        },
+        "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mortar.png",
+            "svg": "",
+            "title": "Natural ingredients"
+          }
+        },
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lotion.png",
+            "svg": "",
+            "title": "Fragrance free"
+          }
+        },
+        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cruelty-free.png",
+            "svg": "",
+            "title": "Cruelty free"
+          }
+        }
+      },
+      "block_order": [
+        "4ad9305b-7491-4839-be0e-44ac6c272088",
+        "53df764b-56b1-480c-8c22-85249fb3d8b7",
+        "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83",
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d",
+        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b"
+      ],
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 140,
+        "padding_top_mobile": 58,
+        "padding_bottom_mobile": 126,
+        "above_title": "Proven to work",
+        "title": "82% positive results",
+        "subtitle": "When asking Notox Babes about their experience with the Selfie Line, 82% stated that they have seen an improvement in theur skin because of Notox Skin Products on a daily basis.",
+        "image": "shopify:\/\/shop_images\/doc-skin.png"
+      }
     }
   },
   "order": [
     "banners-benefits",
-    "stuff-info"
+    "stuff-info",
+    "positive-result"
   ]
 }
