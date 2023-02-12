@@ -386,7 +386,9 @@
   },
   "global": {
     "padding-top-desktop": "Padding top",
-    "padding-bottom-desktop": "Padding bottom"
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)"
   },
   "sections": {
     "all": {
@@ -3277,6 +3279,44 @@
       },
       "presets": {
         "name": "Banners benefits"
+      }
+    },
+    "stuff-info": {
+      "name": "Stuff info",
+      "settings": {
+        "above_title": {
+          "label": "Above title"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Stuff info"
       }
     }
   }
