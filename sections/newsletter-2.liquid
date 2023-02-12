@@ -1,0 +1,207 @@
+{%- liquid
+    assign image = section.settings.image
+    assign image_mobile = section.settings.image_mobile | default: image
+    assign show_circles = section.settings.show_circles
+    assign color = section.settings.color
+    if color contains '#000'
+        assign color = blank
+    endif
+
+    assign title = section.settings.title
+    assign subtitle = section.settings.subtitle
+
+    assign placeholder = section.settings.placeholder
+    assign button_text = section.settings.button_text
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 140 -}}px;
+    --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 58 -}}px;
+    --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 94 -}}px;
+    --margin_top_desktop: {{- section.settings.margin_top_desktop | default: 42 -}}px;
+    --margin_bottom_desktop: {{- section.settings.margin_bottom_desktop | default: 138 -}}px;
+
+    {%- if image != blank -%}
+        --bg-image: url({{- image | img_url: 'master' -}});
+        --bg-image-mobile: url({{- image_mobile | img_url: 'master' -}});
+    {%- endif -%}
+    {%- if color != blank -%}
+        --bg-color: {{- color -}};
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="newsletter-2" data-section-id="{{- section-id -}}" data-section-type="newsletter-2" style="{{- variables -}}">
+
+    <div class="newsletter-2__wrapper">
+        {%- if show_circles -%}
+            <div class="newsletter-2__bg-circles">
+                <div class="newsletter-2__bg-circle newsletter-2__bg-circle--full newsletter-2__bg-circle--1"></div>
+                <div class="newsletter-2__bg-circle newsletter-2__bg-circle--stroke newsletter-2__bg-circle--2"></div>
+                <div class="newsletter-2__bg-circle newsletter-2__bg-circle--full newsletter-2__bg-circle--3"></div>
+                <div class="newsletter-2__bg-circle newsletter-2__bg-circle--stroke newsletter-2__bg-circle--4"></div>
+            </div>
+        {%- endif -%}
+        {%- if color != blank -%}
+            <div class="newsletter-2__bg-color"></div>
+        {%- endif -%}
+
+        <div class="newsletter-2__container">
+            <div class="newsletter-2__content">
+                {%- if title != blank -%}
+                    <h3 class="newsletter-2__title">{{- title -}}</h3>
+                {%- endif -%}
+                {%- if subtitle != blank -%}
+                    <span class="newsletter-2__subtitle">{{- subtitle -}}</span>
+                {%- endif -%}
+            </div>
+            {% form 'customer', class: 'newsletter-2__form' %}
+                <input type="hidden" name="contact[tags]" value="newsletter-2">
+
+                <div class="newsletter-2__input-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15" class="newsletter-2__input-icon">
+                        <path d="M0-3.75a3.065,3.065,0,0,1-1.836-.625L-10-10.742v8.867A2.038,2.038,0,0,0-9.453-.547,2.038,2.038,0,0,0-8.125,0H8.125A2.038,2.038,0,0,0,9.453-.547,2.038,2.038,0,0,0,10-1.875v-8.867L1.836-4.375A3.065,3.065,0,0,1,0-3.75Zm-9.375-8.086,8.281,6.445A1.759,1.759,0,0,0,0-5a1.759,1.759,0,0,0,1.094-.391l8.281-6.445A1.755,1.755,0,0,0,10-13.125a2.038,2.038,0,0,0-.547-1.328A2.038,2.038,0,0,0,8.125-15H-8.125a2.038,2.038,0,0,0-1.328.547A2.038,2.038,0,0,0-10-13.125,1.59,1.59,0,0,0-9.375-11.836Z" transform="translate(10 15)" fill="currentColor"/>
+                    </svg>
+                    <input type="email" class="newsletter-2__input" autocomplete="email" name="contact[email]" required {% if placeholder != blank -%}placeholder="{{- placeholder -}}"{%- endif -%}>
+                </div>
+
+                <button
+                        type="submit"
+                        class="newsletter-2__btn"
+                        name="commit"
+                        id="Subscribe"
+                        aria-label="{{ 'newsletter.button_label' | t }}"
+                >
+                    {%- if button_text != blank -%}
+                        <span class="newsletter-2__btn-text">{{- button_text -}}</span>
+                    {%- endif -%}
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11.25" class="newsletter-2__btn-icon">
+                        <path d="M17.684-5.941l-4.5,4.5a1.173,1.173,0,0,1-.809.316,1.173,1.173,0,0,1-.809-.316,1.173,1.173,0,0,1-.316-.809,1.173,1.173,0,0,1,.316-.809l2.6-2.566H1.125a1.1,1.1,0,0,1-.809-.316A1.218,1.218,0,0,1,0-6.785a1.1,1.1,0,0,1,1.125-1.09H14.168l-2.6-2.566a1.173,1.173,0,0,1-.316-.809,1.173,1.173,0,0,1,.316-.809,1.173,1.173,0,0,1,.809-.316,1.173,1.173,0,0,1,.809.316l4.5,4.5A1.173,1.173,0,0,1,18-6.75,1.173,1.173,0,0,1,17.684-5.941Z" transform="translate(0 12.375)" fill="currentColor"/>
+                    </svg>
+                </button>
+            {% endform %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.newsletter-2.name",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 120
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 118
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:global.padding-top-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:global.padding-bottom-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 94
+        },
+        {
+            "type": "range",
+            "id": "margin_top_desktop",
+            "label": "t:sections.newsletter-2.settings.margin_top_desktop.label",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 42
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_desktop",
+            "label": "t:sections.newsletter-2.settings.margin_bottom_desktop.label",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 138
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.newsletter-2.settings.image.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "t:sections.newsletter-2.settings.image_mobile.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_circles",
+            "label": "t:sections.newsletter-2.settings.show_circles.label",
+            "default": true
+        },
+        {
+            "type": "color",
+            "id": "color",
+            "label": "t:sections.newsletter-2.settings.color.label",
+            "info": "t:sections.newsletter-2.settings.color.info",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.newsletter-2.settings.title.label"
+        },
+        {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "t:sections.newsletter-2.settings.subtitle.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.newsletter-2.settings.form.header"
+        },
+        {
+            "type": "text",
+            "id": "placeholder",
+            "label": "t:sections.newsletter-2.settings.form.placeholder.label",
+            "default": "Your email"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "t:sections.newsletter-2.settings.form.button_text.label",
+            "default": "Go"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.newsletter-2.presets.name"
+        }
+    ]
+}
+{% endschema %}
