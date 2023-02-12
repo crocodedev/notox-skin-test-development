@@ -1,26 +1,26 @@
-{% liquid
+{%- liquid
     assign above_title = section.settings.above_title
     assign title = section.settings.title
     assign subtitle = section.settings.subtitle
-%}
-{% capture variables %}
-    --padding_top_desktop: {{ section.settings.padding_top_desktop | default: 118 }}px;
-    --padding_bottom_desktop: {{ section.settings.padding_bottom_desktop | default: 120 }}px;
-    --padding_top_mobile: {{ section.settings.padding_top_mobile | default: 57 }}px;
-    --padding_bottom_mobile: {{ section.settings.padding_bottom_mobile | default: 0 }}px;
-{% endcapture %}
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 120 -}}px;
+    --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 57 -}}px;
+    --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 0 -}}px;
+{%- endcapture -%}
 
-{% capture blocks_container %}
+{%- capture blocks_container -%}
     <div class="stuff-info__block-list">
-        {% for block in section.blocks %}
-            {% liquid
+        {%- for block in section.blocks -%}
+            {%- liquid
                 assign block_image = block.settings.svg | default: block.settings.image | default: blank
                 assign block_title = block.settings.title
                 assign block_content = block.settings.content
-            %}
+            -%}
 
             <div class="stuff-info__block">
-                {% if block_image != blank and block_image.media_type %}
+                {%- if block_image != blank and block_image.media_type -%}
                     <picture class="stuff-info__block-img">
                         <source media="(max-width: 480px)" srcset="{{- block_image | img_url: '50x' }} 1x, {{ block_image | img_url: '100x' }} 2x"/>
                         <img
@@ -30,46 +30,46 @@
                                 srcset="{{ block_image | img_url: '72x' }} 1x, {{ block_image | img_url: '144x' }} 2x"
                         />
                     </picture>
-                {% elsif block_image != blank %}
+                {%- elsif block_image != blank -%}
                     <div class="stuff-info__block-svg">
-                        {{ block_image }}
+                        {{- block_image -}}
                     </div>
-                {% else %}
+                {%- else -%}
                     <div class="stuff-info__block-svg">
-                        {{ "image" | placeholder_svg_tag: 'placeholder-svg' }}
+                        {{- "image" | placeholder_svg_tag: 'placeholder-svg' -}}
                     </div>
-                {% endif %}
+                {%- endif -%}
 
-                {% if block_title != blank or block_content != blank %}
+                {%- if block_title != blank or block_content != blank -%}
                     <div class="stuff-info__block-text">
-                        {% if block_title != blank %}
-                            <span class="stuff-info__block-title">{{ block_title }}</span>
-                        {% endif %}
-                        {% if block_content != blank %}
-                            <span class="stuff-info__block-content">{{ block_content }}</span>
-                        {% endif %}
+                        {%- if block_title != blank -%}
+                            <span class="stuff-info__block-title">{{- block_title -}}</span>
+                        {%- endif -%}
+                        {%- if block_content != blank -%}
+                            <span class="stuff-info__block-content">{{- block_content -}}</span>
+                        {%- endif -%}
                     </div>
-                {% endif %}
+                {%- endif -%}
             </div>
-        {% endfor %}
+        {%- endfor -%}
     </div>
-{% endcapture %}
+{%- endcapture -%}
 
-<div class="stuff-info" data-section-id="{{- section-id -}}" data-section-type="stuff-info" style="{{ variables }}">
+<div class="stuff-info" data-section-id="{{- section-id -}}" data-section-type="stuff-info" style="{{- variables -}}">
     <div class="stuff-info__container">
         <div class="stuff-info__header">
-            {% if above_title != blank %}
+            {%- if above_title != blank -%}
                 <h4 class="stuff-info__above-title">{{- above_title -}}</h4>
-            {% endif %}
-            {% if title != blank %}
+            {%- endif -%}
+            {%- if title != blank -%}
                 <h3 class="stuff-info__title">{{- title -}}</h3>
-            {% endif %}
-            {% if subtitle != blank %}
+            {%- endif -%}
+            {%- if subtitle != blank -%}
                 <span class="stuff-info__subtitle">{{- subtitle -}}</span>
-            {% endif %}
+            {%- endif -%}
         </div>
 
-        {{ blocks_container }}
+        {{- blocks_container -}}
     </div>
 </div>
 
