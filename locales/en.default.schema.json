@@ -384,6 +384,12 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)"
+  },
   "sections": {
     "all": {
       "padding": {
@@ -3235,6 +3241,44 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "positive-result": {
+      "name": "Positive result",
+      "settings": {
+        "above_title": {
+          "label": "Above title"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "image": {
+          "label": "Image"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "title": {
+              "label": "Title"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Positive result"
       }
     }
   }
