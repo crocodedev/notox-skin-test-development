@@ -384,6 +384,12 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)"
+  },
   "sections": {
     "all": {
       "padding": {
@@ -3235,6 +3241,51 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "instagram": {
+      "name": "Instagram",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "login": {
+          "label": "Login"
+        }
+      },
+      "blocks": {
+        "banner_one": {
+          "heading": {
+            "name": "Photo"
+          },
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
+        "banner_group": {
+          "heading": {
+            "name": "Photo group"
+          },
+          "settings": {
+            "image_1": {
+              "label": "Image (1)"
+            },
+            "image_2": {
+              "label": "Image (2)"
+            },
+            "image_3": {
+              "label": "Image (3)"
+            },
+            "image_4": {
+              "label": "Image (4)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Instagram"
       }
     }
   }
