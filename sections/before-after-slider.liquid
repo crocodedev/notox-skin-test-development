@@ -1,0 +1,213 @@
+{%- liquid
+    assign above_title = section.settings.above_title
+    assign title = section.settings.title
+    assign subtitle = section.settings.subtitle
+    assign slide_leftside_heding = section.settings.slide_leftside_heding
+    assign slide_rightside_heding = section.settings.slide_rightside_heding
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 110 -}}px;
+    --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 58 -}}px;
+    --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 50 -}}px;
+{%- endcapture -%}
+
+{%- capture slides -%}
+    {%- for block in section.blocks -%}
+        {% liquid
+            assign leftside_image = block.settings.leftside_image
+            assign rightside_image = block.settings.rightside_image
+            assign bottom_text = block.settings.bottom_text
+        %}
+        
+        <div class="before-after-slider__slide swiper-slide">
+            <div class="before-after-slider__slide-top">
+                <div class="before-after-slider__slide-column">
+                    <span class="before-after-slider__slide-heading">
+                        {{- slide_leftside_heding -}}
+                    </span>
+                    {%- if leftside_image != blank -%}
+                        <picture class="before-after-slider__slide-image">
+                            <source media="(max-width: 480px)" srcset="{{- leftside_image | img_url: '150x' }} 1x, {{ leftside_image | img_url: '300x' }} 2x"/>
+                            <img
+                                    alt="{{- leftside_image.alt -}}"
+                                    class="image"
+                                    src="{{- leftside_image | img_url: '190x' -}}"
+                                    srcset="{{ leftside_image | img_url: '190x' }} 1x, {{ leftside_image | img_url: '380x' }} 2x"
+                            />
+                        </picture>
+                    {%- else -%}
+                        <div class="before-after-slider__slide-image">
+                            {{- "image" | placeholder_svg_tag: "image" -}}
+                        </div>
+                    {%- endif -%}
+                </div>
+                <div class="before-after-slider__slide-column">
+                    <span class="before-after-slider__slide-heading">
+                        {{- slide_rightside_heding -}}
+                    </span>
+
+                    {%- if rightside_image != blank -%}
+                        <picture class="before-after-slider__slide-image">
+                            <source media="(max-width: 480px)" srcset="{{- rightside_image | img_url: '150x' }} 1x, {{ rightside_image | img_url: '300x' }} 2x"/>
+                            <img
+                                    alt="{{- rightside_image.alt -}}"
+                                    class="image"
+                                    src="{{- rightside_image | img_url: '190x' -}}"
+                                    srcset="{{ rightside_image | img_url: '190x' }} 1x, {{ rightside_image | img_url: '380x' }} 2x"
+                            />
+                        </picture>
+                    {%- else -%}
+                        <div class="before-after-slider__slide-image">
+                            {{- "image" | placeholder_svg_tag: "image" -}}
+                        </div>
+                    {%- endif -%}
+                    
+                </div>
+            </div>
+            <span class="before-after-slider__slide-bottom">
+                {{- bottom_text -}}
+            </span>
+        </div>
+    {%- endfor -%}
+{%- endcapture -%}
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<div class="before-after-slider" data-section-id="{{- section-id -}}" data-section-type="before-after-slider" style="{{- variables -}}">
+    <div class="before-after-slider__header">
+        {%- if above_title != blank -%}
+            <h4 class="before-after-slider__above-title">{{- above_title -}}</h4>
+        {%- endif -%}
+        {%- if title != blank -%}
+            <h3 class="before-after-slider__title">{{- title -}}</h3>
+        {%- endif -%}
+        {%- if subtitle != blank -%}
+            <span class="before-after-slider__subtitle">{{- subtitle -}}</span>
+        {%- endif -%}
+    </div>
+    <div class="before-after-slider__slides">
+        <div class="before-after-slider__slides-container swiper-wrapper">
+            {{- slides -}}
+        </div>
+        <div class="before-after-slider__pagination"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{{ 'before-after-slider.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+    {
+        "name": "Before after slider",
+        "settings": [
+            {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 118
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 110
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:global.padding-top-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 58
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:global.padding-bottom-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "text",
+            "id": "above_title",
+            "label": "Above title"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "Subttile"
+        },
+        {
+            "type": "text",
+            "id": "slide_leftside_heding",
+            "label": "Slide leftside heading",
+            "default": "Before",
+            "placeholder": "Enter text"
+        },
+        {
+            "type": "text",
+            "id": "slide_rightside_heding",
+            "label": "Slide rightside heading",
+            "default": "After",
+            "placeholder": "Enter text"
+        }
+        ],
+        "blocks": [
+                {
+                "type": "slide",
+                "name": "Slide",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "leftside_image",
+                        "label": "Leftside image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "rightside_image",
+                        "label": "Rightside image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "bottom_text",
+                        "label": "Bottom text",
+                        "default": "Bottom slide text content",
+                        "placeholder": "Enter text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Before after slider",
+                "settings": {
+                    "above_title": "real babes. real results.",
+                    "title": "before & afters",
+                    "subtitle": "Use your big beutiful eyes to see the real results these babes had with the selfie line. Don't forget to send us your before & afters."
+                }
+            }
+        ]
+    }
+{% endschema %}
