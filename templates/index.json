@@ -280,12 +280,55 @@
         "placeholder": "Your email",
         "button_text": "Go"
       }
+    },
+    "instagram": {
+      "type": "instagram",
+      "blocks": {
+        "032b37ec-4b7b-413b-8e3c-a0281ce3d5fa": {
+          "type": "banner_group",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/Story-1A.png",
+            "image_2": "shopify:\/\/shop_images\/DSC00391.png",
+            "image_3": "shopify:\/\/shop_images\/DSC03324C.png",
+            "image_4": "shopify:\/\/shop_images\/DSC07119.png"
+          }
+        },
+        "11a457e1-5483-407c-926b-68c576d1a028": {
+          "type": "banner_one",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC03320.png"
+          }
+        },
+        "3bd8065f-855b-43a1-82f5-4f4a8485158a": {
+          "type": "banner_group",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/DSC07200.png",
+            "image_2": "shopify:\/\/shop_images\/DSC09934-2A.png",
+            "image_3": "shopify:\/\/shop_images\/DSC7778.png",
+            "image_4": "shopify:\/\/shop_images\/DSC05659.png"
+          }
+        }
+      },
+      "block_order": [
+        "032b37ec-4b7b-413b-8e3c-a0281ce3d5fa",
+        "11a457e1-5483-407c-926b-68c576d1a028",
+        "3bd8065f-855b-43a1-82f5-4f4a8485158a"
+      ],
+      "settings": {
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "title": "On instagram",
+        "login": "notoxskin"
+      }
     }
   },
   "order": [
     "banners-benefits",
     "stuff-info",
     "positive-result",
-    "newsletter-2"
+    "newsletter-2",
+    "instagram"
   ]
 }
