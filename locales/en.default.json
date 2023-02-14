@@ -322,6 +322,12 @@
     },
     "page": {
       "title": "Page title"
+    },
+    "reviews": {
+      "rating_text": "Reviews",
+      "star_text": "Star",
+      "button_form_review": "Add your review",
+      "no_review_text": "No Reviews"
     }
   },
   "localization": {

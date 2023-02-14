@@ -1,0 +1,36 @@
+.review__form {
+  margin-top: 23px;
+
+  .spr-form {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .spr-form-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  input:not([type="submit"]),
+  textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $color-tertiary;
+  }
+
+  .spr-icon-star {
+    color: #FF7950;
+
+    &.spr-icon-star-hover {
+      opacity: 1;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: #936ed4;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 35px;
+  }
+}

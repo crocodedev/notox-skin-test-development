@@ -3443,6 +3443,26 @@
       "presets": {
         "name": "Instagram"
       }
+    },
+    "reviews": {
+      "name": "Reviews",
+      "settings": {
+        "button": {
+          "header": "Button link",
+          "button_text": {
+            "label": "Button text"
+          },
+          "button_link": {
+            "label": "Button link"
+          },
+          "button_blank": {
+            "label": "Open page in new tab"
+          }
+        }
+      },
+      "presets": {
+        "name": "Reviews"
+      }
     }
   }
 }
