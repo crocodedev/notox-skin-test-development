@@ -384,6 +384,12 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)"
+  },
   "sections": {
     "all": {
       "padding": {
@@ -3235,6 +3241,26 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "reviews": {
+      "name": "Reviews",
+      "settings": {
+        "button": {
+          "header": "Button link",
+          "button_text": {
+            "label": "Button text"
+          },
+          "button_link": {
+            "label": "Button link"
+          },
+          "button_blank": {
+            "label": "Open page in new tab"
+          }
+        }
+      },
+      "presets": {
+        "name": "Reviews"
       }
     }
   }
