@@ -26,6 +26,7 @@
     }
 
     &__header {
+        position: relative;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -41,6 +42,7 @@
     &__title {
         font-weight: 700;
         text-transform: uppercase;
+        color: $color-primary;
 
         @include breakpoint(ultra-small) {
             font-size: 32px;
