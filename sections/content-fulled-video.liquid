@@ -1,0 +1,113 @@
+{% liquid
+    assign above_title = section.settings.above_title
+    assign title = section.settings.title
+%}
+
+<section class="content-fulled-video" data-section-id="{{- section.id -}}" data-section-type="content-fulled-video">
+    <div class="content-fulled-video__container">
+        <div class="content-fulled-video__header">
+            {%- if above_title != blank -%}
+                <h4 class="content-fulled-video__above-title">
+                    {{- above_title -}}
+                </h4>
+            {%- endif -%}
+           
+            {%- if title != blank -%}
+                <h3 class="content-fulled-video__title">
+                    {{- title -}}
+                </h3>
+            {%- endif -%}
+
+            <div class="content-fulled-video__body">
+                <div class="content-fulled-video__tabs">
+                    <input class="content-fulled-video__tabs-radio" type="radio" name="content-fulled-video-tab" id="content-fulled-video-tab--1">
+                    <input class="content-fulled-video__tabs-radio" type="radio" name="content-fulled-video-tab" id="content-fulled-video-tab--2">
+                    <input class="content-fulled-video__tabs-radio" type="radio" name="content-fulled-video-tab" id="content-fulled-video-tab--3">
+
+                    <div class="content-fulled-video__tabs-headings">
+                        <label class="content-fulled-video__tabs-label" for="content-fulled-video-tab--1">The story</label>
+                        <label class="content-fulled-video__tabs-label" for="content-fulled-video-tab--2">Benefits</label>
+                        <label class="content-fulled-video__tabs-label" for="content-fulled-video-tab--3">ingredients</label>
+                    </div>
+                </div>
+                <div class="content-fulled-video__video-wrapper">
+                    <button class="content-fulled-video__play-button" type="button" aria-label="Video play button">
+                        
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-fulled-video__footer">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Content fulled video",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top_desktop",
+                "label": "t:global.padding-top-desktop",
+                "step": 2,
+                "min": 0,
+                "max": 200,
+                "unit": "px",
+                "default": 118
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_desktop",
+                "label": "t:global.padding-bottom-desktop",
+                "step": 2,
+                "min": 0,
+                "max": 200,
+                "unit": "px",
+                "default": 110
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mobile",
+                "label": "t:global.padding-top-mobile",
+                "step": 2,
+                "min": 0,
+                "max": 200,
+                "unit": "px",
+                "default": 58
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mobile",
+                "label": "t:global.padding-bottom-mobile",
+                "step": 2,
+                "min": 0,
+                "max": 200,
+                "unit": "px",
+                "default": 50
+            },
+            {
+                "type": "text",
+                "id": "above_title",
+                "label": "Above heading"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading"
+            }
+        ],
+        "blocks": [],
+        "presets": [
+            {
+                "name": "Content fulled video",
+                "settings": {
+                    "above_title": "Above heading",
+                    "title": "Heading"
+                }
+            }
+        ]
+    }
+{% endschema %}

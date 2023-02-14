@@ -1,0 +1,62 @@
+.content-fulled-video {
+    font-family: $font-walsheim-regular;
+    color: $color-primary;
+
+    &__container {
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-yellow;
+            opacity: 0.5;
+        }
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__above-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-tertiary;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__body {
+    }
+
+    &__tabs {
+    }
+
+    &__tabs-radio {
+    }
+
+    &__tabs-headings {
+    }
+
+    &__tabs-label {
+    }
+
+    &__video-wrapper {
+    }
+
+    &__play-button {
+    }
+
+    &__footer {
+    }
+}

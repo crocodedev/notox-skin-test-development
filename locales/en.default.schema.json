@@ -384,6 +384,12 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)"
+  },
   "sections": {
     "all": {
       "padding": {
