@@ -1,7 +1,15 @@
 {
   "sections": {
     "content-fulled-video": {
-      "type": "content-fulled-video"
+      "type": "content-fulled-video",
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 110,
+        "padding_top_mobile": 58,
+        "padding_bottom_mobile": 50,
+        "above_title": "Everything you need to know",
+        "title": "Serum free trial"
+      }
     }
   },
   "order": [
