@@ -1,5 +1,14 @@
 class BeforeAfterSlider {
     constructor() {
+        this.selectors = {
+            sliderContainer: ".before-after-slider__slides",
+            paginationElement: ".before-after-slider__pagination"
+        }
+
+        this.classes = {
+            activeSlide: "before-after-slider__slide--active"
+        }
+
         this.initSlider();
     }
 
@@ -8,9 +17,9 @@ class BeforeAfterSlider {
             loop: true,
             slidesPerView: "auto",
             spaceBetween: 0,
-            slideNextClass: "before-after-slider__slide--active",
+            slideNextClass: this.classes.activeSlide,
             pagination: {
-                el: ".before-after-slider__pagination",
+                el: this.selectors.paginationElement,
                 bulletClass: "before-after-slider__pagination-item",
                 bulletActiveClass: "before-after-slider__pagination-item--active",
 
@@ -24,7 +33,7 @@ class BeforeAfterSlider {
             }
         };
 
-        const swiper = new Swiper(".before-after-slider__slides", swiperOptions);
+        const swiper = new Swiper(this.selectors.sliderContainer, swiperOptions);
     }
 }
 

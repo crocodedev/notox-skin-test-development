@@ -25,6 +25,11 @@
         text-align: center;
     }
 
+    &__header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     &__above-title {
         margin-bottom: 16px;
         font-size: 16px;
@@ -79,34 +84,36 @@
         display: grid;
         justify-items: center;
         border-radius: 10px;
-        color: $color-tertiary;
         transition-property: color;
         transition-duration: 0.3s;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         text-transform: uppercase;
-
-        @include breakpoint(extra-large) {
-            padding: 20px;
-            min-height: 453px;
-        }
-
-        @include breakpoint(1536px) {
-            padding: 30px;
-            min-height: 453px;
-        }
+        padding: 30px;
+        text-align: center;
+        margin-right: 30px;
 
         @include breakpoint(ultra-small) {
             width: 100%;
             min-height: 376px;
+            color: $color-white;
         }
 
-        @include breakpoint(medium) {
-            width: 31.973%;
+        @include breakpoint(large) {
+            width: 49%;
+            color: $color-tertiary;
 
-            &:not(:last-child) {
-                margin-right: 30px;
+            &::before {
+                opacity: 0.1;
             }
+        }
+
+        @include breakpoint(extra-large) {
+            width: 31.973%;
+        }
+
+        @include breakpoint(1536px) {
+            min-height: 453px;
         }
 
         &::before {
@@ -117,7 +124,6 @@
             width: 100%;
             height: 100%;
             background-color: $color-tertiary;
-            opacity: 0.1;
             z-index: -1;
             transition-property: opacity;
             transition-duration: 0.3s;
@@ -142,12 +148,13 @@
 
     &__slide-top {
         display: flex;
+        width: 100%;
 
         @include breakpoint(ultra-small) {
             column-gap: 20px;
         }
 
-        @include breakpoint(medium) {
+        @include breakpoint(1536px) {
             column-gap: 30px;
         }
     }
@@ -155,9 +162,9 @@
     &__slide-image {
         position: relative;
 
-        @include breakpoint(extra-large) {
-            min-width: 160px;
-            padding-top: 149.48%;
+        @include breakpoint(ultra-small) {
+            min-width: 150px;
+            padding-top: 165.93%;
         }
 
         @include breakpoint(1536px) {

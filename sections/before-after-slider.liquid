@@ -2,8 +2,8 @@
     assign above_title = section.settings.above_title
     assign title = section.settings.title
     assign subtitle = section.settings.subtitle
-    assign slide_leftside_heding = section.settings.slide_leftside_heding
-    assign slide_rightside_heding = section.settings.slide_rightside_heding
+    assign slide_left_side_heading = section.settings.slide_left_side_heading
+    assign slide_right_side_heading = section.settings.slide_right_side_heading
 -%}
 {%- capture variables -%}
     --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
@@ -15,59 +15,65 @@
 {%- capture slides -%}
     {%- for block in section.blocks -%}
         {% liquid
-            assign leftside_image = block.settings.leftside_image
-            assign rightside_image = block.settings.rightside_image
+            assign left_side_image = block.settings.left_side_image
+            assign right_side_image = block.settings.right_side_image
             assign bottom_text = block.settings.bottom_text
         %}
         
         <div class="before-after-slider__slide swiper-slide">
             <div class="before-after-slider__slide-top">
                 <div class="before-after-slider__slide-column">
-                    <span class="before-after-slider__slide-heading">
-                        {{- slide_leftside_heding -}}
-                    </span>
-                    {%- if leftside_image != blank -%}
+                    {%- if slide_left_side_heading != blank -%}
+                        <span class="before-after-slider__slide-heading">
+                            {{- slide_left_side_heading -}}
+                        </span>
+                    {%- endif -%}
+
+                    {%- if left_side_image != blank -%}
                         <picture class="before-after-slider__slide-image">
-                            <source media="(max-width: 480px)" srcset="{{- leftside_image | img_url: '150x' }} 1x, {{ leftside_image | img_url: '300x' }} 2x"/>
+                            <source media="(max-width: 480px)" srcset="{{- left_side_image | img_url: '150x' }} 1x, {{ left_side_image | img_url: '300x' }} 2x"/>
                             <img
-                                    alt="{{- leftside_image.alt -}}"
+                                    alt="{{- left_side_image.alt -}}"
                                     class="image"
-                                    src="{{- leftside_image | img_url: '190x' -}}"
-                                    srcset="{{ leftside_image | img_url: '190x' }} 1x, {{ leftside_image | img_url: '380x' }} 2x"
+                                    src="{{- left_side_image | img_url: '190x' -}}"
+                                    srcset="{{ left_side_image | img_url: '190x' }} 1x, {{ left_side_image | img_url: '380x' }} 2x"
                             />
                         </picture>
                     {%- else -%}
                         <div class="before-after-slider__slide-image">
-                            {{- "image" | placeholder_svg_tag: "image" -}}
+                            {{- "image" | placeholder_svg_tag: "image image-placeholder" -}}
                         </div>
                     {%- endif -%}
                 </div>
                 <div class="before-after-slider__slide-column">
-                    <span class="before-after-slider__slide-heading">
-                        {{- slide_rightside_heding -}}
-                    </span>
+                    {%- if slide_right_side_heading != blank -%}
+                        <span class="before-after-slider__slide-heading">
+                            {{- slide_right_side_heading -}}
+                        </span>
+                    {%- endif -%}
 
-                    {%- if rightside_image != blank -%}
+                    {%- if right_side_image != blank -%}
                         <picture class="before-after-slider__slide-image">
-                            <source media="(max-width: 480px)" srcset="{{- rightside_image | img_url: '150x' }} 1x, {{ rightside_image | img_url: '300x' }} 2x"/>
+                            <source media="(max-width: 480px)" srcset="{{- right_side_image | img_url: '150x' }} 1x, {{ right_side_image | img_url: '300x' }} 2x"/>
                             <img
-                                    alt="{{- rightside_image.alt -}}"
+                                    alt="{{- right_side_image.alt -}}"
                                     class="image"
-                                    src="{{- rightside_image | img_url: '190x' -}}"
-                                    srcset="{{ rightside_image | img_url: '190x' }} 1x, {{ rightside_image | img_url: '380x' }} 2x"
+                                    src="{{- right_side_image | img_url: '190x' -}}"
+                                    srcset="{{ right_side_image | img_url: '190x' }} 1x, {{ right_side_image | img_url: '380x' }} 2x"
                             />
                         </picture>
                     {%- else -%}
                         <div class="before-after-slider__slide-image">
-                            {{- "image" | placeholder_svg_tag: "image" -}}
+                            {{- "image" | placeholder_svg_tag: "image image-placeholder" -}}
                         </div>
                     {%- endif -%}
-                    
                 </div>
             </div>
-            <span class="before-after-slider__slide-bottom">
-                {{- bottom_text -}}
-            </span>
+            {%- if bottom_text != blank -%}
+                <span class="before-after-slider__slide-bottom">
+                    {{- bottom_text -}}
+                </span>
+            {%- endif -%}
         </div>
     {%- endfor -%}
 {%- endcapture -%}
@@ -77,32 +83,37 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
 
-<div class="before-after-slider" data-section-id="{{- section-id -}}" data-section-type="before-after-slider" style="{{- variables -}}">
-    <div class="before-after-slider__header">
-        {%- if above_title != blank -%}
-            <h4 class="before-after-slider__above-title">{{- above_title -}}</h4>
-        {%- endif -%}
-        {%- if title != blank -%}
-            <h3 class="before-after-slider__title">{{- title -}}</h3>
-        {%- endif -%}
-        {%- if subtitle != blank -%}
-            <span class="before-after-slider__subtitle">{{- subtitle -}}</span>
-        {%- endif -%}
-    </div>
-    <div class="before-after-slider__slides">
-        <div class="before-after-slider__slides-container swiper-wrapper">
-            {{- slides -}}
+<section class="before-after-slider" data-section-id="{{- section-id -}}" data-section-type="before-after-slider" style="{{- variables -}}">
+    {%- if above_title != blank or title != blank or subtitle != blank -%}
+        <div class="before-after-slider__header">
+            {%- if above_title != blank -%}
+                <h4 class="before-after-slider__above-title">{{- above_title -}}</h4>
+            {%- endif -%}
+            {%- if title != blank -%}
+                <h3 class="before-after-slider__title">{{- title -}}</h3>
+            {%- endif -%}
+            {%- if subtitle != blank -%}
+                <span class="before-after-slider__subtitle">{{- subtitle -}}</span>
+            {%- endif -%}
         </div>
-        <div class="before-after-slider__pagination"></div>
-    </div>
-</div>
+    {%- endif -%}
+    
+    {%- if slides != blank -%}
+        <div class="before-after-slider__slides">
+            <div class="before-after-slider__slides-container swiper-wrapper">
+                {{- slides -}}
+            </div>
+            <div class="before-after-slider__pagination"></div>
+        </div>
+    {%- endif -%}
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="{{ 'before-after-slider.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
     {
-        "name": "Before after slider",
+        "name": "t:sections.before-after-slider.name",
         "settings": [
             {
             "type": "range",
@@ -145,68 +156,89 @@
             "default": 50
         },
         {
+            "type": "header",
+            "content": "t:sections.before-after-slider.settings.headers.section_text.content"
+        },
+        {
             "type": "text",
             "id": "above_title",
-            "label": "Above title"
+            "label": "t:sections.before-after-slider.settings.above_title.label"
         },
         {
             "type": "text",
             "id": "title",
-            "label": "Title"
+            "label": "t:sections.before-after-slider.settings.title.label"
         },
         {
             "type": "textarea",
             "id": "subtitle",
-            "label": "Subttile"
+            "label": "t:sections.before-after-slider.settings.subtitle.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.before-after-slider.settings.headers.slide_text.content",
+            "info": "t:sections.before-after-slider.settings.headers.slide_text.info"
         },
         {
             "type": "text",
-            "id": "slide_leftside_heding",
-            "label": "Slide leftside heading",
-            "default": "Before",
-            "placeholder": "Enter text"
+            "id": "slide_left_side_heading",
+            "label": "t:sections.before-after-slider.settings.slide_left_side_heading.label",
+            "default": "Before"
         },
         {
             "type": "text",
-            "id": "slide_rightside_heding",
-            "label": "Slide rightside heading",
-            "default": "After",
-            "placeholder": "Enter text"
+            "id": "slide_right_side_heading",
+            "label": "t:sections.before-after-slider.settings.slide_right_side_heading.label",
+            "default": "After"
         }
         ],
         "blocks": [
-                {
+            {
                 "type": "slide",
-                "name": "Slide",
+                "name": "t:sections.before-after-slider.blocks.slide.name",
+                "limit": 12,
                 "settings": [
                     {
                         "type": "image_picker",
-                        "id": "leftside_image",
-                        "label": "Leftside image"
+                        "id": "left_side_image",
+                        "label": "t:sections.before-after-slider.blocks.slide.settings.left_side_image.label"
                     },
                     {
                         "type": "image_picker",
-                        "id": "rightside_image",
-                        "label": "Rightside image"
+                        "id": "right_side_image",
+                        "label": "t:sections.before-after-slider.blocks.slide.settings.right_side_image.label"
                     },
                     {
                         "type": "text",
                         "id": "bottom_text",
-                        "label": "Bottom text",
-                        "default": "Bottom slide text content",
-                        "placeholder": "Enter text"
+                        "label": "t:sections.before-after-slider.blocks.slide.settings.bottom_text.label",
+                        "default": "Bottom slide text content"
                     }
                 ]
             }
         ],
         "presets": [
             {
-                "name": "Before after slider",
+                "name": "t:sections.before-after-slider.presets.name",
                 "settings": {
-                    "above_title": "real babes. real results.",
-                    "title": "before & afters",
-                    "subtitle": "Use your big beutiful eyes to see the real results these babes had with the selfie line. Don't forget to send us your before & afters."
-                }
+                    "above_title": "Above heading",
+                    "title": "Heading",
+                    "subtitle": "Subheading text content"
+                },
+                "blocks": [
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    }
+                ]
             }
         ]
     }
