@@ -2,13 +2,14 @@
     position: relative;
     font-family: $font-walsheim-regular;
     color: $color-primary;
+    overflow-x: hidden;
 
     @include breakpoint(ultra-small) {
         padding-top: var(--padding_top_mobile, 58px);
-        padding-bottom: var(--padding_bottom_mobile, 60);
+        padding-bottom: var(--padding_bottom_mobile, 60px);
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
         padding-top: var(--padding_top_desktop, 118px);
         padding-bottom: var(--padding_bottom_desktop, 120px);
     }
@@ -26,11 +27,14 @@
 
     &__container {
         position: relative;
-        padding-left: 20px;
-        padding-right: 20px;
         margin-left: auto;
         margin-right: auto;
         max-width: 1330px;
+
+        @include breakpoint(large) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__header {
@@ -45,9 +49,19 @@
     }
 
     &__title {
-        font-size: 42px;
         font-weight: 700;
         text-transform: uppercase;
+        line-height: 62px;
+
+        @include breakpoint(ultra-small) {
+            font-size: 32px;
+            margin-top: 10px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 42px;
+            margin-top: 16px;
+        }
     }
 
     &__body {
@@ -56,25 +70,27 @@
         @include breakpoint(ultra-small) {
             gap: 45px;
             margin-top: 52px;
+            flex-direction: column;
         }
         
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             gap: 30px;
             margin-top: 80px;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
     &__tabs {
         position: relative;
-        width: 100%;
-        max-width: 630px;
 
         @include breakpoint(ultra-small) {
-            min-height: 367px;
+            width: 100%;
         }
 
-        @include breakpoint(medium) {
-            min-height: 300px;
+        @include breakpoint(large) {
+            width: 49.1%;
+            max-width: 630px;
         }
     }
 
@@ -108,12 +124,11 @@
     }
 
     &__tabs-content {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
         text-align: start;
         width: 100%;
-
-        p {
-            margin-top: 36px;
-        }
     }
 
     &__tabs-headings {
@@ -171,20 +186,60 @@
         font-weight: 700;
         text-transform: uppercase;
         font-size: 28px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 37px;
+    }
+
+    &__content-text {
+        overflow: auto;
+        line-height: 1.7;
+        letter-spacing: 0;
+        padding-right: 15px;
+
+        @include breakpoint(ultra-small) {
+            height: 191px;
+        }
+
+        @include breakpoint(large) {
+            height: 165px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: $color-primary;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: $color-tertiary;
+        }
     }
 
     &__video-wrapper {
         position: relative;
         width: 100%;
-        max-width: 630px;
-        min-width: 420px;
 
         @include breakpoint(ultra-small) {
-            height: 277px;
+            min-height: 277px;
         }
 
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             height: 416px;
+            max-width: 630px;
+            min-width: 420px;
+        }
+        
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -211,7 +266,7 @@
             height: 48px;
         }
 
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             width: 72px;
             height: 72px;
         }
@@ -228,6 +283,7 @@
         justify-content: center;
         width: 100%;
         height: 100%;
+        padding-top: 65.956%;
 
         img {
             object-fit: cover;
@@ -235,15 +291,151 @@
 
         img,
         svg {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
         }
     }
 
-    &__poster-image {
+    &__bottom {
+        display: flex;
+        gap: 20px;
 
+        @include breakpoint(ultra-small) {
+            margin-top: 53px;
+            flex-direction: column;
+        }
+
+        @include breakpoint(large) {
+            margin-top: 86px;
+            align-items: center;
+            flex-direction: row;
+        }
     }
 
-    &__footer {
+    &-bottom {
+        &__title {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 27px;
+
+            @include breakpoint(large) {
+                max-width: 40%;
+            }
+        }
+
+        &__icon-wrapper {
+            max-width: 21px;
+            min-width: 21px;
+            height: 43px;
+    
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__blocks {
+            display: flex;
+            column-gap: 10px;
+            overflow: auto;
+            height: 133px;
+
+            @include breakpoint(ultra-small) {
+                margin-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include breakpoint(large) {
+                margin-left: 70px;
+                padding-right: 30px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__block {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-width: 101px;
+            max-width: 101px;
+            font-size: 12px;
+            letter-spacing: 0;
+            height: 100%;
+            max-height: 135px;
+        }
+
+        &__block-image-wrap {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: -29px;
+        }
+
+        &__block-image {
+            height: max-content;
+            z-index: 2;
+            object-fit: cover;
+        }
+
+        &__block-title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 27px 8px 14px;
+            line-height: 16px;
+            text-transform: lowercase;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $color-white;
+                opacity: 0.4;
+                z-index: -1;
+            }
+        }
+
+        &__block-title-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    }
+
+    &-bottom__title,
+    &__tabs,
+    &__header {
+        @include breakpoint(ultra-small) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @include breakpoint(large) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

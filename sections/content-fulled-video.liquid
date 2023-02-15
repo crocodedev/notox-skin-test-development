@@ -4,6 +4,11 @@
     assign cover_image 			= section.settings.cover_image
 	assign video_url 			= section.settings.video_url
     assign video_alt_text 		= section.settings.video_alt_text
+    assign bottom_title_icon    = section.settings.bottom_title_icon
+    assign bottom_title         = section.settings.bottom_title
+    assign selected_product         = section.settings.selected_product
+    assign block_prefix_text = section.settings.block_prefix_text
+    assign is_box_variant_id = blank
 -%}
 
 {%- capture variables -%}
@@ -19,6 +24,50 @@
 {%- capture tab_labels -%}
 {%- endcapture -%}
 
+{%- capture selected_product_variants -%}
+    {%- if selected_product != blank -%}
+        <ul class="content-fulled-video-bottom__blocks">
+            {%- for variant in selected_product.variants -%}
+                {%- assign is_box_variant = variant.metafields.box.is_box -%}
+                {%- assign variant_image = variant.image -%}
+                {%- assign variant_title = variant.title -%}
+
+                {%- unless is_box_variant == true -%}
+                    <li class="content-fulled-video-bottom__block">
+                        {%- if variant_image != blank -%}
+                            <picture class="content-fulled-video-bottom__block-image-wrap">
+                                <source media="(max-width: 400px)" srcset="{{- variant_image | img_url: '400x' }} 1x, {{ variant_image | img_url: '800x' }} 2x" />
+
+                                <img
+                                    alt="{{- variant_image.alt -}}"
+                                    class="content-fulled-video-bottom__block-image"
+                                    loading="lazy"
+                                    src="{{- variant_image | img_url: '1900x' -}}"
+                                    srcset="{{- variant_image | img_url: '1900x' }} 1x, {{ variant_image | img_url: '3800x' }} 2x"
+                                />
+                            </picture>
+                        {%- endif -%}
+
+                        {%- if variant_title != blank -%}
+                            <span class="content-fulled-video-bottom__block-title">
+                                <span class="content-fulled-video-bottom__block-title-text">
+                                    {%- if block_prefix_text != blank -%}
+                                        {{- block_prefix_text  }}
+                                    {%- endif -%}
+
+                                    {{- variant_title -}}
+                                </span>
+                            </span>
+                        {%- endif -%}
+                    </li>
+                {%- else -%}
+                    {%- assign is_box_variant_id = variant.id -%}
+                {%- endunless -%}
+            {%- endfor -%}
+        </ul>
+    {%- endif -%}
+{%- endcapture -%}
+
 {%- capture tabs -%}
     {%- for block in section.blocks -%}
         {%- if block.type == "tab" -%}
@@ -29,30 +78,30 @@
             -%}
 
             {%- capture tab_item_radio -%}
-                <input class="content-fulled-video__tabs-radio js-content-fulled-video-input" type="radio" name="content-fulled-video-tab" id="content-fulled-video-tab--{{- forloop.index -}}" {%- if forloop.first %} checked{%- endif -%}>
+                <input class="content-fulled-video__tabs-radio js-content-fulled-video-input" type="radio" name="content-fulled-video-tab" id="content-fulled-video-tab--{{- forloop.index | append: section.id  -}}" {%- if forloop.first %} checked{%- endif -%}>
                 <div class="content-fulled-video__tabs-content">
                     <h3 class="content-fulled-video__content-title">
                         {{- tab_content_title -}}
                     </h3>
-
-                    {{- tab_content_description -}}
+                    <div class="content-fulled-video__content-text">
+                        {{- tab_content_description -}}
+                    </div>
                 </div>
             {%- endcapture -%}
     
             {%- capture tab_item_label -%}
-                <label class="content-fulled-video__tabs-label js-content-fulled-video-label" for="content-fulled-video-tab--{{- forloop.index -}}">
+                <label class="content-fulled-video__tabs-label js-content-fulled-video-label" for="content-fulled-video-tab--{{- forloop.index | append: section.id  -}}">
                     {{- tab_title -}}
                 </label>
             {%- endcapture -%}
     
             {%- assign tab_radios = tab_radios | append: tab_item_radio -%}
             {%- assign tab_labels = tab_labels | append: tab_item_label -%}
-
         {%- endif -%}
     {%- endfor -%}
 {%- endcapture -%}
 
-<section class="content-fulled-video" data-section-id="{{- section.id -}}" data-section-type="content-fulled-video">
+<section class="content-fulled-video" data-section-id="{{- section.id -}}" data-section-type="content-fulled-video" style="{{- variables -}}" data-is-box-variant-id="{{- is_box_variant_id -}}">
     <div class="content-fulled-video__container">
         <div class="content-fulled-video__header">
             {%- if above_title != blank -%}
@@ -60,46 +109,27 @@
                     {{- above_title -}}
                 </h4>
             {%- endif -%}
-           
+        
             {%- if title != blank -%}
                 <h3 class="content-fulled-video__title">
                     {{- title -}}
                 </h3>
             {%- endif -%}
+        </div>
 
-            <div class="content-fulled-video__body">
+        <div class="content-fulled-video__body">
 
-                <div class="content-fulled-video__tabs">
-                    <div class="content-fulled-video__tabs-headings">
-                        {{- tab_labels -}}
-                    </div>
-                    
-                   {{- tab_radios -}}
+            <div class="content-fulled-video__tabs">
+                <div class="content-fulled-video__tabs-headings">
+                    {{- tab_labels -}}
                 </div>
+                
+                {{- tab_radios -}}
+            </div>
 
-                <div class="content-fulled-video__video-wrapper js-content-fulled-video-container">
-                    <noscript>
-                        <a href="{{- video_url -}}" target="_blank" aria-label="Link to video">
-                            {%- if cover_image != blank -%}
-                                <picture class="content-fulled-video__image-wrap">
-                                    <source media="(max-width: 400px)" srcset="{{- cover_image | img_url: '400x' }} 1x, {{ cover_image | img_url: '800x' }} 2x" />
-
-                                    <img
-                                        alt="{{- cover_image.alt -}}"
-                                        class="content-fulled-video__poster-image"
-                                        loading="lazy"
-                                        src="{{- cover_image | img_url: '1900x' -}}"
-                                        srcset="{{- cover_image | img_url: '1900x' }} 1x, {{ cover_image | img_url: '3800x' }} 2x"
-                                    />
-                                </picture>
-                            {%- else -%}
-                                <div class="content-fulled-video__image-wrap">
-                                    {{- "collection-2" | placeholder_svg_tag: "content-fulled-video__poster-image image-placeholder" -}}
-                                </div>
-                            {%- endif -%}
-                        </a>
-                    </noscript>
-                    <button class="content-fulled-video__play-button js-content-fulled-video-button-play" type="button" aria-label="Video play button">
+            <div class="content-fulled-video__video-wrapper js-content-fulled-video-container">
+                <noscript>
+                    <a href="{{- video_url -}}" target="_blank" aria-label="Link to video">
                         {%- if cover_image != blank -%}
                             <picture class="content-fulled-video__image-wrap">
                                 <source media="(max-width: 400px)" srcset="{{- cover_image | img_url: '400x' }} 1x, {{ cover_image | img_url: '800x' }} 2x" />
@@ -117,26 +147,64 @@
                                 {{- "collection-2" | placeholder_svg_tag: "content-fulled-video__poster-image image-placeholder" -}}
                             </div>
                         {%- endif -%}
-                        <span class="content-fulled-video__icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
-                                <path id="Path_1737" data-name="Path 1737" d="M50.2-29.812A3.144,3.144,0,0,1,51.75-27,3.487,3.487,0,0,1,50.2-24.047L29.953-11.672a3.872,3.872,0,0,1-3.516,0,3.205,3.205,0,0,1-1.687-2.953V-39.516a3.093,3.093,0,0,1,1.688-2.812,3.2,3.2,0,0,1,3.516.141ZM29.25-37.406v20.813L46.266-27.141ZM0-27A35.725,35.725,0,0,1,4.922-45.141,35.665,35.665,0,0,1,17.859-58.078,35.725,35.725,0,0,1,36-63a35.725,35.725,0,0,1,18.141,4.922A35.665,35.665,0,0,1,67.078-45.141,35.725,35.725,0,0,1,72-27,35.726,35.726,0,0,1,67.078-8.859,35.665,35.665,0,0,1,54.141,4.078,35.725,35.725,0,0,1,36,9,35.725,35.725,0,0,1,17.859,4.078,35.665,35.665,0,0,1,4.922-8.859,35.725,35.725,0,0,1,0-27ZM36,4.5A31.278,31.278,0,0,0,51.891.141a29.474,29.474,0,0,0,11.25-11.25A31.278,31.278,0,0,0,67.5-27a31.279,31.279,0,0,0-4.359-15.891,29.474,29.474,0,0,0-11.25-11.25A31.278,31.278,0,0,0,36-58.5a31.278,31.278,0,0,0-15.891,4.359,29.474,29.474,0,0,0-11.25,11.25A31.278,31.278,0,0,0,4.5-27,31.278,31.278,0,0,0,8.859-11.109,29.474,29.474,0,0,0,20.109.141,31.278,31.278,0,0,0,36,4.5Z" transform="translate(0 63)" fill="#fff"/>
-                            </svg>
-                        </span>
-                    </button>
-                    <template class="js-content-fulled-video-template">
-                        {%- if video_url.type == 'youtube' -%}
-                            <iframe src="https://www.youtube.com/embed/{{ video_url.id }}?enablejsapi=1" class="js-video-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_alt_text | escape }}"></iframe>
-                        {%- else -%}
-                            <iframe src="https://player.vimeo.com/video/{{ video_url.id }}" class="js-video-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_alt_text | escape }}"></iframe>
-                        {%- endif -%}
-                    </template>
-                </div>
-            </div>
+                    </a>
+                </noscript>
+                <button class="content-fulled-video__play-button js-content-fulled-video-button-play" type="button" aria-label="Video play button">
+                    {%- if cover_image != blank -%}
+                        <picture class="content-fulled-video__image-wrap">
+                            <source media="(max-width: 400px)" srcset="{{- cover_image | img_url: '400x' }} 1x, {{ cover_image | img_url: '800x' }} 2x" />
 
-            <div class="content-fulled-video__footer">
-
+                            <img
+                                alt="{{- cover_image.alt -}}"
+                                class="content-fulled-video__poster-image"
+                                loading="lazy"
+                                src="{{- cover_image | img_url: '1900x' -}}"
+                                srcset="{{- cover_image | img_url: '1900x' }} 1x, {{ cover_image | img_url: '3800x' }} 2x"
+                            />
+                        </picture>
+                    {%- else -%}
+                        <div class="content-fulled-video__image-wrap">
+                            {{- "collection-2" | placeholder_svg_tag: "content-fulled-video__poster-image image-placeholder" -}}
+                        </div>
+                    {%- endif -%}
+                    <span class="content-fulled-video__icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+                            <path id="Path_1737" data-name="Path 1737" d="M50.2-29.812A3.144,3.144,0,0,1,51.75-27,3.487,3.487,0,0,1,50.2-24.047L29.953-11.672a3.872,3.872,0,0,1-3.516,0,3.205,3.205,0,0,1-1.687-2.953V-39.516a3.093,3.093,0,0,1,1.688-2.812,3.2,3.2,0,0,1,3.516.141ZM29.25-37.406v20.813L46.266-27.141ZM0-27A35.725,35.725,0,0,1,4.922-45.141,35.665,35.665,0,0,1,17.859-58.078,35.725,35.725,0,0,1,36-63a35.725,35.725,0,0,1,18.141,4.922A35.665,35.665,0,0,1,67.078-45.141,35.725,35.725,0,0,1,72-27,35.726,35.726,0,0,1,67.078-8.859,35.665,35.665,0,0,1,54.141,4.078,35.725,35.725,0,0,1,36,9,35.725,35.725,0,0,1,17.859,4.078,35.665,35.665,0,0,1,4.922-8.859,35.725,35.725,0,0,1,0-27ZM36,4.5A31.278,31.278,0,0,0,51.891.141a29.474,29.474,0,0,0,11.25-11.25A31.278,31.278,0,0,0,67.5-27a31.279,31.279,0,0,0-4.359-15.891,29.474,29.474,0,0,0-11.25-11.25A31.278,31.278,0,0,0,36-58.5a31.278,31.278,0,0,0-15.891,4.359,29.474,29.474,0,0,0-11.25,11.25A31.278,31.278,0,0,0,4.5-27,31.278,31.278,0,0,0,8.859-11.109,29.474,29.474,0,0,0,20.109.141,31.278,31.278,0,0,0,36,4.5Z" transform="translate(0 63)" fill="#fff"/>
+                        </svg>
+                    </span>
+                </button>
+                <template class="js-content-fulled-video-template">
+                    {%- if video_url.type == 'youtube' -%}
+                        <iframe src="https://www.youtube.com/embed/{{ video_url.id }}?enablejsapi=1" class="js-video-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_alt_text | escape }}"></iframe>
+                    {%- else -%}
+                        <iframe src="https://player.vimeo.com/video/{{ video_url.id }}" class="js-video-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ video_alt_text | escape }}"></iframe>
+                    {%- endif -%}
+                </template>
             </div>
         </div>
+        
+        {%- if selected_product_variants != blank -%}
+            <div class="content-fulled-video__bottom js-content-fulled-video-bottom-container">
+                <div class="content-fulled-video-bottom__title">
+                    {%- if bottom_title_icon != blank -%}
+                        <span class="content-fulled-video-bottom__icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="43" viewBox="0 0 21 43">
+                                <text id="_" data-name="" transform="translate(0 35)" fill="#38393e" font-size="32" font-family="SegoeUI, Segoe UI" letter-spacing="0.1em"><tspan x="0" y="0"></tspan></text>
+                            </svg>
+                        </span>
+                    {%- endif -%}
+                    
+                    {%- if bottom_title != blank -%}
+                        <span class="content-fulled-video-bottom__text">
+                            {{- bottom_title -}}
+                        </span>
+                    {%- endif -%}
+                </div>
+
+                {{- selected_product_variants -}}
+            </div>
+        {%- endif -%}
+       
     </div>
 </section>
 
@@ -216,12 +284,38 @@
 				"id": "video_alt_text",
 				"label": "Video alt text",
 				"info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video-block)"
-			}
+			},
+            {
+                "type": "html",
+                "id": "bottom_title_icon",
+                "label": "SVG icon",
+                "info": "Prepended before heading",
+                "default": "<svg xmlns='http://www.w3.org/2000/svg' width='21' height='43' viewBox='0 0 21 43'> <text id='_' data-name='' transform='translate(0 35)' fill='#38393e' font-size='32' font-family='SegoeUI, Segoe UI' letter-spacing='0.1em'><tspan x='0' y='0'></tspan></text></svg>"
+            },
+            {
+                "type": "text",
+                "id": "bottom_title",
+                "label": "Heading",
+                "default": "What's in the box"
+            },
+            {
+                "type": "product",
+                "id": "selected_product",
+                "label": "Product"
+            },
+            {
+                "type": "text",
+                "id": "block_prefix_text",
+                "label": "Prefix text",
+                "info": "Applied for all blocks",
+                "default": "1pic"
+            }
         ],
         "blocks": [
             {
                 "type": "tab",
                 "name": "Tab",
+                "limit": 10,
                 "settings": [
                     {
                         "type": "text",
@@ -250,7 +344,18 @@
                 "settings": {
                     "above_title": "Above heading",
                     "title": "Heading"
-                }
+                },
+                "blocks": [
+                    {
+                        "type": "tab"
+                    },
+                    {
+                        "type": "tab"
+                    },
+                    {
+                        "type": "tab"
+                    }
+                ]
             }
         ]
     }

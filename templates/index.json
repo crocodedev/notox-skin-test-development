@@ -2,13 +2,51 @@
   "sections": {
     "content-fulled-video": {
       "type": "content-fulled-video",
+      "blocks": {
+        "1d9f5f10-cdae-493a-bb61-eb7060e254b7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "The story",
+            "tab_content_title": "The story",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        },
+        "cd039760-a893-4e7f-b038-e73fb6b0dea5": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Benefits",
+            "tab_content_title": "Benefits",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin! Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        },
+        "009dc868-a42c-45ba-81a7-e010df1dba58": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Ingredients",
+            "tab_content_title": "Ingredients",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1d9f5f10-cdae-493a-bb61-eb7060e254b7",
+        "cd039760-a893-4e7f-b038-e73fb6b0dea5",
+        "009dc868-a42c-45ba-81a7-e010df1dba58"
+      ],
       "settings": {
         "padding_top_desktop": 118,
         "padding_bottom_desktop": 110,
         "padding_top_mobile": 58,
         "padding_bottom_mobile": 50,
         "above_title": "Everything you need to know",
-        "title": "Serum free trial"
+        "title": "Serum free trial",
+        "cover_image": "shopify:\/\/shop_images\/DSC09934-2A.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_alt_text": "",
+        "bottom_title_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"21\" height=\"43\" viewbox=\"0 0 21 43\"> <text id=\"_\" data-name=\"\" transform=\"translate(0 35)\" fill=\"#38393e\" font-size=\"32\" font-family=\"SegoeUI, Segoe UI\" letter-spacing=\"0.1em\"><tspan x=\"0\" y=\"0\"><\/tspan><\/text><\/svg>",
+        "bottom_title": "What's in the box",
+        "selected_product": "product",
+        "block_prefix_text": "1pic"
       }
     }
   },
