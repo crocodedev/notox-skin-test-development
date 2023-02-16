@@ -1,0 +1,30 @@
+{%- liquid
+    assign icon = block.settings.icon
+    assign text = block.settings.text
+-%}
+
+{%- if text != blank -%}
+    {%- capture variables -%}
+        {%- if block.settings.margin_top_desktop != 0 -%}
+            --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_desktop != 0 -%}
+            --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_top_mobile != 0 -%}
+            --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_mobile != 0 -%}
+            --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+        {%- endif -%}
+    {%- endcapture -%}
+
+    <div class="product__advantage" style="{{- variables -}}">
+        {%- if icon != blank -%}
+            <div class="product__advantage-icon">
+                {{- icon -}}
+            </div>
+        {%- endif -%}
+        <span class="product__advantage-text">{{- text -}}</span>
+    </div>
+{%- endif -%}

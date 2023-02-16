@@ -1,0 +1,36 @@
+{%- liquid
+    assign title = ''
+    assign titleArray = product.title | split: ' '
+
+    for titleItem in titleArray
+        assign titleNew = titleItem
+        if titleItem contains '[COLOR]'
+            assign titleNew = titleNew | replace: '[COLOR]', ''
+
+            assign titleNew = '<span class="product__title--color">' | append: titleNew | append: '</span>'
+        endif
+
+        assign title = title | append: titleNew
+
+        unless forloop.last
+            assign title = title | append: ' '
+        endunless
+    endfor
+-%}
+
+{%- capture variables -%}
+    {%- if block.settings.margin_top_desktop != 0 -%}
+        --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_desktop != 0 -%}
+        --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_top_mobile != 0 -%}
+        --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_mobile != 0 -%}
+        --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+<span class="product__title" style="{{- variables -}}">{{- title -}}</span>

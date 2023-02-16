@@ -384,6 +384,16 @@
       }
     }
   },
+  "global": {
+    "padding-top-desktop": "Padding top",
+    "padding-bottom-desktop": "Padding bottom",
+    "padding-top-mobile": "Padding top (mobile)",
+    "padding-bottom-mobile": "Padding bottom (mobile)",
+    "margin-top-desktop": "Margin top",
+    "margin-bottom-desktop": "Margin bottom",
+    "margin-top-mobile": "Margin top (mobile)",
+    "margin-bottom-mobile": "Margin bottom (mobile)"
+  },
   "sections": {
     "all": {
       "padding": {
@@ -3235,6 +3245,62 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "product": {
+      "name": "Product",
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text-style": {
+              "label": "Text style",
+              "options-1": {
+                "label": "Capitalize"
+              },
+              "options-2": {
+                "label": "Uppercase"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "Title"
+        },
+        "price": {
+          "name": "Price"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "variant-picker": {
+          "name": "Variant picker"
+        },
+        "quantity-selector": {
+          "name": "Quantity selector",
+          "settings": {
+            "show-button-buy": {
+              "label": "Show button buy"
+            }
+          }
+        },
+        "advantage": {
+          "name": "Advantage",
+          "settings": {
+            "icon": {
+              "label": "Icon (svg)"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Product"
       }
     }
   }

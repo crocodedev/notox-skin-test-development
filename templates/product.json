@@ -1,215 +1,93 @@
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "product": {
+      "type": "product",
       "blocks": {
-        "vendor": {
+        "50621e81-97ac-48fe-8d9b-8fc64e286c48": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "margin_top_desktop": 0,
+            "margin_bottom_desktop": 15,
+            "margin_top_mobile": 0,
+            "margin_bottom_mobile": 13,
+            "text": "A gentle daily skincare routine",
             "text_style": "uppercase"
           }
         },
-        "title": {
-          "type": "title"
+        "e47f522d-a527-4381-bcac-053357b65fc6": {
+          "type": "title",
+          "settings": {
+            "margin_top_desktop": 15,
+            "margin_bottom_desktop": 23,
+            "margin_top_mobile": 13,
+            "margin_bottom_mobile": 19
+          }
         },
-        "caption": {
+        "2a03b045-e432-49cc-8569-1eaf7ae6c4e5": {
+          "type": "price",
+          "settings": {
+            "margin_top_desktop": 36,
+            "margin_bottom_desktop": 27,
+            "margin_top_mobile": 25,
+            "margin_bottom_mobile": 28
+          }
+        },
+        "6f1bbbaa-ea2e-4e99-b386-d592c003c16d": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "margin_top_desktop": 10,
+            "margin_bottom_desktop": 10,
+            "margin_top_mobile": 10,
+            "margin_bottom_mobile": 10,
+            "text": "Pay in full or 4 interest-free installments of $29.99 With",
+            "text_style": "capitalize"
           }
         },
-        "price": {
-          "type": "price"
-        },
-        "variant_picker": {
-          "type": "variant_picker",
+        "46bd0757-6105-4668-bd30-efe8509d095d": {
+          "type": "variant_picker-2",
           "settings": {
-            "picker_type": "button"
+            "margin_top_desktop": 27,
+            "margin_bottom_desktop": 37,
+            "margin_top_mobile": 40,
+            "margin_bottom_mobile": 45
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector"
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "f73326d4-b830-46fc-a6fa-7995150d014b": {
+          "type": "quantity_selector",
           "settings": {
-            "show_dynamic_checkout": true
+            "margin_top_desktop": 37,
+            "margin_bottom_desktop": 46,
+            "margin_top_mobile": 45,
+            "margin_bottom_mobile": 45,
+            "show_button_buy": true
           }
         },
-        "description": {
-          "type": "description"
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
+        "9e6bebf0-151b-4fdd-8e6f-eec6e6a3228e": {
+          "type": "advantage",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "margin_top_desktop": 46,
+            "margin_bottom_desktop": 0,
+            "margin_top_mobile": 45,
+            "margin_bottom_mobile": 0,
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 25 20\">\n  <path d=\"M7.148-11.25h3.477a.626.626,0,0,1,.586.391.622.622,0,0,1-.156.664L7.3-6.445a.57.57,0,0,1-.859,0,.57.57,0,0,1,0-.859L9.1-10.039H5.625a.631.631,0,0,1-.586-.352.622.622,0,0,1,.156-.664l3.75-3.75a.57.57,0,0,1,.859,0,.57.57,0,0,1,0,.859ZM0-15a2.525,2.525,0,0,1,.742-1.758A2.525,2.525,0,0,1,2.5-17.5H13.75a2.525,2.525,0,0,1,1.758.742A2.525,2.525,0,0,1,16.25-15v1.25h2.539a1.852,1.852,0,0,1,1.445.664l3.047,3.594a1.724,1.724,0,0,1,.469,1.211V-2.5h.625A.6.6,0,0,1,25-1.875a.6.6,0,0,1-.625.625H22.5a3.738,3.738,0,0,1-1.094,2.656A3.738,3.738,0,0,1,18.75,2.5a3.738,3.738,0,0,1-2.656-1.094A3.738,3.738,0,0,1,15-1.25H10A3.738,3.738,0,0,1,8.906,1.406,3.738,3.738,0,0,1,6.25,2.5,3.738,3.738,0,0,1,3.594,1.406,3.738,3.738,0,0,1,2.5-1.25,2.525,2.525,0,0,1,.742-1.992,2.525,2.525,0,0,1,0-3.75Zm13.75-1.25H2.5a1.217,1.217,0,0,0-.9.352,1.217,1.217,0,0,0-.352.9V-3.75a1.217,1.217,0,0,0,.352.9,1.217,1.217,0,0,0,.9.352h.2A4.059,4.059,0,0,1,4.063-4.3,3.907,3.907,0,0,1,6.25-5a3.907,3.907,0,0,1,2.188.7A4.059,4.059,0,0,1,9.8-2.5H15V-15a1.217,1.217,0,0,0-.352-.9A1.217,1.217,0,0,0,13.75-16.25Zm2.5,3.75v3.75H22.3l-3.047-3.516a.592.592,0,0,0-.469-.234ZM18.75-5a3.907,3.907,0,0,1,2.188.7A4.059,4.059,0,0,1,22.3-2.5h.2v-5H16.25v3.438A3.8,3.8,0,0,1,18.75-5ZM6.25,1.25A2.525,2.525,0,0,0,8.008.508,2.525,2.525,0,0,0,8.75-1.25a2.525,2.525,0,0,0-.742-1.758A2.525,2.525,0,0,0,6.25-3.75a2.525,2.525,0,0,0-1.758.742A2.525,2.525,0,0,0,3.75-1.25,2.525,2.525,0,0,0,4.492.508,2.525,2.525,0,0,0,6.25,1.25Zm12.5-5a2.525,2.525,0,0,0-1.758.742A2.525,2.525,0,0,0,16.25-1.25,2.525,2.525,0,0,0,16.992.508a2.525,2.525,0,0,0,1.758.742A2.525,2.525,0,0,0,20.508.508,2.525,2.525,0,0,0,21.25-1.25a2.525,2.525,0,0,0-.742-1.758A2.525,2.525,0,0,0,18.75-3.75Z\" transform=\"translate(0 17.5)\" fill=\"currentColor\"><\/path>\n<\/svg>",
+            "text": "Fast free shipping on orders $50+"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "caption",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "50621e81-97ac-48fe-8d9b-8fc64e286c48",
+        "e47f522d-a527-4381-bcac-053357b65fc6",
+        "2a03b045-e432-49cc-8569-1eaf7ae6c4e5",
+        "6f1bbbaa-ea2e-4e99-b386-d592c003c16d",
+        "46bd0757-6105-4668-bd30-efe8509d095d",
+        "f73326d4-b830-46fc-a6fa-7995150d014b",
+        "9e6bebf0-151b-4fdd-8e6f-eec6e6a3228e"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "gallery_layout": "stacked",
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
-      }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
       }
     }
   },
   "order": [
-    "main",
-    "image-with-text",
-    "multicolumn",
-    "related-products"
+    "product"
   ]
 }
