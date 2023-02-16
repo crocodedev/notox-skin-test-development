@@ -1,0 +1,66 @@
+{%- unless product.has_only_default_variant -%}
+    {%- capture variables -%}
+        {%- if block.settings.margin_top_desktop != 0 -%}
+            --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_desktop != 0 -%}
+            --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_top_mobile != 0 -%}
+            --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_mobile != 0 -%}
+            --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+        {%- endif -%}
+    {%- endcapture -%}
+
+    <div class="product__variant-picker" style="{{- variables -}}">
+        <div class="product__variant-picker-list js-product-variants">
+            {%- for variant in product.variants -%}
+                {%- liquid
+                    assign is_box = variant.metafields.box.is_box
+                    assign color_preview = variant.metafields.color.preview
+                    assign color_main = variant.metafields.color.main
+                -%}
+                {% capture variant_variables %}
+                    --color-preview: {{- color_preview -}};
+                    --color-preview-2: {{- color_preview -}}80;
+                {% endcapture %}
+                <input
+                        id="form-{{- product_form_id.id -}}-variant-{{- variant.id -}}"
+                        type="radio"
+                        name="id"
+                        class="hidden"
+                        value="{{- variant.id -}}"
+                        form="{{- product_form_id -}}"
+                        {% if variant.available == false %}
+                            disabled
+                        {% endif %}
+                        {% if variant == product.selected_or_first_available_variant %}
+                            checked
+                        {% endif %}
+                >
+                <label for="form-{{- product_form_id.id -}}-variant-{{- variant.id -}}"
+                       class="product__variant-picker-item {% if is_box == true %} product__variant-picker-item--box{%- endif -%}"
+                        style="{{- variant_variables -}}"
+                >
+                    {%- liquid
+                        assign variant_image = variant.image
+                        assign variant_title = variant.title
+                    -%}
+                    <picture class="product__variant-picker-item-image">
+                        <source media="(max-width: 768px)"
+                                srcset="{{- variant_image | img_url: '80x' }} 1x, {{ variant_image | img_url: '160x' }} 2x"/>
+                        <img
+                                alt="{{- variant_image.alt -}}"
+                                class="image"
+                                src="{{- variant_image | img_url: '101x' -}}"
+                                srcset="{{ variant_image | img_url: '101x' }} 1x, {{ variant_image | img_url: '202x' }} 2x"
+                        />
+                    </picture>
+                    <span class="product__variant-picker-item-title">{{- variant_title -}}</span>
+                </label>
+            {%- endfor -%}
+        </div>
+    </div>
+{%- endunless -%}

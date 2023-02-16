@@ -1,0 +1,11 @@
+{% assign image = product.selected_or_first_available_variant.featured_image %}
+
+<div class="product__media-2-container">
+    <picture class="product__media-2-image">
+        <img
+                alt="{{- image.alt -}}"
+                class="image"
+                src="{{- image | img_url: 'master' -}}"
+        />
+    </picture>
+</div>

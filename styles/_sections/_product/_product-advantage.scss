@@ -1,0 +1,31 @@
+.product__advantage {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: var(--margin_top_mobile, 0);
+  margin-bottom: var(--margin_bottom_mobile, 0);
+  font-family: $font-walsheim-regular;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    margin-top: var(--margin_top_desktop, 0);
+    margin-bottom: var(--margin_bottom_desktop, 0);
+    justify-content: left;
+  }
+}
+
+.product__advantage-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 21px;
+  background-color: $color-white;
+  color: $color-secondary;
+  padding: 14px 11px 14px 12px;
+}
+
+.product__advantage-text {
+  text-transform: uppercase;
+}
