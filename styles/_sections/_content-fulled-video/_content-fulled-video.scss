@@ -361,13 +361,12 @@
             height: 133px;
 
             @include breakpoint(ultra-small) {
-                margin-left: 30px;
                 padding-right: 30px;
             }
 
             @include breakpoint(large) {
                 margin-left: 70px;
-                padding-right: 30px;
+                padding-right: 0;
             }
 
             &::-webkit-scrollbar {
@@ -387,6 +386,16 @@
             letter-spacing: 0;
             height: 100%;
             max-height: 135px;
+
+            &:first-child {
+                @include breakpoint(ultra-small) {
+                    margin-left: 30px;
+                }
+    
+                @include breakpoint(large) {
+                    margin-left: 0;
+                }
+            }
         }
 
         &__block-image-wrap {
