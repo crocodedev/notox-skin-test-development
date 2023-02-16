@@ -1,14 +1,14 @@
 {%- liquid
-    assign above_title = section.settings.above_title
-    assign title = section.settings.title
+    assign above_title          = section.settings.above_title
+    assign title                = section.settings.title
     assign cover_image 			= section.settings.cover_image
 	assign video_url 			= section.settings.video_url
     assign video_alt_text 		= section.settings.video_alt_text
     assign bottom_title_icon    = section.settings.bottom_title_icon
     assign bottom_title         = section.settings.bottom_title
-    assign selected_product         = section.settings.selected_product
-    assign block_prefix_text = section.settings.block_prefix_text
-    assign is_box_variant_id = blank
+    assign selected_product     = section.settings.selected_product
+    assign block_prefix_text    = section.settings.block_prefix_text
+    assign is_box_variant_id    = blank
 -%}
 
 {%- capture variables -%}
@@ -36,14 +36,14 @@
                     <li class="content-fulled-video-bottom__block">
                         {%- if variant_image != blank -%}
                             <picture class="content-fulled-video-bottom__block-image-wrap">
-                                <source media="(max-width: 400px)" srcset="{{- variant_image | img_url: '400x' }} 1x, {{ variant_image | img_url: '800x' }} 2x" />
+                                <source media="(max-width: 480px)" srcset="{{- variant_image | img_url: '60x' }} 1x, {{ variant_image | img_url: '120x' }} 2x" />
 
                                 <img
                                     alt="{{- variant_image.alt -}}"
                                     class="content-fulled-video-bottom__block-image"
                                     loading="lazy"
-                                    src="{{- variant_image | img_url: '1900x' -}}"
-                                    srcset="{{- variant_image | img_url: '1900x' }} 1x, {{ variant_image | img_url: '3800x' }} 2x"
+                                    src="{{- variant_image | img_url: '60x' -}}"
+                                    srcset="{{- variant_image | img_url: '60x' }} 1x, {{ variant_image | img_url: '120x' }} 2x"
                                 />
                             </picture>
                         {%- endif -%}
@@ -158,8 +158,8 @@
                                 alt="{{- cover_image.alt -}}"
                                 class="content-fulled-video__poster-image"
                                 loading="lazy"
-                                src="{{- cover_image | img_url: '1900x' -}}"
-                                srcset="{{- cover_image | img_url: '1900x' }} 1x, {{ cover_image | img_url: '3800x' }} 2x"
+                                src="{{- cover_image | img_url: '630x' -}}"
+                                srcset="{{- cover_image | img_url: '630x' }} 1x, {{ cover_image | img_url: '1260x' }} 2x"
                             />
                         </picture>
                     {%- else -%}
@@ -212,7 +212,7 @@
 
 {% schema %}
     {
-        "name": "Content fulled video",
+        "name": "t:sections.content-fulled-video.name",
         "settings": [
             {
                 "type": "range",
@@ -255,19 +255,27 @@
                 "default": 50
             },
             {
+                "type": "header",
+                "content": "t:sections.content-fulled-video.settings.headers.headings_settings.content"
+            },
+            {
                 "type": "text",
                 "id": "above_title",
-                "label": "Above heading"
+                "label": "t:sections.content-fulled-video.settings.above_title.label"
             },
             {
                 "type": "text",
                 "id": "title",
-                "label": "Heading"
+                "label": "t:sections.content-fulled-video.settings.title.label"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.content-fulled-video.settings.headers.video_settings.content"
             },
             {
 				"type": "image_picker",
 				"id": "cover_image",
-				"label": "Cover image"
+				"label": "t:sections.content-fulled-video.settings.cover_image.label"
 			},
 			{
 				"type": "video_url",
@@ -276,63 +284,67 @@
 					"youtube",
 					"vimeo"
 				],
-				"label": "URL",
-				"info": "Video plays in the page."
+				"label": "t:sections.content-fulled-video.settings.video_url.label",
+				"info": "t:sections.content-fulled-video.settings.video_url.info"
 			},
 			{
 				"type": "text",
 				"id": "video_alt_text",
-				"label": "Video alt text",
-				"info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video-block)"
+				"label": "t:sections.content-fulled-video.settings.video_alt_text.label",
+				"info": "t:sections.content-fulled-video.settings.video_alt_text.info"
 			},
+            {
+                "type": "header",
+                "content": "t:sections.content-fulled-video.settings.headers.bottom_blocks_settings.content"
+            },
             {
                 "type": "html",
                 "id": "bottom_title_icon",
-                "label": "SVG icon",
-                "info": "Prepended before heading",
+                "label": "t:sections.content-fulled-video.settings.bottom_title_icon.label",
+                "info": "t:sections.content-fulled-video.settings.bottom_title_icon.info",
                 "default": "<svg xmlns='http://www.w3.org/2000/svg' width='21' height='43' viewBox='0 0 21 43'> <text id='_' data-name='' transform='translate(0 35)' fill='#38393e' font-size='32' font-family='SegoeUI, Segoe UI' letter-spacing='0.1em'><tspan x='0' y='0'></tspan></text></svg>"
             },
             {
                 "type": "text",
                 "id": "bottom_title",
-                "label": "Heading",
+                "label": "t:sections.content-fulled-video.settings.bottom_title.label",
                 "default": "What's in the box"
             },
             {
                 "type": "product",
                 "id": "selected_product",
-                "label": "Product"
+                "label": "t:sections.content-fulled-video.settings.selected_product.label"
             },
             {
                 "type": "text",
                 "id": "block_prefix_text",
-                "label": "Prefix text",
-                "info": "Applied for all blocks",
+                "label": "t:sections.content-fulled-video.settings.block_prefix_text.label",
+                "info": "t:sections.content-fulled-video.settings.block_prefix_text.info",
                 "default": "1pic"
             }
         ],
         "blocks": [
             {
                 "type": "tab",
-                "name": "Tab",
+                "name": "t:sections.content-fulled-video.blocks.tab.name",
                 "limit": 10,
                 "settings": [
                     {
                         "type": "text",
                         "id": "tab_title",
-                        "label": "Tab heading",
+                        "label": "t:sections.content-fulled-video.blocks.tab.settings.tab_title.label",
                         "default": "Tab heading"
                     },
                     {
                         "type": "text",
                         "id": "tab_content_title",
-                        "label": "Heading",
+                        "label": "t:sections.content-fulled-video.blocks.tab.settings.tab_content_title.label",
                         "default": "Content heading"
                     },
                     {
                         "type": "richtext",
                         "id": "tab_content_description",
-                        "label": "Text",
+                        "label": "t:sections.content-fulled-video.blocks.tab.settings.tab_content_description.label",
                         "default": "<p>Content description text</p>"
                     }
                 ]
@@ -340,7 +352,7 @@
         ],
         "presets": [
             {
-                "name": "Content fulled video",
+                "name": "t:sections.content-fulled-video.presets.name",
                 "settings": {
                     "above_title": "Above heading",
                     "title": "Heading"
