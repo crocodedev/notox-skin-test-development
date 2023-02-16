@@ -3522,10 +3522,58 @@
             },
             "tab_content_description": {
               "label": "Description"
-			}
-		  }
-		}
-	  }
-	}
+			      }
+		      }
+		    }
+	    }
+	  },
+    "before-after-slider": {
+      "name": "Before and afters slider",
+      "settings": {
+        "headers": {
+          "section_text": {
+            "content": "Section text"
+          },
+          "slide_text": {
+            "content": "Slide heading text",
+            "info": "Applied for all slides"
+          }
+        },
+        "above_title": {
+          "label": "Above heading"
+        },
+        "title": {
+          "label": "Heading"
+        },
+        "subtitle": { 
+          "label": "Subheading"
+        },
+        "slide_left_side_heading": {
+          "label": "Slide left side heading"
+        },
+        "slide_right_side_heading": {
+          "label": "Slide right side heading"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "left_side_image": {
+              "label": "Left side image"
+            },
+            "right_side_image": {
+              "label": "Right side image"
+            },
+            "bottom_text": {
+              "label": "Bottom text"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Before and afters slider"
+      }
+    }
   }
 }

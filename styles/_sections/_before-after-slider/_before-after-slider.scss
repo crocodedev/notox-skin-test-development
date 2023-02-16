@@ -1,0 +1,239 @@
+.before-after-slider {
+    position: relative;
+    font-family: $font-walsheim-regular;
+    color: $color-primary;
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-tertiary;
+        opacity: 0.1;
+    }
+    
+    @include breakpoint(ultra-small) {
+        padding-top: var(--padding_top_mobile, 58px);
+        padding-bottom: var(--padding_bottom_mobile, 50);
+    }
+
+    @include breakpoint(medium) {
+        padding-top: var(--padding_top_desktop, 118px);
+        padding-bottom: var(--padding_bottom_desktop, 110px);
+        text-align: center;
+    }
+
+    &__header {
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__above-title {
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-secondary;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-primary;
+
+        @include breakpoint(ultra-small) {
+            font-size: 32px;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 42px;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        margin-top: 34px;
+        font-size: 16px;
+
+        @include breakpoint(medium) {
+            max-width: 580px;
+        }
+    }
+
+    &__slides {
+        position: relative;
+        max-width: 1510px;
+        overflow: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint(ultra-small) {
+            margin-top: 35px;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 45px;
+        }
+    }
+
+    &__slide.swiper-slide {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        border-radius: 10px;
+        transition-property: color;
+        transition-duration: 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 30px;
+        text-align: center;
+        margin-right: 30px;
+
+        @include breakpoint(ultra-small) {
+            width: 100%;
+            min-height: 376px;
+            color: $color-white;
+        }
+
+        @include breakpoint(large) {
+            width: 49%;
+            color: $color-tertiary;
+
+            &::before {
+                opacity: 0.1;
+            }
+        }
+
+        @include breakpoint(extra-large) {
+            width: 31.973%;
+        }
+
+        @include breakpoint(1536px) {
+            min-height: 453px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-tertiary;
+            z-index: -1;
+            transition-property: opacity;
+            transition-duration: 0.3s;
+            border-radius: 10px;
+        }
+    }
+
+    &__slide--active.swiper-slide {
+        color: $color-white;
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &__slide-column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 100%;
+    }
+
+    &__slide-top {
+        display: flex;
+        width: 100%;
+
+        @include breakpoint(ultra-small) {
+            column-gap: 20px;
+        }
+
+        @include breakpoint(1536px) {
+            column-gap: 30px;
+        }
+    }
+
+    &__slide-image {
+        position: relative;
+
+        @include breakpoint(ultra-small) {
+            min-width: 150px;
+            padding-top: 165.93%;
+        }
+
+        @include breakpoint(1536px) {
+            min-width: 190px;
+            padding-top: 149.48%;
+        }
+
+        img, 
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    &__slide-bottom {
+        @include breakpoint(ultra-small) {
+            margin-top: 20px;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 30px;
+        }
+    }
+
+    &__pagination {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(ultra-small) {
+            margin-top: 23px;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 64px;
+        }
+    }
+
+    &__pagination-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding: 10px;
+
+        &-fill {
+            width: 10px;
+            height: 10px;
+            border: 1px solid $color-secondary;
+            border-radius: 50%;
+            background-color: $color-white;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+        }
+
+        &--active & {
+            &-fill {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
