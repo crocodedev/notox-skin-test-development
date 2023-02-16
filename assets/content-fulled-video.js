@@ -13,7 +13,8 @@ class ContentFulledVideo {
         
         this.classes = {
             activeTab: "content-fulled-video__tabs-label--active",
-            hidden: "hidden"
+            hidden: "hidden",
+            videoWrapper: "content-fulled-video__image-wrap"
         }
 
         this.container = container;
@@ -72,9 +73,18 @@ class ContentFulledVideo {
 				template.content.firstElementChild.cloneNode(true)
 			);
 
+            
+
 			if (content.querySelector(this.selectors.videoContent)) {
 				const video = content.querySelector(this.selectors.videoContent);
-				videoContainer.appendChild(video);
+                const videoWrapper = document.createElement("div");
+                videoWrapper.appendChild(video);
+
+                if (!videoWrapper.classList.contains(this.classes.videoWrapper)) {
+                    videoWrapper.classList.add(this.classes.videoWrapper);
+                }
+
+				videoContainer.appendChild(videoWrapper);
 
 				if (!buttonPlay.classList.contains(this.classes.hidden)) {
 					buttonPlay.classList.add(this.classes.hidden);
