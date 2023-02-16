@@ -99,33 +99,37 @@
             {%- assign tab_labels = tab_labels | append: tab_item_label -%}
         {%- endif -%}
     {%- endfor -%}
+
+    <div class="content-fulled-video__tabs">
+        <div class="content-fulled-video__tabs-headings">
+            {{- tab_labels -}}
+        </div>
+        
+        {{- tab_radios -}}
+    </div>
 {%- endcapture -%}
 
 <section class="content-fulled-video" data-section-id="{{- section.id -}}" data-section-type="content-fulled-video" style="{{- variables -}}" data-is-box-variant-id="{{- is_box_variant_id -}}">
     <div class="content-fulled-video__container">
-        <div class="content-fulled-video__header">
-            {%- if above_title != blank -%}
-                <h4 class="content-fulled-video__above-title">
-                    {{- above_title -}}
-                </h4>
-            {%- endif -%}
-        
-            {%- if title != blank -%}
-                <h3 class="content-fulled-video__title">
-                    {{- title -}}
-                </h3>
-            {%- endif -%}
-        </div>
+        {%- if above_title != blank or title != blank -%}
+            <div class="content-fulled-video__header">
+                {%- if above_title != blank -%}
+                    <h4 class="content-fulled-video__above-title">
+                        {{- above_title -}}
+                    </h4>
+                {%- endif -%}
+            
+                {%- if title != blank -%}
+                    <h3 class="content-fulled-video__title">
+                        {{- title -}}
+                    </h3>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
 
         <div class="content-fulled-video__body">
-
-            <div class="content-fulled-video__tabs">
-                <div class="content-fulled-video__tabs-headings">
-                    {{- tab_labels -}}
-                </div>
-                
-                {{- tab_radios -}}
-            </div>
+            
+            {{- tabs -}}
 
             <div class="content-fulled-video__video-wrapper js-content-fulled-video-container">
                 <noscript>
