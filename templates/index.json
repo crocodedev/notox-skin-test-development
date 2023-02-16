@@ -369,11 +369,11 @@
       "type": "newsletter-2",
       "settings": {
         "padding_top_desktop": 120,
-        "padding_bottom_desktop": 118,
-        "padding_top_mobile": 100,
+        "padding_bottom_desktop": 110,
+        "padding_top_mobile": 90,
         "padding_bottom_mobile": 94,
-        "margin_top_desktop": 42,
-        "margin_bottom_desktop": 138,
+        "margin_top_desktop": 60,
+        "margin_bottom_desktop": 68,
         "image": "shopify:\/\/shop_images\/DSC7753.png",
         "image_mobile": "shopify:\/\/shop_images\/DSC7753_e6716486-6e61-4a52-8f6c-885917488050.png",
         "show_circles": true,
@@ -420,7 +420,7 @@
       "settings": {
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 70,
         "padding_bottom_mobile": 0,
         "title": "On instagram",
         "login": "notoxskin"
