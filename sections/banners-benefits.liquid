@@ -1,0 +1,155 @@
+{%- liquid
+    assign banner_image = section.settings.svg | default: section.settings.image | default: blank
+    assign title = section.settings.title
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 116 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 24 -}}px;
+{%- endcapture -%}
+
+{%- capture blocks_container -%}
+    <div class="banner-benefits__block-list">
+        {%- for block in section.blocks -%}
+            {%- liquid
+                assign image = block.settings.svg | default: block.settings.image | default: blank
+                assign text_line1 = block.settings.text_line1
+                assign text_line2 = block.settings.text_line2
+            -%}
+
+            <div class="banner-benefits__block">
+                {%- if image != blank and image.media_type -%}
+                    <picture class="banner-benefits__block-img">
+                        <source media="(max-width: 480px)" srcset="{{- image | img_url: '32x' }} 1x, {{ image | img_url: '64x' }} 2x"/>
+                        <img
+                                alt="{{- image.alt -}}"
+                                class="image"
+                                src="{{- image | img_url: '48x' -}}"
+                                srcset="{{ image | img_url: '48x' }} 1x, {{ image | img_url: '48x' }} 2x"
+                        />
+                    </picture>
+                {%- elsif image != blank -%}
+                    <div class="banner-benefits__block-svg">
+                        {{- image -}}
+                    </div>
+                {%- else -%}
+                    <div class="banner-benefits__block-svg">
+                        {{- "image" | placeholder_svg_tag: 'placeholder-svg' -}}
+                    </div>
+                {%- endif -%}
+
+                {%- if text_line1 != blank or text_line2 != blank -%}
+                    <div class="banner-benefits__block-text">
+                        {%- if text_line1 != blank -%}
+                            <span class="banner-benefits__block-line">{{- text_line1 -}}</span>
+                        {%- endif %}
+                        {%- if text_line2 != blank -%}
+                            <span class="banner-benefits__block-line">{{- text_line2 -}}</span>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+            </div>
+        {%- endfor -%}
+    </div>
+{%- endcapture -%}
+
+<div class="banner-benefits" data-section-id="{{- section-id -}}" data-section-type="banner-benefits" style="{{- variables -}}">
+    {%- if banner_image != blank and banner_image.media_type -%}
+        <picture class="banner-benefits__img">
+            <source media="(max-width: 480px)" srcset="{{- banner_image | img_url: '140x' }} 1x, {{ banner_image | img_url: '280x' }} 2x">
+            <img
+                    alt="{{- banner_image.alt | escape -}}"
+                    src="{{- banner_image | img_url: '170x' -}}"
+                    srcset="{{- banner_image | img_url: '170x' }} 1x, {{ banner_image | img_url: '340x' }} 2x"
+            />
+        </picture>
+    {%- elsif banner_image != blank -%}
+        <div class="banner-benefits__svg">
+            {{- banner_image -}}
+        </div>
+    {%- endif -%}
+
+    <div class="banner-benefits__container">
+
+        {%- if title != blank -%}
+            <h3 class="banner-benefits__title">{{- title -}}</h3>
+        {%- endif -%}
+
+        {{- blocks_container -}}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.banners-benefits.name",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 4,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 116
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 4,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 24
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.banners-benefits.settings.image.label"
+        },
+        {
+            "type": "textarea",
+            "id": "svg",
+            "label": "t:sections.banners-benefits.settings.svg.label"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.banners-benefits.settings.title.label"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "banner",
+            "name": "t:sections.banners-benefits.blocks.heading.name",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:sections.banners-benefits.blocks.banner.settings.image.label"
+                },
+                {
+                    "type": "textarea",
+                    "id": "svg",
+                    "label": "t:sections.banners-benefits.blocks.banner.settings.svg.label"
+                },
+                {
+                    "type": "text",
+                    "id": "text_line1",
+                    "label": "t:sections.banners-benefits.blocks.banner.settings.text_line1.label"
+                },
+                {
+                    "type": "text",
+                    "id": "text_line2",
+                    "label": "t:sections.banners-benefits.blocks.banner.settings.text_line2.label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.banners-benefits.presets.name"
+        }
+    ]
+}
+{% endschema %}

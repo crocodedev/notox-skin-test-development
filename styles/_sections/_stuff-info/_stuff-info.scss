@@ -1,0 +1,119 @@
+.stuff-info {
+  padding-top: var(--padding_top_mobile, 57px);
+  padding-bottom: var(--padding_bottom_mobile, 0);
+  font-family: $font-walsheim-regular;
+  color: $color-primary;
+  text-align: center;
+
+  .stuff-info__header {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  .stuff-info__above-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-secondary;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .stuff-info__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    @include breakpoint(medium) {
+      font-size: 42px;
+    }
+  }
+
+  .stuff-info__subtitle {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    color: $color-primary;
+
+    @include breakpoint(medium) {
+      margin-top: 31px;
+    }
+  }
+
+  .stuff-info__block-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1290px;
+    margin: 20px auto 0;
+    row-gap: 51px;
+
+    @include breakpoint(medium) {
+      margin: 40px auto 0;
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+  }
+
+  .stuff-info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 210px;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      max-width: 234px;
+    }
+  }
+
+  .stuff-info__block-img,
+  .stuff-info__block-svg {
+    max-width: 72px;
+    max-height: 72px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .image,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .placeholder-svg {
+      width: 170px;
+      height: 170px;
+      transform: translateY(-29%) translateX(-29%);
+    }
+  }
+
+  .stuff-info__block-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .stuff-info__block-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .stuff-info__block-content {
+    font-size: 16px;
+  }
+
+  @include breakpoint(medium) {
+    padding-top: var(--padding_top_desktop, 118px);
+    padding-bottom: var(--padding_bottom_desktop, 120px);
+  }
+}

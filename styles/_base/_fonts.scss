@@ -34,3 +34,28 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('Nexa Regular.otf');
+  src: local('Nexa Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('Nexa Bold.eot');
+  src: local('Nexa Bold');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('Nexa Light.eot');
+  src: local('Nexa Light');
+  font-weight: 500;
+  font-style: normal;
+}
