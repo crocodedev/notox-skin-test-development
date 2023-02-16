@@ -1,0 +1,181 @@
+{% assign block_review = section.blocks | where: 'type', '@app' | first %}
+
+{% unless block_review == blank %}
+    <script src="{{ 'section-reviews.js' | asset_url }}" defer="defer"></script>
+
+    {%- liquid
+        assign button_text = section.settings.button_text
+        assign button_link = section.settings.button_link
+        assign button_blank = section.settings.button_blank
+    -%}
+
+    {%- capture variables -%}
+        --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 100 -}}px;
+        --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 94 -}}px;
+        --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 54 -}}px;
+        --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 42 -}}px;
+    {%- endcapture -%}
+
+    <div class="reviews" data-section-id="{{- section-id -}}" data-section-type="reviews" style="{{- variables -}}">
+        <div class="reviews__js-container">
+            {%- render block_review -%}
+        </div>
+
+        <div class="reviews__item hidden js-review-element-template">
+            <div class="reviews__item-container">
+                <div class="reviews__item-header">
+                    <div class="reviews__item-column">
+                        <div class="reviews__rating">
+                            <div class="reviews__star-list">
+                                {%- for star in (1..5) -%}
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19.2" class="reviews__star js-review-element-star">
+                                        <path d="M9.146,1.4a1,1,0,0,1,1.708,0L13.285,5.4a1,1,0,0,0,.618.452l4.528,1.1a1,1,0,0,1,.528,1.617l-3.03,3.59a1,1,0,0,0-.233.722l.361,4.693a1,1,0,0,1-1.382,1l-4.289-1.788a1,1,0,0,0-.769,0L5.327,18.572a1,1,0,0,1-1.382-1l.361-4.693a1,1,0,0,0-.233-.722l-3.03-3.59A1,1,0,0,1,1.57,6.952L6.1,5.849A1,1,0,0,0,6.715,5.4Z" stroke="#ff7950" fill="currentColor"/>
+                                    </svg>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                        <div class="reviews__line"></div>
+                        <div class="reviews__author">
+                            <span class="reviews__author-name js-review-element-author"></span>
+                            <span class="reviews__author-recommend js-review-element-recommend">❤️ I recommend this product</span>
+                        </div>
+                    </div>
+                    <div class="reviews__item-column reviews__item-date-container">
+                        <div class="reviews__item-date js-review-element-date"></div>
+                    </div>
+                </div>
+                <div class="reviews__item-content js-review-element-content"></div>
+            </div>
+        </div>
+
+        <div class="reviews__info-container js-container">
+            <span class="reviews__count js-rating-float">0.0</span>
+
+            <div class="reviews__rating">
+                <div class="reviews__star-list">
+                    {%- for star in (1..5) -%}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19.2" class="reviews__star js-rating-star">
+                            <path d="M9.146,1.4a1,1,0,0,1,1.708,0L13.285,5.4a1,1,0,0,0,.618.452l4.528,1.1a1,1,0,0,1,.528,1.617l-3.03,3.59a1,1,0,0,0-.233.722l.361,4.693a1,1,0,0,1-1.382,1l-4.289-1.788a1,1,0,0,0-.769,0L5.327,18.572a1,1,0,0,1-1.382-1l.361-4.693a1,1,0,0,0-.233-.722l-3.03-3.59A1,1,0,0,1,1.57,6.952L6.1,5.849A1,1,0,0,0,6.715,5.4Z" stroke="#ff7950" fill="currentColor"/>
+                        </svg>
+                    {%- endfor -%}
+                </div>
+                <span class="reviews__rating-text js-rating-text">0 {{ 'sections.reviews.rating_text' | t -}}</span>
+            </div>
+
+            <div class="reviews__rating-details js-rating-elements">
+                {%- for star in (1..5) reversed -%}
+                    <div class="reviews__rating-element js-rating-element" data-star="{{- star -}}">
+                        <div class="reviews__rating-text">{{ star }} {{ 'sections.reviews.star_text' | t -}}</div>
+                        <div class="reviews__rating-range">
+                            <div class="reviews__rating-range-bg"></div>
+                            <div class="reviews__rating-range-view"></div>
+                        </div>
+                        <div class="reviews__rating-text js-rating-element-text">0%</div>
+                    </div>
+                {%- endfor -%}
+            </div>
+
+            <div class="reviews__buttons">
+                <a href="#" class="reviews__button reviews__button--primary js-button-review-form">{{ 'sections.reviews.button_form_review' | t }}</a>
+
+                <div class="review__form js-review-form hidden">
+
+                </div>
+
+                {%- if button_text != blank and button_link != blank -%}
+                    <a href="{{- button_link -}}" {% if button_blank == true %} target="_blank" {% endif %} class="reviews__button reviews__button--secondary">{{- button_text -}}</a>
+                {%- endif -%}
+            </div>
+        </div>
+        <div class="reviews__list js-review-list">
+            <div class="reviews__item js-review-no-element">
+                <div class="reviews__item-container">
+                    <div class="reviews__item-content js-review-element-content">
+                        {{ 'sections.reviews.no_review_text' | t }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endunless %}
+
+{% schema %}
+{
+    "name": "t:sections.reviews.name",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 94
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:global.padding-top-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 54
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:global.padding-bottom-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 42
+        },
+        {
+            "type": "header",
+            "content": "t:sections.reviews.settings.button.header"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "t:sections.reviews.settings.button.button_text.label",
+            "default": "Ask a quetion"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.reviews.settings.button.button_link.label",
+            "default": "/"
+        },
+        {
+            "type": "checkbox",
+            "id": "button_blank",
+            "label": "t:sections.reviews.settings.button.button_blank.label",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "@app"
+        }
+    ],
+    "templates": ["product"],
+    "presets": [
+        {
+            "name": "t:sections.reviews.presets.name"
+        }
+    ]
+}
+{% endschema %}

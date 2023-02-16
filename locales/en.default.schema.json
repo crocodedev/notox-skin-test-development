@@ -3243,6 +3243,290 @@
         "name": "Collapsible content"
       }
     },
+    "banners-benefits": {
+      "name": "Banners benefits",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "svg": {
+          "label": "Svg icon"
+        },
+        "title": {
+          "label": "Title"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "text_line1": {
+              "label": "Text (line 1)"
+            },
+            "text_line2": {
+              "label": "Text (line 2)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Banners benefits"
+      }
+    },
+    "stuff-info": {
+      "name": "Stuff info",
+      "settings": {
+        "above_title": {
+          "label": "Above title"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Stuff info"
+      }
+    },
+    "positive-result": {
+      "name": "Positive result",
+      "settings": {
+        "above_title": {
+          "label": "Above title"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "image": {
+          "label": "Image"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Banner"
+        },
+        "banner": {
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "svg": {
+              "label": "Svg icon"
+            },
+            "title": {
+              "label": "Title"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Positive result"
+      }
+    },
+    "newsletter-2": {
+      "name": "Newsletter",
+      "settings": {
+        "margin_top_desktop": {
+          "label": "Margin top"
+        },
+        "margin_bottom_desktop": {
+          "label": "Margin bottom"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "image_mobile": {
+          "label": "Image (mobile)"
+        },
+        "show_circles": {
+          "label": "Show circles"
+        },
+        "color": {
+          "label": "Color",
+          "info": "For no color at all, set it to #000000."
+        },
+        "title": {
+          "label": "Title"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "form": {
+          "header": "Form settings",
+          "placeholder": {
+            "label": "Placeholder"
+          },
+          "button_text": {
+            "label": "Button text"
+          }
+        }
+      },
+      "presets": {
+        "name": "Newsletter (new)"
+      }
+    },
+    "instagram": {
+      "name": "Instagram",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "login": {
+          "label": "Login"
+        }
+      },
+      "blocks": {
+        "banner_one": {
+          "heading": {
+            "name": "Photo"
+          },
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
+        "banner_group": {
+          "heading": {
+            "name": "Photo group"
+          },
+          "settings": {
+            "image_1": {
+              "label": "Image (1)"
+            },
+            "image_2": {
+              "label": "Image (2)"
+            },
+            "image_3": {
+              "label": "Image (3)"
+            },
+            "image_4": {
+              "label": "Image (4)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Instagram"
+      }
+    },
+    "reviews": {
+      "name": "Reviews",
+      "settings": {
+        "button": {
+          "header": "Button link",
+          "button_text": {
+            "label": "Button text"
+          },
+          "button_link": {
+            "label": "Button link"
+          },
+          "button_blank": {
+            "label": "Open page in new tab"
+          }
+        }
+      },
+      "presets": {
+        "name": "Reviews"
+      }
+    },
+    "content-fulled-video": {
+      "name": "Content fulled video",
+      "settings": {
+        "headers": {
+          "headings_settings": {
+            "content": "Section headings settings"
+          },
+          "video_settings": {
+            "content": "Video settings"
+          },
+          "bottom_blocks_settings": {
+            "content": "Bottom blocks settings"
+          }
+        },
+        "above_title": {
+          "label": "Above heading"
+        },
+        "title": {
+          "label": "Heading"
+        },
+        "cover_image": {
+          "label": "Cover image"
+        },
+        "video_url": {
+          "label": "URL",
+				  "info": "Video plays in the page."
+        },
+        "video_alt_text": {
+          "label": "Video alt text",
+				  "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video-block)"
+        },
+        "bottom_title_icon": {
+          "label": "SVG icon",
+          "info": "Prepended before heading"
+        },
+        "bottom_title": {
+          "label": "Heading"
+        },
+        "selected_product": {
+          "label": "Product"
+        },
+        "block_prefix_text": {
+          "label": "Prefix text",
+          "info": "Prepended before all block headings"
+        }
+      },
+      "blocks": {
+        "tab": {
+          "name": "Tab",
+          "settings": {
+            "tab_title": {
+              "label": "Tab heading"
+            },
+            "tab_content_title": {
+              "label": "Heading"
+            },
+            "tab_content_description": {
+              "label": "Description"
+			      }
+		      }
+		    }
+	    }
+	  },
     "before-after-slider": {
       "name": "Before and afters slider",
       "settings": {

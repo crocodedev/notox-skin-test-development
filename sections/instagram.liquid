@@ -1,0 +1,220 @@
+{%- liquid
+    assign title = section.settings.title
+    assign login = section.settings.login | default: blank
+
+    if login contains '@'
+        assign login = login | replace: '@', ''
+    endif
+-%}
+{%- capture variables -%}
+    --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 0 -}}px;
+    --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 0 -}}px;
+    --padding_top_mobile: {{- section.settings.padding_top_mobile | default: 0 -}}px;
+    --padding_bottom_mobile: {{- section.settings.padding_bottom_mobile | default: 0 -}}px;
+    --flex-count: {{- section.blocks.size -}};
+{%- endcapture -%}
+
+{%- capture blocks_container -%}
+    <div class="instagram__photo-list">
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'banner_group' -%}
+                    {%- liquid
+                        assign image_1 = block.settings.image_1
+                        assign image_2 = block.settings.image_2
+                        assign image_3 = block.settings.image_3
+                        assign image_4 = block.settings.image_4
+                    -%}
+                    <div class="instagram__photo-group">
+                        {% if image_1 != blank %}
+                            <picture class="instagram__photo-image">
+                                <source media="(max-width: 768px)"
+                                        srcset="{{- image_1 | img_url: '178x' }} 1x, {{ image_1 | img_url: '356x' }} 2x"/>
+                                <img
+                                        alt="{{- image_1.alt -}}"
+                                        class="image"
+                                        src="{{- image_1 | img_url: '224x' -}}"
+                                        srcset="{{ image_1 | img_url: '224x' }} 1x, {{ image_1 | img_url: '448x' }} 2x"
+                                />
+                            </picture>
+                        {% endif %}
+                        {% if image_2 != blank %}
+                            <picture class="instagram__photo-image">
+                                <source media="(max-width: 768px)"
+                                        srcset="{{- image_2 | img_url: '178x' }} 1x, {{ image_2 | img_url: '356x' }} 2x"/>
+                                <img
+                                        alt="{{- image_2.alt -}}"
+                                        class="image"
+                                        src="{{- image_2 | img_url: '224x' -}}"
+                                        srcset="{{ image_2 | img_url: '224x' }} 1x, {{ image_2 | img_url: '448x' }} 2x"
+                                />
+                            </picture>
+                        {% endif %}
+                        {% if image_3 != blank %}
+                            <picture class="instagram__photo-image">
+                                <source media="(max-width: 768px)"
+                                        srcset="{{- image_3 | img_url: '178x' }} 1x, {{ 31 | img_url: '356x' }} 2x"/>
+                                <img
+                                        alt="{{- image_3.alt -}}"
+                                        class="image"
+                                        src="{{- image_3 | img_url: '224x' -}}"
+                                        srcset="{{ image_3 | img_url: '224x' }} 1x, {{ image_3 | img_url: '448x' }} 2x"
+                                />
+                            </picture>
+                        {% endif %}
+                        {% if image_4 != blank %}
+                            <picture class="instagram__photo-image">
+                                <source media="(max-width: 768px)"
+                                        srcset="{{- image_4 | img_url: '178x' }} 1x, {{ image_4 | img_url: '356x' }} 2x"/>
+                                <img
+                                        alt="{{- image_4.alt -}}"
+                                        class="image"
+                                        src="{{- image_4 | img_url: '224x' -}}"
+                                        srcset="{{ image_4 | img_url: '224x' }} 1x, {{ image_4 | img_url: '448x' }} 2x"
+                                />
+                            </picture>
+                        {% endif %}
+                    </div>
+                {%- when 'banner_one' -%}
+                    {%- liquid
+                        assign image = block.settings.image
+                    -%}
+                    {% if image != blank %}
+                        <div class="instagram__photo-big">
+                            <picture class="instagram__photo-image">
+                                <source media="(max-width: 768px)"
+                                        srcset="{{- image | img_url: '380x' }} 1x, {{ image | img_url: '760x' }} 2x"/>
+                                <img
+                                        alt="{{- image.alt -}}"
+                                        class="image"
+                                        src="{{- image | img_url: '478x' -}}"
+                                        srcset="{{ image | img_url: '478x' }} 1x, {{ image | img_url: '956x' }} 2x"
+                                />
+                            </picture>
+                        </div>
+                    {% endif %}
+            {%- endcase -%}
+
+        {%- endfor -%}
+    </div>
+{%- endcapture -%}
+
+<div class="instagram" data-section-id="{{- section-id -}}" data-section-type="instagram" style="{{- variables -}}">
+
+    <div class="instagram__container">
+        {%- if title != blank or login != blank -%}
+            <h3 class="instagram__title">
+                {%- if title != blank -%}
+                    {{- title }}
+                {% endif %}
+                {% if login != blank %}
+                    <a href="//instagram.com/{{- login -}}" class="instagram__login">@{{- login -}}</a>
+                {%- endif -%}
+            </h3>
+        {%- endif -%}
+
+        {{- blocks_container -}}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.instagram.name",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top_desktop",
+            "label": "t:global.padding-top-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_desktop",
+            "label": "t:global.padding-bottom-desktop",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:global.padding-top-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:global.padding-bottom-mobile",
+            "step": 2,
+            "min": 0,
+            "max": 200,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.instagram.settings.title.label"
+        },
+        {
+            "type": "text",
+            "id": "login",
+            "label": "t:sections.instagram.settings.login.label"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "banner_one",
+            "name": "t:sections.instagram.blocks.banner_one.heading.name",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:sections.instagram.blocks.banner_one.settings.image.label"
+                }
+            ]
+        },
+        {
+            "type": "banner_group",
+            "name": "t:sections.instagram.blocks.banner_group.heading.name",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "t:sections.instagram.blocks.banner_group.settings.image_1.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_2",
+                    "label": "t:sections.instagram.blocks.banner_group.settings.image_2.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_3",
+                    "label": "t:sections.instagram.blocks.banner_group.settings.image_3.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_4",
+                    "label": "t:sections.instagram.blocks.banner_group.settings.image_4.label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.instagram.presets.name"
+        }
+    ]
+}
+{% endschema %}
