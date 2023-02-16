@@ -3463,6 +3463,69 @@
       "presets": {
         "name": "Reviews"
       }
-    }
+    },
+    "content-fulled-video": {
+      "name": "Content fulled video",
+      "settings": {
+        "headers": {
+          "headings_settings": {
+            "content": "Section headings settings"
+          },
+          "video_settings": {
+            "content": "Video settings"
+          },
+          "bottom_blocks_settings": {
+            "content": "Bottom blocks settings"
+          }
+        },
+        "above_title": {
+          "label": "Above heading"
+        },
+        "title": {
+          "label": "Heading"
+        },
+        "cover_image": {
+          "label": "Cover image"
+        },
+        "video_url": {
+          "label": "URL",
+				  "info": "Video plays in the page."
+        },
+        "video_alt_text": {
+          "label": "Video alt text",
+				  "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video-block)"
+        },
+        "bottom_title_icon": {
+          "label": "SVG icon",
+          "info": "Prepended before heading"
+        },
+        "bottom_title": {
+          "label": "Heading"
+        },
+        "selected_product": {
+          "label": "Product"
+        },
+        "block_prefix_text": {
+          "label": "Prefix text",
+          "info": "Prepended before all block headings"
+        }
+      },
+      "blocks": {
+        "tab": {
+          "name": "Tab",
+          "settings": {
+            "tab_title": {
+              "label": "Tab heading"
+            },
+            "tab_content_title": {
+              "label": "Heading"
+            },
+            "tab_content_description": {
+              "label": "Description"
+			}
+		  }
+		}
+	  }
+	}
   }
 }
