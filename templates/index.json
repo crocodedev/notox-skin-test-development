@@ -129,7 +129,7 @@
         "cover_image": "shopify:\/\/shop_images\/DSC09934-2A.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "video_alt_text": "",
-        "bottom_title_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"21\" height=\"43\" viewbox=\"0 0 21 43\"> <text id=\"_\" data-name=\"\" transform=\"translate(0 35)\" fill=\"#38393e\" font-size=\"32\" font-family=\"SegoeUI, Segoe UI\" letter-spacing=\"0.1em\"><tspan x=\"0\" y=\"0\"><\/tspan><\/text><\/svg>",
+        "bottom_title_icon": "▯",
         "bottom_title": "What's in the box",
         "selected_product": "product",
         "block_prefix_text": "1pic"
