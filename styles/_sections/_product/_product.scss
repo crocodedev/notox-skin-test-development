@@ -8,13 +8,12 @@
 
     @include breakpoint(medium) {
       flex-direction: row;
-      gap: 127px;
+      gap: 85px;
     }
   }
 
   .product__media {
     display: flex;
-    width: 100%;
     padding-bottom: 70px;
   }
 
@@ -48,6 +47,12 @@
 
   &.product--container {
 
+    .product__media {
+      @include breakpoint(medium) {
+        width: 50%;
+      }
+    }
+
     .product__media-2-container {
       width: 100%;
     }
@@ -65,9 +70,10 @@
   &.product--container-right {
 
     .product__container {
+      gap: 5px;
 
       @include breakpoint(medium) {
-        gap: calc(127px + 53px);
+        gap: 130px;
       }
     }
 
