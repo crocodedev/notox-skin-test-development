@@ -1,10 +1,19 @@
 {%- liquid
-    assign above_title = section.settings.above_title
-    assign title = section.settings.title
-    assign subtitle = section.settings.subtitle
-    assign slide_left_side_heading = section.settings.slide_left_side_heading
+    assign above_title              = section.settings.above_title
+    assign title                    = section.settings.title
+    assign subtitle                 = section.settings.subtitle
+    assign slide_left_side_heading  = section.settings.slide_left_side_heading
     assign slide_right_side_heading = section.settings.slide_right_side_heading
+    assign enable_autoplay          = section.settings.enable_autoplay
+    assign autoplay_delay           = section.settings.autoplay_delay
 -%}
+
+{%- capture data_autoplay -%}
+    {%- if enable_autoplay == true -%}
+        data-autoplay="{{- enable_autoplay -}}" data-autoplay-delay="{{- autoplay_delay -}}"
+    {%- endif -%}
+{%- endcapture -%}
+
 {%- capture variables -%}
     --padding_top_desktop: {{- section.settings.padding_top_desktop | default: 118 -}}px;
     --padding_bottom_desktop: {{- section.settings.padding_bottom_desktop | default: 110 -}}px;
@@ -83,7 +92,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
 
-<section class="before-after-slider" data-section-id="{{- section-id -}}" data-section-type="before-after-slider" style="{{- variables -}}">
+<section class="before-after-slider" data-section-id="{{- section.id -}}" data-section-type="before-after-slider" style="{{- variables -}}">
     {%- if above_title != blank or title != blank or subtitle != blank -%}
         <div class="before-after-slider__header">
             {%- if above_title != blank -%}
@@ -99,7 +108,7 @@
     {%- endif -%}
     
     {%- if slides != blank -%}
-        <div class="before-after-slider__slides">
+        <div class="before-after-slider__slides" {{ data_autoplay -}}>
             <div class="before-after-slider__slides-container swiper-wrapper">
                 {{- slides -}}
             </div>
@@ -173,6 +182,22 @@
             "type": "textarea",
             "id": "subtitle",
             "label": "t:sections.before-after-slider.settings.subtitle.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_autoplay",
+            "label": "Enable autoplay",
+            "default": true
+        },
+        {
+            "type": "range",
+            "id": "autoplay_delay",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "unit": "s",
+            "label": "Autoplay delay",
+            "default": 3
         },
         {
             "type": "header",
