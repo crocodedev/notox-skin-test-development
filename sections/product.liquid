@@ -95,18 +95,20 @@
                 {%- case block.type -%}
                     {%- when '@app' -%}
                         {% render block %}
+                    {%- when 'rating' -%}
+                        {%- render 'product-rating', block: block -%}
                     {%- when 'text' -%}
                         {%- render 'product-text', block: block -%}
                     {%- when 'title' -%}
-                        {%- render 'product-title', product: product, block: block -%}
+                        {%- render 'product-title', block: block -%}
                     {%- when 'price' -%}
-                        {%- render 'product-price', product: product, block: block -%}
+                        {%- render 'product-price', block: block -%}
                     {%- when 'variant_picker-2' -%}
-                        {%- render 'product-variant-picker-2', product: product, block: block, product_form_id: product_form_id -%}
+                        {%- render 'product-variant-picker-2', block: block, product_form_id: product_form_id -%}
                     {%- when 'quantity_selector' -%}
-                        {%- render 'product-quantity-selector', product: product, block: block, product_form_id: product_form_id, isVariantPicker: isVariantPicker -%}
+                        {%- render 'product-quantity-selector', block: block, product_form_id: product_form_id, isVariantPicker: isVariantPicker -%}
                     {%- when 'advantage' -%}
-                        {%- render 'product-advantage', product: product, block: block -%}
+                        {%- render 'product-advantage', block: block -%}
                 {%- endcase -%}
             {%- endfor -%}
         </div>
@@ -161,6 +163,53 @@
     "blocks": [
         {
             "type": "@app"
+        },
+        {
+            "type": "rating",
+            "name": "t:sections.product.blocks.rating.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "margin_top_desktop",
+                    "label": "t:global.margin-top-desktop",
+                    "step": 1,
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 10
+                },
+                {
+                    "type": "range",
+                    "id": "margin_bottom_desktop",
+                    "label": "t:global.margin-bottom-desktop",
+                    "step": 1,
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 10
+                },
+                {
+                    "type": "range",
+                    "id": "margin_top_mobile",
+                    "label": "t:global.margin-top-mobile",
+                    "step": 1,
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 10
+                },
+                {
+                    "type": "range",
+                    "id": "margin_bottom_mobile",
+                    "label": "t:global.margin-bottom-mobile",
+                    "step": 1,
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 10
+                }
+            ]
         },
         {
             "type": "text",

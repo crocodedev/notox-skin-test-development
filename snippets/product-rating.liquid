@@ -1,0 +1,36 @@
+{%- liquid
+    assign tenth = product.metafields.reviews.rating.value | split: '.' | last | split: '' | first
+    assign value = product.metafields.reviews.rating.value | split: '.' | first | append: '.' | append: tenth
+    assign max = product.metafields.reviews.rating.value.scale_max | round
+    assign value_round = value | round
+-%}
+{%- capture variables -%}
+    {%- if block.settings.margin_top_desktop != 0 -%}
+        --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_desktop != 0 -%}
+        --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_top_mobile != 0 -%}
+        --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_mobile != 0 -%}
+        --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="product__rating" style="{{- variables -}}">
+    <span class="product__rating-count">
+        {{- value -}}/{{- max -}}
+    </span>
+    <div class="product__rating-list">
+        {%- for star in (1..value_round) -%}
+            <svg viewBox="0 0 26 25">
+                <path d="M12.093,1.952a1,1,0,0,1,1.814,0l2.76,5.94a1,1,0,0,0,.781.571l6.459.821A1,1,0,0,1,24.469,11l-4.763,4.516a1,1,0,0,0-.294.912L20.637,22.9a1,1,0,0,1-1.469,1.06L13.486,20.8a1,1,0,0,0-.973,0L6.832,23.961A1,1,0,0,1,5.363,22.9l1.225-6.473a1,1,0,0,0-.294-.912L1.531,11a1,1,0,0,1,.562-1.718l6.459-.821a1,1,0,0,0,.781-.571Z" fill="#38393e"/>
+            </svg>
+        {%- endfor -%}
+    </div>
+    <span class="product__rating-count">
+        {{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}
+    </span>
+</div>

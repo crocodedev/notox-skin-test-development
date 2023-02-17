@@ -38,7 +38,7 @@
     padding-top: var(--padding_top_mobile, 0);
     padding-bottom: var(--padding_bottom_mobile, 0);
     width: 100%;
-    max-width: 576px;
+    max-width: 542px;
 
     @include breakpoint(medium) {
       padding-top: var(--padding_top_desktop, 0);
@@ -93,6 +93,7 @@
 
   @import "product-text";
   @import "product-title";
+  @import "product-rating";
   @import "product-price";
   @import "product-variant-picker-2";
   @import "product-quantity-selector";

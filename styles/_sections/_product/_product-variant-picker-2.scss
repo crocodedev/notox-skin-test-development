@@ -22,16 +22,20 @@
   }
 
   input:checked + label {
-    transition: all 0.3s ease-out;
+    transition: all 0.3s;
     border: 3px solid $color-white;
 
     .product__variant-picker-item-image {
-      transition: all 0.3s ease-out;
+      transition: all 0.3s;
       background: radial-gradient(var(--color-preview, #FEE3EB), var(--color-preview-2, #FEE3EB));
+
+      img {
+        margin-bottom: 3px;
+      }
     }
 
     .product__variant-picker-item-title {
-      transition: all 0.3s ease-out;
+      transition: all 0.3s;
       background-color: $color-white;
       padding-bottom: 10px;
       padding-top: 8px;
@@ -44,11 +48,16 @@
   }
 
   input:not(:checked) + label {
-    background: linear-gradient(0deg, #FEE3EB 0%, #FEE3EB 45%, var(--color-preview, #FEE3EB) 45%, var(--color-preview, #FEE3EB) 100%);
+    background: linear-gradient(0deg, #FEE3EB 0%, #FEE3EB 40%, var(--color-preview, #FEE3EB) 40%, var(--color-preview, #FEE3EB) 100%);
 
     .product__variant-picker-item-title {
       padding-bottom: 14px;
     }
+  }
+
+  @include breakpoint(medium) {
+    padding-left: initial;
+    padding-right: initial;
   }
 }
 
@@ -74,9 +83,11 @@
   max-height: 110px;
 
   img {
+    margin-top: auto;
     filter: drop-shadow(0px 0px 5px #00000080);
-    height: 100%;
+    height: 80%;
     object-fit: contain;
+    transition: all 0.3s;
   }
 }
 
@@ -92,4 +103,11 @@
   max-width: 101px;
   cursor: pointer;
   flex: 0 0 100%;
+}
+
+.product__variant-picker-item--box {
+  .product__variant-picker-item-image img {
+    margin-top: initial;
+    height: 100%;
+  }
 }
