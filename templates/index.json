@@ -121,9 +121,9 @@
       ],
       "settings": {
         "padding_top_desktop": 118,
-        "padding_bottom_desktop": 110,
+        "padding_bottom_desktop": 120,
         "padding_top_mobile": 58,
-        "padding_bottom_mobile": 50,
+        "padding_bottom_mobile": 60,
         "above_title": "Everything you need to know",
         "title": "Serum free trial",
         "cover_image": "shopify:\/\/shop_images\/DSC09934-2A.jpg",
