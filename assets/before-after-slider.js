@@ -18,6 +18,23 @@ class BeforeAfterSlider {
             slidesPerView: "auto",
             spaceBetween: 0,
             slideNextClass: this.classes.activeSlide,
+            initialSlide: 2,
+            on: {
+                init: function(swiper) {
+                    const autoPlayEnable = swiper.el.dataset.autoplay;
+                    console.log(swiper);
+                    if (autoPlayEnable && autoPlayEnable === "true") {
+                      const autoPlayDelay = +swiper.el.dataset.autoplayDelay;
+              
+                      if (autoPlayDelay) {
+                        swiper.params.autoplay.delay = autoPlayDelay * 1000;
+                        swiper.autoplay.start();
+                      } else {
+                        swiper.autoplay.start();
+                      }
+                    }
+                },
+            },
             pagination: {
                 el: this.selectors.paginationElement,
                 bulletClass: "before-after-slider__pagination-item",

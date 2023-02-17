@@ -32,34 +32,40 @@
     }
 
     &__above-title {
+        font-family: $font-walsheim-regular;
         margin-bottom: 16px;
         font-size: 16px;
         font-weight: 700;
         color: $color-secondary;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     &__title {
+        font-family: $font-walsheim-regular;
         font-weight: 700;
         text-transform: uppercase;
         color: $color-primary;
 
         @include breakpoint(ultra-small) {
             font-size: 32px;
+            letter-spacing: 0.2rem;
         }
 
         @include breakpoint(medium) {
             font-size: 42px;
+            letter-spacing: 0.27rem;
         }
     }
 
     &__subtitle {
         display: inline-block;
-        margin-top: 34px;
+        margin-top: 25px;
         font-size: 16px;
+        letter-spacing: 0;
 
         @include breakpoint(medium) {
-            max-width: 580px;
+            max-width: 530px;
         }
     }
 
@@ -73,7 +79,7 @@
         margin-right: auto;
 
         @include breakpoint(ultra-small) {
-            margin-top: 35px;
+            margin-top: 27px;
         }
 
         @include breakpoint(medium) {
@@ -91,7 +97,7 @@
         font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
-        padding: 30px;
+        padding: 41px 30px 20px;
         text-align: center;
         margin-right: 30px;
 
@@ -116,6 +122,7 @@
 
         @include breakpoint(1536px) {
             min-height: 453px;
+            padding: 41px 30px 30px;
         }
 
         &::before {
@@ -146,6 +153,11 @@
         flex-direction: column;
         row-gap: 20px;
         width: 100%;
+        letter-spacing: 0.2rem;
+
+        @include breakpoint(1536px) {
+            row-gap: 15px;
+        }
     }
 
     &__slide-top {
@@ -166,7 +178,7 @@
 
         @include breakpoint(ultra-small) {
             min-width: 150px;
-            padding-top: 165.93%;
+            padding-top: 147.93%;
         }
 
         @include breakpoint(1536px) {
@@ -187,6 +199,8 @@
     }
 
     &__slide-bottom {
+        letter-spacing: 3px;
+
         @include breakpoint(ultra-small) {
             margin-top: 20px;
         }
