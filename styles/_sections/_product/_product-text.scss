@@ -1,0 +1,31 @@
+.product__text {
+  display: block;
+  margin-top: var(--margin_top_mobile, 0);
+  margin-bottom: var(--margin_bottom_mobile, 0);
+  font-family: $font-walsheim-regular;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    margin-top: var(--margin_top_desktop, 0);
+    margin-bottom: var(--margin_bottom_desktop, 0);
+    text-align: left;
+  }
+}
+
+.product__text--capitalize {
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+}
+
+.product__text--uppercase {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include breakpoint(medium) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

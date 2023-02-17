@@ -1,0 +1,37 @@
+.product__price {
+  margin-top: var(--margin_top_mobile, 0);
+  margin-bottom: var(--margin_bottom_mobile, 0);
+  font-family: $font-walsheim-regular;
+  color: $color-primary;
+  font-weight: 700;
+
+  @include breakpoint(medium) {
+    margin-top: var(--margin_top_desktop, 0);
+    margin-bottom: var(--margin_bottom_desktop, 0);
+  }
+}
+
+.product__price-container {
+  display: flex;
+  gap: 51px;
+  font-size: 32px;
+  line-height: 44px;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    gap: 70px;
+    justify-content: left;
+  }
+}
+
+.product__price-sale {
+  display: none;
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+.product__price--on-sale {
+  .product__price-sale {
+    display: initial;
+  }
+}

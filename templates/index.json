@@ -78,7 +78,9 @@
       ],
       "settings": {
         "padding_top_desktop": 160,
-        "padding_bottom_desktop": 24,
+        "padding_bottom_desktop": 122,
+        "padding_top_mobile": 124,
+        "padding_bottom_mobile": 60,
         "image": "shopify:\/\/shop_images\/head.png",
         "svg": "",
         "title": "Proven to work"
@@ -312,28 +314,12 @@
             "title": "Paraben free"
           }
         },
-        "53df764b-56b1-480c-8c22-85249fb3d8b7": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/essential-oil.png",
-            "svg": "",
-            "title": "Sulfate free"
-          }
-        },
         "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83": {
           "type": "banner",
           "settings": {
             "image": "shopify:\/\/shop_images\/mortar.png",
             "svg": "",
             "title": "Natural ingredients"
-          }
-        },
-        "b6e77921-44b7-4288-a1ed-2c419e9a386d": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lotion.png",
-            "svg": "",
-            "title": "Fragrance free"
           }
         },
         "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b": {
@@ -343,20 +329,36 @@
             "svg": "",
             "title": "Cruelty free"
           }
+        },
+        "53df764b-56b1-480c-8c22-85249fb3d8b7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/essential-oil.png",
+            "svg": "",
+            "title": "Sulfate free"
+          }
+        },
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lotion.png",
+            "svg": "",
+            "title": "Fragrance free"
+          }
         }
       },
       "block_order": [
         "4ad9305b-7491-4839-be0e-44ac6c272088",
-        "53df764b-56b1-480c-8c22-85249fb3d8b7",
         "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83",
-        "b6e77921-44b7-4288-a1ed-2c419e9a386d",
-        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b"
+        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b",
+        "53df764b-56b1-480c-8c22-85249fb3d8b7",
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d"
       ],
       "settings": {
         "padding_top_desktop": 118,
         "padding_bottom_desktop": 140,
         "padding_top_mobile": 58,
-        "padding_bottom_mobile": 126,
+        "padding_bottom_mobile": 60,
         "above_title": "Proven to work",
         "title": "82% positive results",
         "subtitle": "When asking Notox Babes about their experience with the Selfie Line, 82% stated that they have seen an improvement in theur skin because of Notox Skin Products on a daily basis.",
@@ -367,11 +369,11 @@
       "type": "newsletter-2",
       "settings": {
         "padding_top_desktop": 120,
-        "padding_bottom_desktop": 118,
-        "padding_top_mobile": 100,
+        "padding_bottom_desktop": 110,
+        "padding_top_mobile": 90,
         "padding_bottom_mobile": 94,
-        "margin_top_desktop": 42,
-        "margin_bottom_desktop": 138,
+        "margin_top_desktop": 60,
+        "margin_bottom_desktop": 68,
         "image": "shopify:\/\/shop_images\/DSC7753.png",
         "image_mobile": "shopify:\/\/shop_images\/DSC7753_e6716486-6e61-4a52-8f6c-885917488050.png",
         "show_circles": true,
@@ -418,7 +420,7 @@
       "settings": {
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 70,
         "padding_bottom_mobile": 0,
         "title": "On instagram",
         "login": "notoxskin"

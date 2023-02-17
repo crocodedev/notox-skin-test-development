@@ -1,0 +1,22 @@
+{%- liquid
+    assign text = block.settings.text
+    assign text_style = block.settings.text_style
+-%}
+{%- if text != blanl -%}
+    {%- capture variables -%}
+        {%- if block.settings.margin_top_desktop != 0 -%}
+            --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_desktop != 0 -%}
+        --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_top_mobile != 0 -%}
+        --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+        {%- endif -%}
+        {%- if block.settings.margin_bottom_mobile != 0 -%}
+        --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+        {%- endif -%}
+    {%- endcapture -%}
+
+    <span class="product__text product__text--{{- text_style -}}" style="{{- variables -}}">{{- text -}}</span>
+{%- endif -%}

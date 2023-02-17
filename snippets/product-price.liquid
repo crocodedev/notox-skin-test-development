@@ -1,0 +1,44 @@
+{%- liquid
+    assign target_product = product.selected_or_first_available_variant
+
+    assign compare_at_price = target_product.compare_at_price
+    assign price = target_product.price | default: 1999
+    assign available = target_product.available | default: false
+    assign money_price = price | money
+
+    if target_product == product and product.price_varies
+        assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+    endif
+-%}
+{%- capture variables -%}
+    {%- if block.settings.margin_top_desktop != 0 -%}
+        --margin_top_desktop: {{- block.settings.margin_top_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_desktop != 0 -%}
+        --margin_bottom_desktop: {{- block.settings.margin_bottom_desktop | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_top_mobile != 0 -%}
+        --margin_top_mobile: {{- block.settings.margin_top_mobile | append: 'px;' -}}
+    {%- endif -%}
+    {%- if block.settings.margin_bottom_mobile != 0 -%}
+        --margin_bottom_mobile: {{- block.settings.margin_bottom_mobile | append: 'px;' -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="
+    product__price js-product-price
+    {%- if available == false %} product__price--sold-out {% endif -%}
+    {%- if compare_at_price > price %} product__price--on-sale {% endif -%}
+" style="{{- variables -}}">
+    <div class="product__price-container">
+        <span class="product__price-current js-product-price-current">
+            {{- money_price -}}
+        </span>
+
+        <span class="product__price-sale js-product-price-sale">
+            {%- unless product.price_varies == false and product.compare_at_price_varies -%}
+                {{- compare_at_price | money -}}
+            {%- endunless -%}
+        </span>
+    </div>
+</div>

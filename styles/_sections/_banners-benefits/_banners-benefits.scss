@@ -1,11 +1,19 @@
 .banner-benefits {
   position: relative;
-  padding-top: var(--padding_top_desktop, 116px);
-  padding-bottom: var(--padding_bottom_desktop, 24px);
   padding-left: 20px;
   padding-right: 20px;
   font-family: $font-walsheim-regular;
   color: $color-primary;
+
+  @include breakpoint(ultra-small) {
+    padding-top: var(--padding_top_mobile, 58px);
+    padding-bottom: var(--padding_bottom_mobile, 60px);
+  }
+
+  @include breakpoint(medium) {
+      padding-top: var(--padding_top_desktop, 118px);
+      padding-bottom: var(--padding_bottom_desktop, 120px);
+  }
 
   .banner-benefits__svg,
   .banner-benefits__img {
@@ -19,6 +27,11 @@
     @include breakpoint(medium) {
       max-width: 170px;
     }
+
+    svg,
+    img {
+      width: 100%;
+    }
   }
 
   .banner-benefits__title {
@@ -26,16 +39,20 @@
     font-family: $font-walsheim-regular;
     font-size: 32px;
     font-weight: 700;
+    text-transform: uppercase;
+    line-height: 43px;
+    letter-spacing: 0.2rem;
 
     @include breakpoint(medium) {
       font-size: 42px;
+      line-height: 56px;
     }
   }
 
   .banner-benefits__block-list {
     display: flex;
-    margin-top: 117px;
     row-gap: 37px;
+    margin-top: 40px;
     column-gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
@@ -43,6 +60,7 @@
     @include breakpoint(medium) {
       row-gap: 30px;
       column-gap: 30px;
+      margin-top: 117px;
     }
   }
 
@@ -51,6 +69,23 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    letter-spacing: 0;
+
+    @include breakpoint(ultra-small) {
+      width: 180px;
+
+      &:last-child:nth-of-type(odd) {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(medium) {
+      width: 159px;
+
+      &:last-child:nth-of-type(odd) {
+        width: 159px;
+      }
+    }
   }
 
   .banner-benefits__block-svg {
@@ -87,10 +122,11 @@
     gap: 3px;
     flex-wrap: wrap;
     justify-content: center;
+    line-height: 20px;
 
     @include breakpoint(medium) {
       flex-direction: column;
-      gap: 0;
+      gap: 5px;
     }
   }
 }
