@@ -62,7 +62,7 @@
   .stuff-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 25px;
     max-width: 210px;
