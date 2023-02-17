@@ -68,7 +68,7 @@
   .stuff-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 15px;
     max-width: 210px;
