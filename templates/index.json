@@ -80,7 +80,7 @@
         "padding_top_desktop": 160,
         "padding_bottom_desktop": 122,
         "padding_top_mobile": 124,
-        "padding_bottom_mobile": 60,
+        "padding_bottom_mobile": 62,
         "image": "shopify:\/\/shop_images\/head.png",
         "svg": "",
         "title": "Proven to work"
@@ -121,7 +121,7 @@
       ],
       "settings": {
         "padding_top_desktop": 118,
-        "padding_bottom_desktop": 120,
+        "padding_bottom_desktop": 126,
         "padding_top_mobile": 58,
         "padding_bottom_mobile": 60,
         "above_title": "Everything you need to know",
@@ -243,8 +243,8 @@
       ],
       "settings": {
         "padding_top_desktop": 118,
-        "padding_bottom_desktop": 120,
-        "padding_top_mobile": 57,
+        "padding_bottom_desktop": 122,
+        "padding_top_mobile": 60,
         "padding_bottom_mobile": 0,
         "above_title": "The highest quality everything",
         "title": "The magic stuff",
@@ -254,6 +254,22 @@
     "before-after-slider": {
       "type": "before-after-slider",
       "blocks": {
+        "c5434532-6a79-4329-8c08-e4bd16a182e8": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/DSC03320.png",
+            "right_side_image": "shopify:\/\/shop_images\/DSC09934-2A.png",
+            "bottom_text": "Bottom slide text content"
+          }
+        },
+        "06651fb0-0feb-465a-b0fb-c5913d231019": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/DSC00391.png",
+            "right_side_image": "shopify:\/\/shop_images\/DSC03324C.png",
+            "bottom_text": "Bottom slide text content"
+          }
+        },
         "4d870f45-d6c8-4cd0-9629-a2d1487cd27e": {
           "type": "slide",
           "settings": {
@@ -277,36 +293,20 @@
             "right_side_image": "shopify:\/\/shop_images\/120906764_2712643685667109_2371619575535.jpg",
             "bottom_text": "Helped: even out skin tone"
           }
-        },
-        "c5434532-6a79-4329-8c08-e4bd16a182e8": {
-          "type": "slide",
-          "settings": {
-            "left_side_image": "shopify:\/\/shop_images\/DSC03320.png",
-            "right_side_image": "shopify:\/\/shop_images\/DSC09934-2A.png",
-            "bottom_text": "Bottom slide text content"
-          }
-        },
-        "06651fb0-0feb-465a-b0fb-c5913d231019": {
-          "type": "slide",
-          "settings": {
-            "left_side_image": "shopify:\/\/shop_images\/DSC00391.png",
-            "right_side_image": "shopify:\/\/shop_images\/DSC03324C.png",
-            "bottom_text": "Bottom slide text content"
-          }
         }
       },
       "block_order": [
+        "c5434532-6a79-4329-8c08-e4bd16a182e8",
+        "06651fb0-0feb-465a-b0fb-c5913d231019",
         "4d870f45-d6c8-4cd0-9629-a2d1487cd27e",
         "d79d4416-f11c-4d13-90d5-03f6d928a6f4",
-        "07d4ffec-4ba7-4258-a25a-289d0c61fd42",
-        "c5434532-6a79-4329-8c08-e4bd16a182e8",
-        "06651fb0-0feb-465a-b0fb-c5913d231019"
+        "07d4ffec-4ba7-4258-a25a-289d0c61fd42"
       ],
       "settings": {
         "padding_top_desktop": 118,
-        "padding_bottom_desktop": 120,
+        "padding_bottom_desktop": 108,
         "padding_top_mobile": 58,
-        "padding_bottom_mobile": 60,
+        "padding_bottom_mobile": 50,
         "above_title": "Real babes. real results.",
         "title": "Before & Afters",
         "subtitle": "Use your big beautiful eyes to see the real results these babes had with the selfie line. Don't forget to send us your before & afters. 😍",
