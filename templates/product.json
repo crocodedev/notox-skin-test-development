@@ -86,6 +86,384 @@
       "settings": {
       }
     },
+    "banners-benefits": {
+      "type": "banners-benefits",
+      "blocks": {
+        "4ce83927-eaba-49e7-85f5-14a43107f49f": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_49\" data-name=\"Rectangle 49\" width=\"48\" height=\"48\" transform=\"translate(0.441)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_5\" data-name=\"Mask Group 5\" transform=\"translate(-0.441)\" clip-path=\"url(#clip-path)\">\n    <g id=\"cream\" transform=\"translate(0 0)\">\n      <path id=\"Path_14\" data-name=\"Path 14\" d=\"M48,.774H24.774A.774.774,0,0,0,24,1.548V12.387H13.161a.774.774,0,0,0-.774.774V24H1.548a.774.774,0,0,0-.774.774V48a.774.774,0,0,0,.774.774H24.774A.774.774,0,0,0,25.548,48V37.161H36.387a.774.774,0,0,0,.774-.774V25.548H48a.774.774,0,0,0,.774-.774V1.548A.774.774,0,0,0,48,.774ZM24,47.226H2.323V25.548H12.387V36.387a.774.774,0,0,0,.774.774H24ZM35.613,35.613H13.935V13.935H24V24.774a.774.774,0,0,0,.774.774H35.613ZM47.226,24H25.548V2.323H47.226Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_15\" data-name=\"Path 15\" d=\"M3.871,37.161H5.419V38.71H3.871Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_16\" data-name=\"Path 16\" d=\"M7.742,30.968H9.29v1.548H7.742Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_17\" data-name=\"Path 17\" d=\"M10.839,39.484h1.548v1.548H10.839Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_18\" data-name=\"Path 18\" d=\"M7.742,35.613H9.29v1.548H7.742Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_19\" data-name=\"Path 19\" d=\"M3.871,43.355H5.419V44.9H3.871Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_20\" data-name=\"Path 20\" d=\"M6.194,39.484H7.742v1.548H6.194Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_21\" data-name=\"Path 21\" d=\"M13.935,44.129h1.548v1.548H13.935Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_22\" data-name=\"Path 22\" d=\"M13.935,37.935h1.548v1.548H13.935Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_23\" data-name=\"Path 23\" d=\"M8.516,41.806h1.548v1.548H8.516Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_24\" data-name=\"Path 24\" d=\"M9.29,44.9h1.548v1.548H9.29Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_25\" data-name=\"Path 25\" d=\"M20.129,37.935h1.548v1.548H20.129Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_26\" data-name=\"Path 26\" d=\"M17.032,41.806h1.548v1.548H17.032Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_27\" data-name=\"Path 27\" d=\"M20.129,44.9h1.548v1.548H20.129Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_28\" data-name=\"Path 28\" d=\"M4.645,27.1H6.194v1.548H4.645Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_29\" data-name=\"Path 29\" d=\"M3.871,31.742H5.419V33.29H3.871Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_30\" data-name=\"Path 30\" d=\"M10.065,27.1h1.548v1.548H10.065Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_31\" data-name=\"Path 31\" d=\"M16.258,31.742h1.548V33.29H16.258Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_32\" data-name=\"Path 32\" d=\"M18.581,24h1.548v1.548H18.581Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_33\" data-name=\"Path 33\" d=\"M26.323,28.645h1.548v1.548H26.323Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_34\" data-name=\"Path 34\" d=\"M17.032,14.71h1.548v1.548H17.032Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_35\" data-name=\"Path 35\" d=\"M30.968,33.29h1.548v1.548H30.968Z\" transform=\"translate(-0.774 -0.774)\" fill=\"#f48ba9\"><\/path>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Fade Dark",
+            "text_line2": "Marks"
+          }
+        },
+        "2bea59a5-3c9f-4b0d-8e31-4582cf7b4629": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_50\" data-name=\"Rectangle 50\" width=\"48\" height=\"48\" transform=\"translate(-0.5)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_6\" data-name=\"Mask Group 6\" transform=\"translate(0.5)\" clip-path=\"url(#clip-path)\">\n    <g id=\"skin\" transform=\"translate(0.488 0)\">\n      <path id=\"Path_36\" data-name=\"Path 36\" d=\"M6.193,48a.774.774,0,0,1-.747-.571c-.011-.04-1.1-3.94-4.128-4.882a.774.774,0,0,1,0-1.479c3.041-.947,4.117-4.841,4.127-4.877a.774.774,0,0,1,.748-.578h0a.774.774,0,0,1,.747.571c.011.04,1.1,3.94,4.128,4.882a.774.774,0,0,1,0,1.479c-3.041.947-4.117,4.841-4.127,4.877A.774.774,0,0,1,6.193,48ZM3.339,41.8a8.694,8.694,0,0,1,2.854,3.351A8.69,8.69,0,0,1,9.048,41.8a8.69,8.69,0,0,1-2.855-3.351A8.694,8.694,0,0,1,3.339,41.8Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_37\" data-name=\"Path 37\" d=\"M44.9,41.8h0a.774.774,0,0,1-.749-.586c-.007-.025-.707-2.7-2.59-3.324a.774.774,0,0,1,0-1.471c1.884-.629,2.583-3.3,2.59-3.329a.793.793,0,0,1,.749-.58.774.774,0,0,1,.749.584h0c.007.027.707,2.7,2.59,3.329a.774.774,0,0,1,0,1.471c-1.884.629-2.583,3.3-2.59,3.329A.774.774,0,0,1,44.9,41.8Zm-1.515-4.645A6.24,6.24,0,0,1,44.9,39.011a6.24,6.24,0,0,1,1.515-1.852A6.24,6.24,0,0,1,44.9,35.308,6.24,6.24,0,0,1,43.386,37.159Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_38\" data-name=\"Path 38\" d=\"M9.29,12.386h0A.774.774,0,0,1,8.54,11.8c-.007-.025-.707-2.7-2.59-3.324a.774.774,0,0,1,0-1.471c1.884-.629,2.583-3.3,2.59-3.329A.76.76,0,0,1,9.29,3.1a.774.774,0,0,1,.749.584h0c.007.027.707,2.7,2.59,3.329a.774.774,0,0,1,0,1.471c-1.884.629-2.583,3.3-2.59,3.329A.774.774,0,0,1,9.29,12.386ZM7.775,7.742A6.24,6.24,0,0,1,9.29,9.593,6.24,6.24,0,0,1,10.8,7.742,6.24,6.24,0,0,1,9.29,5.89,6.24,6.24,0,0,1,7.775,7.742Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_39\" data-name=\"Path 39\" d=\"M44.9,10.064h0a.774.774,0,0,1-.752-.6c-.137-.575-.735-2.156-1.828-2.545a.774.774,0,0,1,0-1.459c1.093-.387,1.691-1.969,1.829-2.545a.774.774,0,0,1,.752-.6h0a.774.774,0,0,1,.752.6h0c.138.576.735,2.157,1.829,2.545a.774.774,0,0,1,0,1.459c-1.093.387-1.691,1.969-1.829,2.545A.774.774,0,0,1,44.9,10.064Zm-.88-3.871A4.99,4.99,0,0,1,44.9,7.3a4.99,4.99,0,0,1,.88-1.108,4.99,4.99,0,0,1-.88-1.108,4.99,4.99,0,0,1-.88,1.108Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_40\" data-name=\"Path 40\" d=\"M24.773,48.772c-7.092,0-13.271-6.624-14.821-15.817a6.466,6.466,0,0,1-1.889-1.28,5.832,5.832,0,0,1-1.87-4.106,4.018,4.018,0,0,1,1.185-2.923,3,3,0,0,1,.387-.319,3.976,3.976,0,0,1,2.06-.792C10.9,13.223,15.793,8.206,24.773,8.206s13.889,5.032,14.951,15.369a4.86,4.86,0,0,1,2.1.783,2.7,2.7,0,0,1,.339.284,4.02,4.02,0,0,1,1.188,2.926,5.832,5.832,0,0,1-1.87,4.1h0a6.466,6.466,0,0,1-1.889,1.28C38.044,42.147,31.865,48.772,24.773,48.772ZM10.34,25.06a2.67,2.67,0,0,0-1.667.519,1.7,1.7,0,0,0-.218.179,2.452,2.452,0,0,0-.713,1.808,4.288,4.288,0,0,0,1.393,3A4.915,4.915,0,0,0,10.9,31.67a.774.774,0,0,1,.506.614c1.312,8.657,6.93,14.94,13.363,14.94s12.051-6.283,13.36-14.941a.774.774,0,0,1,.506-.614,4.91,4.91,0,0,0,1.772-1.106h0a4.288,4.288,0,0,0,1.393-3,2.451,2.451,0,0,0-.716-1.811,1.411,1.411,0,0,0-.172-.146A3.8,3.8,0,0,0,39,25.064a.774.774,0,0,1-.762-.708c-.851-9.962-5.132-14.6-13.469-14.6s-12.619,4.639-13.47,14.6a.774.774,0,0,1-.8.708C10.445,25.061,10.392,25.06,10.34,25.06Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_41\" data-name=\"Path 41\" d=\"M41.349,25.742a.792.792,0,0,1-.222-.033.774.774,0,0,1-.519-.964,16.134,16.134,0,0,0,.688-4.618C41.3,9.644,34.5,2.322,24.773,2.322A16.035,16.035,0,0,0,14.427,5.862a.775.775,0,1,1-.985-1.2A17.566,17.566,0,0,1,24.773.774c10.471,0,18.071,8.139,18.071,19.354a17.677,17.677,0,0,1-.753,5.062A.774.774,0,0,1,41.349,25.742Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_42\" data-name=\"Path 42\" d=\"M8.2,25.742a.774.774,0,0,1-.742-.552A17.677,17.677,0,0,1,6.7,20.128a22.622,22.622,0,0,1,.9-6.412.774.774,0,1,1,1.485.438,21.1,21.1,0,0,0-.839,5.974,16.133,16.133,0,0,0,.688,4.618.774.774,0,0,1-.519.964A.792.792,0,0,1,8.2,25.742Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_43\" data-name=\"Path 43\" d=\"M19.007,29.263a5.066,5.066,0,0,1-3.421-1.147A.774.774,0,1,1,16.657,27a3.58,3.58,0,0,0,2.35.718A3.573,3.573,0,0,0,21.359,27a.78.78,0,0,1,1.092.036.77.77,0,0,1-.022,1.084A5.067,5.067,0,0,1,19.007,29.263Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_44\" data-name=\"Path 44\" d=\"M30.539,29.263a5.067,5.067,0,0,1-3.422-1.147A.774.774,0,1,1,28.194,27a3.585,3.585,0,0,0,2.345.711A3.572,3.572,0,0,0,32.89,27a.78.78,0,0,1,1.092.036.77.77,0,0,1-.022,1.084A5.066,5.066,0,0,1,30.539,29.263Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_45\" data-name=\"Path 45\" d=\"M21.891,23.844a.774.774,0,0,1-.675-.394,2.736,2.736,0,0,0-2.209-1.309A2.738,2.738,0,0,0,16.8,23.457a.774.774,0,0,1-1.345-.765,4.305,4.305,0,0,1,3.553-2.1,4.306,4.306,0,0,1,3.557,2.1.774.774,0,0,1-.674,1.154Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_46\" data-name=\"Path 46\" d=\"M33.422,23.844a.774.774,0,0,1-.672-.387h0a2.518,2.518,0,0,0-4.42,0,.774.774,0,1,1-1.349-.76,4.065,4.065,0,0,1,7.114,0,.774.774,0,0,1-.673,1.154Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_47\" data-name=\"Path 47\" d=\"M24.773,39.791a6.919,6.919,0,0,1-5.428-2.483.775.775,0,0,1,1.247-.919,5.645,5.645,0,0,0,8.361,0,.774.774,0,1,1,1.246.919,6.919,6.919,0,0,1-5.426,2.483Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_48\" data-name=\"Path 48\" d=\"M21.6,9.636l-1.386-.692c3.306-6.617,14.268-5.132,14.734-5.065l-.219,1.533C34.625,5.4,24.4,4.017,21.6,9.636Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_49\" data-name=\"Path 49\" d=\"M37.159,17.031a.774.774,0,0,1-.429-.13c-.044-.025-4.585-2.967-12.732-2.967-7.337,0-11.094,2.9-11.131,2.929a.774.774,0,1,1-.965-1.211c.167-.133,4.174-3.266,12.1-3.266,8.65,0,13.393,3.1,13.59,3.227a.774.774,0,0,1-.43,1.418Z\" transform=\"translate(-0.774 -0.772)\" fill=\"#f48ba9\"><\/path>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Event out",
+            "text_line2": "skin tone"
+          }
+        },
+        "95815d5e-efa8-4f9f-a4a6-e21ec2a9644d": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_51\" data-name=\"Rectangle 51\" width=\"48\" height=\"48\" transform=\"translate(0.063)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_7\" data-name=\"Mask Group 7\" transform=\"translate(-0.063)\" clip-path=\"url(#clip-path)\">\n    <g id=\"pore\" transform=\"translate(0 12.646)\">\n      <path id=\"Path_50\" data-name=\"Path 50\" d=\"M45.509,17.188a4.412,4.412,0,0,0-6.239,0l-.887.887a2.9,2.9,0,0,1-4.1,0l-.887-.887a4.4,4.4,0,0,0-6.045-.176,3.444,3.444,0,0,1-.1-.8,1.829,1.829,0,0,1,1.827-1.827h18.61V12.868H29.078a3.341,3.341,0,0,0-3.341,3.342,4.939,4.939,0,0,0,.752,2.619l.5.8a16.639,16.639,0,0,1,2.531,8.829,4.446,4.446,0,0,1-.97,2.767,5.545,5.545,0,0,1-8.657,0,4.451,4.451,0,0,1-.97-2.767,16.622,16.622,0,0,1,2.532-8.825l.5-.8a4.939,4.939,0,0,0,.752-2.623,3.341,3.341,0,0,0-3.342-3.341H.757v1.514h18.61a1.829,1.829,0,0,1,1.827,1.827,3.444,3.444,0,0,1-.1.8,4.4,4.4,0,0,0-6.045.176l-.887.887a2.9,2.9,0,0,1-4.1,0l-.887-.887a4.412,4.412,0,0,0-6.239,0L.222,19.9l1.07,1.07,2.714-2.714a2.9,2.9,0,0,1,4.1,0l.887.887a4.412,4.412,0,0,0,6.239,0l.887-.887a2.9,2.9,0,0,1,4.1,0l.192.192-.237.378a18.318,18.318,0,0,0-.973,1.792,3.028,3.028,0,1,0-1.665,5.8,18.022,18.022,0,0,0-.123,2.038,5.966,5.966,0,0,0,1.3,3.709,7.057,7.057,0,0,0,11.02,0,5.967,5.967,0,0,0,1.3-3.709,18.213,18.213,0,0,0-.125-2.035,3.028,3.028,0,1,0-1.665-5.8,18.228,18.228,0,0,0-.973-1.792l-.237-.378.192-.192a2.9,2.9,0,0,1,4.1,0l.887.887a4.412,4.412,0,0,0,6.239,0l.887-.887a2.9,2.9,0,0,1,4.1,0l2.714,2.714,1.07-1.07ZM17.766,24.909a1.5,1.5,0,1,1,.829-2.888,18.136,18.136,0,0,0-.829,2.889Zm12.512-2.957a1.514,1.514,0,0,1,1.514,1.514,1.537,1.537,0,0,1-1.113,1.449,18.136,18.136,0,0,0-.833-2.893A1.5,1.5,0,0,1,30.278,21.952Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_51\" data-name=\"Path 51\" d=\"M6.056,20.438a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,6.056,20.438Zm0,4.542A1.514,1.514,0,1,1,7.57,23.466,1.514,1.514,0,0,1,6.056,24.979Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_52\" data-name=\"Path 52\" d=\"M42.389,20.438a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,42.389,20.438Zm0,4.542A1.514,1.514,0,1,1,43.9,23.466,1.514,1.514,0,0,1,42.389,24.979Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_53\" data-name=\"Path 53\" d=\"M12.111,25.661a2.271,2.271,0,1,0,2.271,2.271A2.271,2.271,0,0,0,12.111,25.661Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,12.111,28.689Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_54\" data-name=\"Path 54\" d=\"M36.334,25.736A2.271,2.271,0,1,0,38.6,28.007,2.271,2.271,0,0,0,36.334,25.736Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,36.334,28.764Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n      <circle id=\"Ellipse_52\" data-name=\"Ellipse 52\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(16.431 19.681)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_53\" data-name=\"Ellipse 53\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(28.542 19.681)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_54\" data-name=\"Ellipse 54\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(40.654 19.681)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_55\" data-name=\"Ellipse 55\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(4.32 19.681)\" fill=\"#f48ba9\"><\/circle>\n      <path id=\"Path_55\" data-name=\"Path 55\" d=\"M24.223,31.035a3.789,3.789,0,0,0,3.785-3.785c0-1.77-2.768-8.6-3.084-9.37a.757.757,0,0,0-1.4,0c-.316.773-3.084,7.6-3.084,9.37A3.789,3.789,0,0,0,24.223,31.035Zm0-10.824c1.067,2.747,2.271,6.131,2.271,7.04a2.271,2.271,0,1,1-4.542,0C21.952,26.349,23.155,22.961,24.223,20.211Z\" transform=\"translate(-0.222 -12.868)\" fill=\"#f48ba9\"><\/path>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Fight Acne &",
+            "text_line2": "Breakouts"
+          }
+        },
+        "c4788009-c980-43b2-a3b3-9f0135e084a4": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_52\" data-name=\"Rectangle 52\" width=\"48\" height=\"48\" transform=\"translate(0.063)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_11\" data-name=\"Mask Group 11\" transform=\"translate(-0.063)\" clip-path=\"url(#clip-path)\">\n    <g id=\"moisturizing\" transform=\"translate(0 0.543)\">\n      <path id=\"Path_99\" data-name=\"Path 99\" d=\"M24.222,24.979a6.062,6.062,0,0,0,6.055-6.055c0-3.094-4.9-9.573-5.454-10.3a.785.785,0,0,0-1.2,0c-.558.729-5.454,7.208-5.454,10.3a6.062,6.062,0,0,0,6.055,6.055Zm0-14.629c1.665,2.291,4.542,6.646,4.542,8.574a4.542,4.542,0,0,1-9.083,0C19.68,17,22.557,12.641,24.222,10.35Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_100\" data-name=\"Path 100\" d=\"M9.083,17.409a6.062,6.062,0,0,0,6.055-6.055c0-3.094-4.9-9.573-5.454-10.3a.784.784,0,0,0-1.2,0c-.558.729-5.454,7.208-5.454,10.3a6.062,6.062,0,0,0,6.055,6.055Zm0-14.628c1.665,2.29,4.542,6.646,4.542,8.573a4.542,4.542,0,0,1-9.083,0C4.542,9.428,7.418,5.071,9.083,2.781Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_101\" data-name=\"Path 101\" d=\"M39.36,17.409a6.062,6.062,0,0,0,6.055-6.055c0-3.094-4.9-9.573-5.454-10.3a.784.784,0,0,0-1.2,0c-.558.729-5.454,7.208-5.454,10.3A6.062,6.062,0,0,0,39.36,17.409Zm0-14.628c1.665,2.29,4.542,6.646,4.542,8.573a4.542,4.542,0,0,1-9.083,0C34.819,9.428,37.7,5.071,39.36,2.781Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_102\" data-name=\"Path 102\" d=\"M24.222,22.708V21.194a2.271,2.271,0,0,1-2.271-2.271H20.437a3.789,3.789,0,0,0,3.785,3.785Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_103\" data-name=\"Path 103\" d=\"M9.083,15.139V13.625a2.271,2.271,0,0,1-2.271-2.271H5.3a3.789,3.789,0,0,0,3.785,3.785Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_104\" data-name=\"Path 104\" d=\"M39.36,15.139V13.625a2.271,2.271,0,0,1-2.271-2.271H35.576a3.789,3.789,0,0,0,3.785,3.785Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_105\" data-name=\"Path 105\" d=\"M.757,26.493h46.93v1.514H.757Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_106\" data-name=\"Path 106\" d=\"M45.507,30.812a4.411,4.411,0,0,0-6.239,0l-.887.887a2.9,2.9,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0l-.887.887a2.9,2.9,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0l-.887.887a2.9,2.9,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0L.222,33.527l1.07,1.07,2.714-2.714a2.9,2.9,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.9,2.9,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.9,2.9,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.9,2.9,0,0,1,4.1,0L47.151,34.6l1.07-1.07Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_107\" data-name=\"Path 107\" d=\"M6.055,34.062A3.028,3.028,0,1,0,9.083,37.09,3.028,3.028,0,0,0,6.055,34.062Zm0,4.542A1.514,1.514,0,1,1,7.569,37.09,1.514,1.514,0,0,1,6.055,38.6Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_108\" data-name=\"Path 108\" d=\"M18.166,34.062a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,18.166,34.062Zm0,4.542A1.514,1.514,0,1,1,19.68,37.09,1.514,1.514,0,0,1,18.166,38.6Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_109\" data-name=\"Path 109\" d=\"M30.277,34.062A3.028,3.028,0,1,0,33.3,37.09,3.028,3.028,0,0,0,30.277,34.062Zm0,4.542a1.514,1.514,0,1,1,1.514-1.514A1.514,1.514,0,0,1,30.277,38.6Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_110\" data-name=\"Path 110\" d=\"M42.388,34.062a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,42.388,34.062Zm0,4.542A1.514,1.514,0,1,1,43.9,37.09,1.514,1.514,0,0,1,42.388,38.6Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_111\" data-name=\"Path 111\" d=\"M12.111,39.285a2.271,2.271,0,1,0,2.271,2.271A2.271,2.271,0,0,0,12.111,39.285Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,12.111,42.312Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_112\" data-name=\"Path 112\" d=\"M24.222,39.36a2.271,2.271,0,1,0,2.271,2.271A2.271,2.271,0,0,0,24.222,39.36Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,24.222,42.388Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_113\" data-name=\"Path 113\" d=\"M36.333,39.36A2.271,2.271,0,1,0,38.6,41.631,2.271,2.271,0,0,0,36.333,39.36Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,36.333,42.388Z\" transform=\"translate(-0.222 -0.772)\" fill=\"#f48ba9\"><\/path>\n      <circle id=\"Ellipse_68\" data-name=\"Ellipse 68\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(16.431 43.886)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_69\" data-name=\"Ellipse 69\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(28.542 43.886)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_70\" data-name=\"Ellipse 70\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(40.652 43.886)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_71\" data-name=\"Ellipse 71\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(4.32 43.886)\" fill=\"#f48ba9\"><\/circle>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Reduce",
+            "text_line2": "Oily Skin"
+          }
+        },
+        "0d731c2b-3426-42f0-8edd-e6ca2bf47736": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_53\" data-name=\"Rectangle 53\" width=\"48\" height=\"48\" transform=\"translate(0.063)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_9\" data-name=\"Mask Group 9\" transform=\"translate(-0.063)\" clip-path=\"url(#clip-path)\">\n    <g id=\"acne\" transform=\"translate(0 8.476)\">\n      <path id=\"Path_69\" data-name=\"Path 69\" d=\"M16.35,20.437a7.665,7.665,0,0,0,6.007-2.888,2.392,2.392,0,0,1,3.738,0,7.656,7.656,0,0,0,6,2.888l15.593.011V18.934l-15.593-.011a6.152,6.152,0,0,1-4.822-2.32,3.906,3.906,0,0,0-6.1,0,6.157,6.157,0,0,1-4.825,2.32L.757,18.936V20.45Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_70\" data-name=\"Path 70\" d=\"M45.508,23.256a4.412,4.412,0,0,0-6.239,0l-.887.89a2.966,2.966,0,0,1-4.1,0L33.4,23.26a4.412,4.412,0,0,0-6.239,0l-.887.886a2.966,2.966,0,0,1-4.1,0l-.886-.886a4.412,4.412,0,0,0-6.239,0l-.887.886a2.966,2.966,0,0,1-4.1,0l-.886-.886a4.412,4.412,0,0,0-6.239,0L.222,25.97l1.07,1.07,2.714-2.714a2.968,2.968,0,0,1,4.1,0l.886.886a4.411,4.411,0,0,0,6.239,0l.887-.886a2.968,2.968,0,0,1,4.1,0l.886.886a4.411,4.411,0,0,0,6.239,0l.887-.886a2.968,2.968,0,0,1,4.1,0l.886.886a4.411,4.411,0,0,0,6.239,0l.887-.886a2.968,2.968,0,0,1,4.1,0l2.714,2.714,1.07-1.07Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_71\" data-name=\"Path 71\" d=\"M6.055,26.505a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,6.055,26.505Zm0,4.542a1.514,1.514,0,1,1,1.514-1.514A1.514,1.514,0,0,1,6.055,31.047Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_72\" data-name=\"Path 72\" d=\"M18.166,26.505a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,18.166,26.505Zm0,4.542a1.514,1.514,0,1,1,1.514-1.514A1.514,1.514,0,0,1,18.166,31.047Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_73\" data-name=\"Path 73\" d=\"M30.277,26.505A3.028,3.028,0,1,0,33.3,29.533,3.028,3.028,0,0,0,30.277,26.505Zm0,4.542a1.514,1.514,0,1,1,1.514-1.514A1.514,1.514,0,0,1,30.277,31.047Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_74\" data-name=\"Path 74\" d=\"M42.388,26.505a3.028,3.028,0,1,0,3.028,3.028A3.028,3.028,0,0,0,42.388,26.505Zm0,4.542A1.514,1.514,0,1,1,43.9,29.533,1.514,1.514,0,0,1,42.388,31.047Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_75\" data-name=\"Path 75\" d=\"M12.111,31.727A2.271,2.271,0,1,0,14.382,34,2.271,2.271,0,0,0,12.111,31.727Zm0,3.028A.757.757,0,1,1,12.868,34,.757.757,0,0,1,12.111,34.754Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_76\" data-name=\"Path 76\" d=\"M24.222,31.8a2.271,2.271,0,1,0,2.271,2.271A2.271,2.271,0,0,0,24.222,31.8Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,24.222,34.832Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_77\" data-name=\"Path 77\" d=\"M36.333,31.8A2.271,2.271,0,1,0,38.6,34.075,2.271,2.271,0,0,0,36.333,31.8Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,36.333,34.832Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <circle id=\"Ellipse_60\" data-name=\"Ellipse 60\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(16.431 28.019)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_61\" data-name=\"Ellipse 61\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(28.542 28.019)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_62\" data-name=\"Ellipse 62\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(40.652 28.019)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_63\" data-name=\"Ellipse 63\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(4.32 28.019)\" fill=\"#f48ba9\"><\/circle>\n      <path id=\"Path_78\" data-name=\"Path 78\" d=\"M23.6,17.736c-.5.718-1.648,2.49-1.648,3.458a2.271,2.271,0,0,0,4.542,0c0-.967-1.152-2.74-1.648-3.458a.786.786,0,0,0-1.246,0Zm.623,4.215a.757.757,0,0,1-.757-.757,5.645,5.645,0,0,1,.757-1.625,5.635,5.635,0,0,1,.757,1.625A.757.757,0,0,1,24.222,21.951Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_79\" data-name=\"Path 79\" d=\"M0,0H1.514V4.281H0Z\" transform=\"translate(15.893 3.564) rotate(-45)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_80\" data-name=\"Path 80\" d=\"M23.465,9.083h1.514v4.542H23.465Z\" transform=\"translate(-0.222 -9.083)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_81\" data-name=\"Path 81\" d=\"M0,0H4.281V1.514H0Z\" transform=\"translate(28.002 5.521) rotate(-45)\" fill=\"#f48ba9\"><\/path>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Lighten",
+            "text_line2": "Acne Scars"
+          }
+        },
+        "fcaf9999-ce23-41f8-9b1c-6dc52c63066f": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 48 48\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_54\" data-name=\"Rectangle 54\" width=\"48\" height=\"48\" transform=\"translate(0.063)\" fill=\"#f48ba9\" stroke=\"#707070\" stroke-width=\"1\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Mask_Group_10\" data-name=\"Mask Group 10\" transform=\"translate(-0.063)\" clip-path=\"url(#clip-path)\">\n    <g id=\"cleansing\" transform=\"translate(0 4.32)\">\n      <path id=\"Path_82\" data-name=\"Path 82\" d=\"M.757,22.708h46.93v1.514H.757Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_83\" data-name=\"Path 83\" d=\"M45.507,27.028a4.411,4.411,0,0,0-6.239,0l-.887.887a2.969,2.969,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0l-.887.887a2.969,2.969,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0l-.887.887a2.969,2.969,0,0,1-4.1,0l-.887-.887a4.411,4.411,0,0,0-6.239,0L.222,29.742l1.07,1.07L4.006,28.1a2.969,2.969,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.969,2.969,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.969,2.969,0,0,1,4.1,0l.887.887a4.411,4.411,0,0,0,6.239,0l.887-.887a2.969,2.969,0,0,1,4.1,0l2.714,2.714,1.07-1.07Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_84\" data-name=\"Path 84\" d=\"M6.055,30.277A3.028,3.028,0,1,0,9.083,33.3,3.028,3.028,0,0,0,6.055,30.277Zm0,4.542A1.514,1.514,0,1,1,7.569,33.3,1.514,1.514,0,0,1,6.055,34.819Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_85\" data-name=\"Path 85\" d=\"M18.166,30.277A3.028,3.028,0,1,0,21.194,33.3,3.028,3.028,0,0,0,18.166,30.277Zm0,4.542A1.514,1.514,0,1,1,19.68,33.3,1.514,1.514,0,0,1,18.166,34.819Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_86\" data-name=\"Path 86\" d=\"M30.277,30.277A3.028,3.028,0,1,0,33.3,33.3,3.028,3.028,0,0,0,30.277,30.277Zm0,4.542A1.514,1.514,0,1,1,31.791,33.3,1.514,1.514,0,0,1,30.277,34.819Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_87\" data-name=\"Path 87\" d=\"M42.388,30.277A3.028,3.028,0,1,0,45.416,33.3,3.028,3.028,0,0,0,42.388,30.277Zm0,4.542A1.514,1.514,0,1,1,43.9,33.3,1.514,1.514,0,0,1,42.388,34.819Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_88\" data-name=\"Path 88\" d=\"M12.111,35.5a2.271,2.271,0,1,0,2.271,2.271A2.271,2.271,0,0,0,12.111,35.5Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,12.111,38.528Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_89\" data-name=\"Path 89\" d=\"M24.222,35.576a2.271,2.271,0,1,0,2.271,2.271,2.271,2.271,0,0,0-2.271-2.271Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,24.222,38.6Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_90\" data-name=\"Path 90\" d=\"M36.333,35.576A2.271,2.271,0,1,0,38.6,37.847a2.271,2.271,0,0,0-2.271-2.271Zm0,3.028a.757.757,0,1,1,.757-.757A.757.757,0,0,1,36.333,38.6Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <circle id=\"Ellipse_64\" data-name=\"Ellipse 64\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(16.431 36.333)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_65\" data-name=\"Ellipse 65\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(28.542 36.333)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_66\" data-name=\"Ellipse 66\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(40.652 36.333)\" fill=\"#f48ba9\"><\/circle>\n      <circle id=\"Ellipse_67\" data-name=\"Ellipse 67\" cx=\"1.514\" cy=\"1.514\" r=\"1.514\" transform=\"translate(4.32 36.333)\" fill=\"#f48ba9\"><\/circle>\n      <path id=\"Path_91\" data-name=\"Path 91\" d=\"M3.7,7.089A76.132,76.132,0,0,1,16.188,6.055h1.064A17,17,0,0,1,31.171,13.3a18.515,18.515,0,0,0,15.158,7.893h1.357V19.68H46.329a17,17,0,0,1-13.918-7.246A18.515,18.515,0,0,0,17.253,4.542H16.188A77.671,77.671,0,0,0,3.453,5.6l-2.821.47.25,1.493Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_92\" data-name=\"Path 92\" d=\"M15.139,16.652a13.224,13.224,0,0,1-4.184-.681l-.117-.039-.483,1.438.119.04a14.736,14.736,0,0,0,4.664.756Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_93\" data-name=\"Path 93\" d=\"M20.972,9.3a5.887,5.887,0,0,0-4.19-1.736h-.129V9.083h.129a4.383,4.383,0,0,1,3.12,1.292Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_94\" data-name=\"Path 94\" d=\"M32.77,18.388a4.383,4.383,0,0,1-3.12,1.292h-.886v1.514h.886a5.887,5.887,0,0,0,4.19-1.736Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_95\" data-name=\"Path 95\" d=\"M5.3,9.083H6.812V10.6H5.3Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_96\" data-name=\"Path 96\" d=\"M3.028,19.68H4.542v1.514H3.028Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_97\" data-name=\"Path 97\" d=\"M22.708,14.382h1.514V15.9H22.708Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n      <path id=\"Path_98\" data-name=\"Path 98\" d=\"M45.123,15.875l-1.756,1.756,1.07,1.07,3.028-3.028a.757.757,0,0,0,0-1.07l-3.028-3.028-1.07,1.07,1.714,1.714a16.972,16.972,0,0,1-11.96-5.775l-1.135,1A18.483,18.483,0,0,0,45.123,15.875Z\" transform=\"translate(-0.222 -4.542)\" fill=\"#f48ba9\"><\/path>\n    <\/g>\n  <\/g>\n<\/svg>",
+            "text_line1": "Reduced",
+            "text_line2": "Bumps"
+          }
+        },
+        "19183d26-99e9-441a-a254-75ade66fcd5f": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_Group_8.png",
+            "svg": "",
+            "text_line1": "Hydrated Dry skin &",
+            "text_line2": "Dry Patches"
+          }
+        }
+      },
+      "block_order": [
+        "4ce83927-eaba-49e7-85f5-14a43107f49f",
+        "2bea59a5-3c9f-4b0d-8e31-4582cf7b4629",
+        "95815d5e-efa8-4f9f-a4a6-e21ec2a9644d",
+        "c4788009-c980-43b2-a3b3-9f0135e084a4",
+        "0d731c2b-3426-42f0-8edd-e6ca2bf47736",
+        "fcaf9999-ce23-41f8-9b1c-6dc52c63066f",
+        "19183d26-99e9-441a-a254-75ade66fcd5f"
+      ],
+      "settings": {
+        "padding_top_desktop": 160,
+        "padding_bottom_desktop": 122,
+        "padding_top_mobile": 124,
+        "padding_bottom_mobile": 62,
+        "image": "shopify:\/\/shop_images\/head.png",
+        "svg": "",
+        "title": "Proven to work"
+      }
+    },
+    "content-fulled-video": {
+      "type": "content-fulled-video",
+      "blocks": {
+        "1d9f5f10-cdae-493a-bb61-eb7060e254b7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "The story",
+            "tab_content_title": "The story",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        },
+        "cd039760-a893-4e7f-b038-e73fb6b0dea5": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Benefits",
+            "tab_content_title": "Benefits",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin! Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        },
+        "009dc868-a42c-45ba-81a7-e010df1dba58": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Ingredients",
+            "tab_content_title": "Ingredients",
+            "tab_content_description": "<p>Math should be confusing. Homework should be hard. Skin care should be SIMPLE! The Selfie Line takes the guess work out of your daily routine & lays it out in 4 easy , effective steps. Bonus? The Selfie Line plays so well with all your active ingregients. It's the best place to start for your skin!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1d9f5f10-cdae-493a-bb61-eb7060e254b7",
+        "cd039760-a893-4e7f-b038-e73fb6b0dea5",
+        "009dc868-a42c-45ba-81a7-e010df1dba58"
+      ],
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 126,
+        "padding_top_mobile": 58,
+        "padding_bottom_mobile": 60,
+        "above_title": "Everything you need to know",
+        "title": "Serum free trial",
+        "cover_image": "shopify:\/\/shop_images\/DSC09934-2A.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_alt_text": "",
+        "bottom_title_icon": "▯",
+        "bottom_title": "What's in the box",
+        "selected_product": "product",
+        "block_prefix_text": "1pic"
+      }
+    },
+    "stuff-info": {
+      "type": "stuff-info",
+      "blocks": {
+        "77419fb4-6b2f-4b58-87fe-f7aca81ee0af": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aloe-vera.png",
+            "svg": "",
+            "title": "Aloe vera",
+            "content": "Heal & Repair"
+          }
+        },
+        "35635bde-88a9-401f-a95a-5d7d70b19252": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/basil.png",
+            "svg": "",
+            "title": "Basil oil",
+            "content": "Brighten & Exfoliote"
+          }
+        },
+        "52b545ba-c5e0-4523-afd5-4d549c1eff3f": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/almond.png",
+            "svg": "",
+            "title": "Castor oil",
+            "content": "Great for all skin types"
+          }
+        },
+        "47825f0a-96c8-40f8-8e5c-c674f6b075cc": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/green-tea.png",
+            "svg": "",
+            "title": "Green tea",
+            "content": "Calm Redness"
+          }
+        },
+        "c31efdd5-cec2-4974-b85a-963c1d9f2276": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/filled_outline.png",
+            "svg": "",
+            "title": "Hibiscus",
+            "content": "Exfoliote dead skin Cells"
+          }
+        },
+        "69ef889c-9574-47d5-9f52-2f429ccd8d73": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dill.png",
+            "svg": "",
+            "title": "Irish moss",
+            "content": "Heal acne & Glow"
+          }
+        },
+        "32d029bd-2c3f-4b6f-b6b5-4043427d5d8e": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jojoba.png",
+            "svg": "",
+            "title": "Jojoba oil",
+            "content": "Hydration for oily Skin"
+          }
+        },
+        "ce5cd668-5ce9-40ec-8afb-0c96a7efd012": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lavender.png",
+            "svg": "",
+            "title": "Lavender",
+            "content": "Calm Redness"
+          }
+        },
+        "758b18b2-3dae-40d3-acf9-1dee907e9dc7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Page-1.png",
+            "svg": "",
+            "title": "Olive oil",
+            "content": "Wan't Strip Your Skin's Natural Oils"
+          }
+        },
+        "35f32114-d727-4d11-9f83-9f10540f4cea": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rosemary.png",
+            "svg": "",
+            "title": "Rosenary Oil",
+            "content": "Control Oil Production"
+          }
+        }
+      },
+      "block_order": [
+        "77419fb4-6b2f-4b58-87fe-f7aca81ee0af",
+        "35635bde-88a9-401f-a95a-5d7d70b19252",
+        "52b545ba-c5e0-4523-afd5-4d549c1eff3f",
+        "47825f0a-96c8-40f8-8e5c-c674f6b075cc",
+        "c31efdd5-cec2-4974-b85a-963c1d9f2276",
+        "69ef889c-9574-47d5-9f52-2f429ccd8d73",
+        "32d029bd-2c3f-4b6f-b6b5-4043427d5d8e",
+        "ce5cd668-5ce9-40ec-8afb-0c96a7efd012",
+        "758b18b2-3dae-40d3-acf9-1dee907e9dc7",
+        "35f32114-d727-4d11-9f83-9f10540f4cea"
+      ],
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 122,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 0,
+        "above_title": "The highest quality everything",
+        "title": "The magic stuff",
+        "subtitle": "We have sourced the finest ingredients from all of the world."
+      }
+    },
+    "before-after-slider": {
+      "type": "before-after-slider",
+      "blocks": {
+        "c5434532-6a79-4329-8c08-e4bd16a182e8": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/DSC03320.png",
+            "right_side_image": "shopify:\/\/shop_images\/DSC09934-2A.png",
+            "bottom_text": "Bottom slide text content"
+          }
+        },
+        "06651fb0-0feb-465a-b0fb-c5913d231019": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/DSC00391.png",
+            "right_side_image": "shopify:\/\/shop_images\/DSC03324C.png",
+            "bottom_text": "Bottom slide text content"
+          }
+        },
+        "4d870f45-d6c8-4cd0-9629-a2d1487cd27e": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/Terra_Before_After.jpg",
+            "right_side_image": "shopify:\/\/shop_images\/Terra_Before_After_2.jpg",
+            "bottom_text": "Helped: reduces bumps"
+          }
+        },
+        "d79d4416-f11c-4d13-90d5-03f6d928a6f4": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/Mikaela_Before_After_2.jpg",
+            "right_side_image": "shopify:\/\/shop_images\/Mikaela_Before_After_3.jpg",
+            "bottom_text": "Helped: fade dark marks"
+          }
+        },
+        "07d4ffec-4ba7-4258-a25a-289d0c61fd42": {
+          "type": "slide",
+          "settings": {
+            "left_side_image": "shopify:\/\/shop_images\/121156659_336540144087035_18420938674286.jpg",
+            "right_side_image": "shopify:\/\/shop_images\/120906764_2712643685667109_2371619575535.jpg",
+            "bottom_text": "Helped: even out skin tone"
+          }
+        }
+      },
+      "block_order": [
+        "c5434532-6a79-4329-8c08-e4bd16a182e8",
+        "06651fb0-0feb-465a-b0fb-c5913d231019",
+        "4d870f45-d6c8-4cd0-9629-a2d1487cd27e",
+        "d79d4416-f11c-4d13-90d5-03f6d928a6f4",
+        "07d4ffec-4ba7-4258-a25a-289d0c61fd42"
+      ],
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 108,
+        "padding_top_mobile": 58,
+        "padding_bottom_mobile": 50,
+        "above_title": "Real babes. real results.",
+        "title": "Before & Afters",
+        "subtitle": "Use your big beautiful eyes to see the real results these babes had with the selfie line. Don't forget to send us your before & afters. 😍",
+        "enable_autoplay": false,
+        "autoplay_delay": 3,
+        "slide_left_side_heading": "Before",
+        "slide_right_side_heading": "After"
+      }
+    },
+    "positive-result": {
+      "type": "positive-result",
+      "blocks": {
+        "4ad9305b-7491-4839-be0e-44ac6c272088": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/leaves.png",
+            "svg": "",
+            "title": "Paraben free"
+          }
+        },
+        "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mortar.png",
+            "svg": "",
+            "title": "Natural ingredients"
+          }
+        },
+        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cruelty-free.png",
+            "svg": "",
+            "title": "Cruelty free"
+          }
+        },
+        "53df764b-56b1-480c-8c22-85249fb3d8b7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/essential-oil.png",
+            "svg": "",
+            "title": "Sulfate free"
+          }
+        },
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lotion.png",
+            "svg": "",
+            "title": "Fragrance free"
+          }
+        }
+      },
+      "block_order": [
+        "4ad9305b-7491-4839-be0e-44ac6c272088",
+        "548b1f80-ba2b-4d8e-ac14-b04ad58c5c83",
+        "d166af16-ea1f-4ccd-91cc-83e91c1e9f6b",
+        "53df764b-56b1-480c-8c22-85249fb3d8b7",
+        "b6e77921-44b7-4288-a1ed-2c419e9a386d"
+      ],
+      "settings": {
+        "padding_top_desktop": 118,
+        "padding_bottom_desktop": 140,
+        "padding_top_mobile": 58,
+        "padding_bottom_mobile": 60,
+        "above_title": "Proven to work",
+        "title": "82% positive results",
+        "subtitle": "When asking Notox Babes about their experience with the Selfie Line, 82% stated that they have seen an improvement in theur skin because of Notox Skin Products on a daily basis.",
+        "image": "shopify:\/\/shop_images\/doc-skin.png"
+      }
+    },
     "reviews": {
       "type": "reviews",
       "blocks": {
@@ -107,10 +485,78 @@
         "button_link": "\/",
         "button_blank": false
       }
+    },
+    "newsletter-2": {
+      "type": "newsletter-2",
+      "settings": {
+        "padding_top_desktop": 120,
+        "padding_bottom_desktop": 110,
+        "padding_top_mobile": 90,
+        "padding_bottom_mobile": 94,
+        "margin_top_desktop": 60,
+        "margin_bottom_desktop": 68,
+        "image": "shopify:\/\/shop_images\/DSC7753.png",
+        "image_mobile": "shopify:\/\/shop_images\/DSC7753_e6716486-6e61-4a52-8f6c-885917488050.png",
+        "show_circles": true,
+        "color": "#936ed4",
+        "title": "Get 10% off your first purchase",
+        "subtitle": "Subscribe below and we will keep you up to date with events, discounts, and fun things!",
+        "placeholder": "Your email",
+        "button_text": "Go"
+      }
+    },
+    "instagram": {
+      "type": "instagram",
+      "blocks": {
+        "032b37ec-4b7b-413b-8e3c-a0281ce3d5fa": {
+          "type": "banner_group",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/Story-1A.png",
+            "image_2": "shopify:\/\/shop_images\/DSC00391.png",
+            "image_3": "shopify:\/\/shop_images\/DSC03324C.png",
+            "image_4": "shopify:\/\/shop_images\/DSC07119.png"
+          }
+        },
+        "11a457e1-5483-407c-926b-68c576d1a028": {
+          "type": "banner_one",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC03320.png"
+          }
+        },
+        "3bd8065f-855b-43a1-82f5-4f4a8485158a": {
+          "type": "banner_group",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/DSC07200.png",
+            "image_2": "shopify:\/\/shop_images\/DSC09934-2A.png",
+            "image_3": "shopify:\/\/shop_images\/DSC7778.png",
+            "image_4": "shopify:\/\/shop_images\/DSC05659.png"
+          }
+        }
+      },
+      "block_order": [
+        "032b37ec-4b7b-413b-8e3c-a0281ce3d5fa",
+        "11a457e1-5483-407c-926b-68c576d1a028",
+        "3bd8065f-855b-43a1-82f5-4f4a8485158a"
+      ],
+      "settings": {
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 50,
+        "title": "On instagram",
+        "login": "notoxskin"
+      }
     }
   },
   "order": [
     "product",
-    "reviews"
+    "banners-benefits",
+    "content-fulled-video",
+    "stuff-info",
+    "before-after-slider",
+    "positive-result",
+    "reviews",
+    "newsletter-2",
+    "instagram"
   ]
 }
