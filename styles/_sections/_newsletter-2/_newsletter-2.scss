@@ -193,6 +193,11 @@
     margin-right: 20px;
     padding: 5px;
     border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 
     @include placeholder() {
       font-family: $font-walsheim-regular;
@@ -204,9 +209,12 @@
     }
 
     &:focus-visible {
-      outline: 1px solid black;
-      outline-offset: initial;
+      outline: none;
       box-shadow: none;
+
+      @include placeholder() {
+        color: $color-white;
+      }
     }
   }
 
