@@ -418,10 +418,10 @@
         "3bd8065f-855b-43a1-82f5-4f4a8485158a"
       ],
       "settings": {
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 70,
-        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 72,
+        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 50,
         "title": "On instagram",
         "login": "notoxskin"
       }
