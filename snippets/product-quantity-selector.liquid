@@ -42,7 +42,7 @@
                         data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                         max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                     {% endif %}
-                    value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                    value="0{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                     step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
                     form="{{- product_form_id -}}"
             >

@@ -1,0 +1,25 @@
+.product__rating {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    justify-content: left;
+  }
+}
+
+.product__rating-count {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.product__rating-list {
+  display: flex;
+  gap: 10px;
+
+  svg {
+    width: 26px;
+    height: 25px;
+  }
+}

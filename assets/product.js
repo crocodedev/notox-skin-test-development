@@ -160,6 +160,10 @@ class Product {
         } else {
             this.quantityInput.value = newValue;
         }
+
+        if (this.quantityInput.value*1 < 10) {
+            this.quantityInput.value = '0'+this.quantityInput.value;
+        }
     }
 
     updateQuantityButton() {

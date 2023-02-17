@@ -75,7 +75,7 @@
       "external": "Opens external website."
     },
     "loading": "Loading...",
-    "total_reviews": "total reviews",
+    "total_reviews": "Reviews",
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
     "collapsible_content_title": "Collapsible content",
     "complementary_products": "Complementary products"
@@ -106,7 +106,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to bag",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
