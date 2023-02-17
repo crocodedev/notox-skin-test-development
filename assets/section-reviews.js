@@ -60,7 +60,7 @@ class Review {
         this.reviewList = this.container.querySelector(this.selectors.reviewList);
         this.reviewElementTemplate = this.container.querySelector(this.selectors.reviewElementTemplate);
 
-        const config = { childList: true, subtree: true };
+        const config = {childList: true, subtree: true};
         const callback = (mutationList, observer) => {
             for (const mutation of mutationList) {
                 if (mutation.type === 'childList') {
@@ -84,7 +84,13 @@ class Review {
         const observer = new MutationObserver(callback);
         observer.observe(this.jsContainer, config);
 
+        this.container.addEventListener('click', (event) => {
+            let element = event.target.closest('[data-type="btn-show"]');
 
+            if (element) {
+                this.generationReviews(true);
+            }
+        });
     }
 
     generationForm(formContainer) {
@@ -128,11 +134,12 @@ class Review {
         this.ratingStars = this.ratingContainer.querySelectorAll(this.selectors.ratingStar);
         this.ratingElements = this.ratingContainer.querySelectorAll(this.selectors.ratingElement);
 
-        if (this.ratingFloat) this.ratingFloat.innerHTML = this.reviewRating;
-        if (this.ratingText) this.ratingText.innerHTML = this.ratingText.innerHTML.replace('0', this.reviewCount);4
+        if (this.ratingFloat) this.ratingFloat.innerHTML = this.reviewRating.toFixed(1);
+        if (this.ratingText) this.ratingText.innerHTML = this.ratingText.innerHTML.replace('0', this.reviewCount);
+        4
 
         this.ratingStars.forEach((star, starIndex) => {
-            if (starIndex+1 <= this.reviewRating) {
+            if (starIndex + 1 <= this.reviewRating) {
                 star.classList.add(this.modifiers.starFull);
             }
         });
@@ -149,39 +156,53 @@ class Review {
             });
 
             if (starRatingCount) {
-                let StarRatingPercent = `${starRatingCount/this.reviewCount*100}%`
+                let StarRatingPercent = `${starRatingCount / this.reviewCount * 100}%`
                 element.style.setProperty('--rating', StarRatingPercent);
                 elementText.innerHTML = StarRatingPercent;
             }
         });
     }
 
-    generationReviews() {
+    generationReviews(fullWidth = false) {
         if (!this.reviewElementTemplate || !this.reviewList) return false;
 
         if (this.reviews.length !== 0) {
             this.reviewList.innerHTML = '';
         }
 
-            this.reviews.forEach(review => {
-                let reviewItem = this.reviewElementTemplate.cloneNode(true);
-                reviewItem.classList.remove(this.modifiers.hidden);
-                reviewItem.querySelectorAll(this.selectors.reviewElement.star).forEach((star, starIndex) => {
-                    if (starIndex+1 <= review.countStar) {
-                        star.classList.add(this.modifiers.starFull);
-                    }
-                });
-                reviewItem.querySelector(this.selectors.reviewElement.author).innerHTML = review.author;
-                reviewItem.querySelector(this.selectors.reviewElement.date).innerHTML = review.date;
-                if (review.countStar >= 4) {
-                    reviewItem.querySelector(this.selectors.reviewElement.recommend).classList.remove(this.modifiers.hidden);
-                } else {
-                    reviewItem.querySelector(this.selectors.reviewElement.recommend).classList.add(this.modifiers.hidden);
-                }
-                reviewItem.querySelector(this.selectors.reviewElement.content).innerHTML = review.content;
+        let reviews = this.reviews;
+        if (!fullWidth) {
+            reviews = this.reviews.slice(0, 4);
+        }
 
-                this.reviewList.appendChild(reviewItem);
+        reviews.forEach(review => {
+            let reviewItem = this.reviewElementTemplate.cloneNode(true);
+            reviewItem.classList.remove(this.modifiers.hidden);
+            reviewItem.querySelectorAll(this.selectors.reviewElement.star).forEach((star, starIndex) => {
+                if (starIndex + 1 <= review.countStar) {
+                    star.classList.add(this.modifiers.starFull);
+                }
             });
+            reviewItem.querySelector(this.selectors.reviewElement.author).innerHTML = review.author;
+            reviewItem.querySelector(this.selectors.reviewElement.date).innerHTML = review.date;
+            if (review.countStar >= 4) {
+                reviewItem.querySelector(this.selectors.reviewElement.recommend).classList.remove(this.modifiers.hidden);
+            } else {
+                reviewItem.querySelector(this.selectors.reviewElement.recommend).classList.add(this.modifiers.hidden);
+            }
+            reviewItem.querySelector(this.selectors.reviewElement.content).innerHTML = review.content;
+
+            this.reviewList.appendChild(reviewItem);
+        });
+
+        if (!fullWidth) {
+            let button = document.createElement("button");
+            button.innerHTML = 'Show more';
+            button.dataset.type = 'btn-show';
+            button.classList.add('reviews__btn');
+
+            this.reviewList.appendChild(button);
+        }
     }
 }
 
