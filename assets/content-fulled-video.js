@@ -42,15 +42,15 @@ class ContentFulledVideo {
 		firstLabel.classList.add(this.classes.activeTab);
 
 		inputList.forEach((input) => {
+            const currentLabel = this.container.querySelector(`[for=${input.id}]`);
+
 			input.addEventListener("change", () => {
 				let activeItem = this.container.querySelector(this.selectors.activeLabel);
 
 				if (activeItem) activeItem.classList.remove(this.classes.activeTab);
 
 				if (input.checked)
-                this.container
-						.querySelector(`[for=${input.id}]`)
-						.classList.add(this.classes.activeTab);
+                currentLabel.classList.add(this.classes.activeTab);
 			});
 		});
     }

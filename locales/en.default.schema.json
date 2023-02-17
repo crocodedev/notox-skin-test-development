@@ -3529,7 +3529,10 @@
 			      }
 		      }
 		    }
-	    }
+	    },
+      "presets": {
+        "name": "Content fulled video"
+      }
 	  },
     "before-after-slider": {
       "name": "Before and afters slider",
