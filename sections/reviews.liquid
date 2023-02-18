@@ -38,14 +38,17 @@
                         <div class="reviews__author">
                             <span class="reviews__author-name js-review-element-author"></span>
                             <span class="reviews__author-recommend js-review-element-recommend">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15">
-                                  <g transform="translate(-825 -4091)" clip-path="url(#clip-path)">
-                                    <g id="heart" transform="translate(825 4091)">
-                                      <path d="M10.92,1.36A4.1,4.1,0,0,1,15,5.44c0,4.12-7.5,8.2-7.5,8.2S0,9.5,0,5.44A4.08,4.08,0,0,1,4.08,1.36h0A4.04,4.04,0,0,1,7.5,3.2,4.08,4.08,0,0,1,10.92,1.36Z" fill="#d7443e"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#fff" stroke="#707070" d="M825 4091h15v15h-15z" />
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#a)" transform="translate(-825 -4091)">
+                                        <path fill="#d7443e" d="M835.92 4092.36a4.1 4.1 0 0 1 4.08 4.08c0 4.12-7.5 8.2-7.5 8.2s-7.5-4.14-7.5-8.2a4.08 4.08 0 0 1 4.08-4.08 4.04 4.04 0 0 1 3.42 1.84 4.08 4.08 0 0 1 3.42-1.84Z"/>
                                     </g>
-                                  </g>
                                 </svg>
-                                I recommend this product
+                                {{- 'reviews.recommend' | t -}}
                             </span>
                         </div>
                     </div>
