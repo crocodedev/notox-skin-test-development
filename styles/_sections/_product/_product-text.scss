@@ -4,6 +4,7 @@
   margin-bottom: var(--margin_bottom_mobile, 0);
   font-family: $font-walsheim-regular;
   text-align: center;
+  letter-spacing: 0;
 
   @include breakpoint(medium) {
     margin-top: var(--margin_top_desktop, 0);

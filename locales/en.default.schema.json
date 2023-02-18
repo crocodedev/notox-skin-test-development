@@ -3585,6 +3585,9 @@
     "product": {
       "name": "Product",
       "blocks": {
+        "rating": {
+          "name": "Rating"
+        },
         "text": {
           "name": "Text",
           "settings": {
