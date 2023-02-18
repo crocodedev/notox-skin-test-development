@@ -156,7 +156,7 @@ class Review {
             });
 
             if (starRatingCount) {
-                let StarRatingPercent = `${starRatingCount / this.reviewCount * 100}%`
+                let StarRatingPercent = `${Math.round(starRatingCount / this.reviewCount * 100)}%`
                 element.style.setProperty('--rating', StarRatingPercent);
                 elementText.innerHTML = StarRatingPercent;
             }
