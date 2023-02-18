@@ -23,13 +23,22 @@
             "margin_bottom_mobile": 19
           }
         },
+        "60bf5710-10f0-47ff-b20e-1dde8c72168c": {
+          "type": "rating",
+          "settings": {
+            "margin_top_desktop": 10,
+            "margin_bottom_desktop": 10,
+            "margin_top_mobile": 10,
+            "margin_bottom_mobile": 10
+          }
+        },
         "2a03b045-e432-49cc-8569-1eaf7ae6c4e5": {
           "type": "price",
           "settings": {
             "margin_top_desktop": 36,
             "margin_bottom_desktop": 27,
             "margin_top_mobile": 25,
-            "margin_bottom_mobile": 28
+            "margin_bottom_mobile": 20
           }
         },
         "6f1bbbaa-ea2e-4e99-b386-d592c003c16d": {
@@ -77,6 +86,7 @@
       "block_order": [
         "50621e81-97ac-48fe-8d9b-8fc64e286c48",
         "e47f522d-a527-4381-bcac-053357b65fc6",
+        "60bf5710-10f0-47ff-b20e-1dde8c72168c",
         "2a03b045-e432-49cc-8569-1eaf7ae6c4e5",
         "6f1bbbaa-ea2e-4e99-b386-d592c003c16d",
         "46bd0757-6105-4668-bd30-efe8509d095d",
@@ -461,7 +471,7 @@
         "above_title": "Proven to work",
         "title": "82% positive results",
         "subtitle": "When asking Notox Babes about their experience with the Selfie Line, 82% stated that they have seen an improvement in theur skin because of Notox Skin Products on a daily basis.",
-        "image": "shopify:\/\/shop_images\/doc-skin.png"
+        "image": "shopify:\/\/shop_images\/1.png"
       }
     },
     "reviews": {

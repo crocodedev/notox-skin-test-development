@@ -72,7 +72,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 54px;
+    margin-top: 39px;
+
+    @include breakpoint(medium) {
+      margin-top: 54px;
+    }
   }
 
   .reviews__rating-element {
@@ -117,7 +121,11 @@
   }
 
   .reviews__buttons {
-    margin-top: 50px;
+    margin-top: 46px;
+
+    @include breakpoint(medium) {
+      margin-top: 50px;
+    }
   }
 
   .reviews__button {
@@ -273,8 +281,6 @@
   }
 
   @include breakpoint(medium) {
-    margin-top: var(--margin_top_desktop, 100px);
-    margin-bottom: var(--margin_bottom_desktop, 94px);
     padding-top: var(--padding_top_desktop, 100px);
     padding-bottom: var(--padding_bottom_desktop, 94px);
     flex-direction: row;

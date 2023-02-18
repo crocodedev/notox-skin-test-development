@@ -14,7 +14,11 @@
 
   .product__media {
     display: flex;
-    padding-bottom: 70px;
+    padding-bottom: 21px;
+
+    @include breakpoint(medium) {
+      padding-bottom: 70px;
+    }
   }
 
   .product__media-2-container {
