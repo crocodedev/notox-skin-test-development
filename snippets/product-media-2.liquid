@@ -1,11 +1,15 @@
-{% assign image = product.selected_or_first_available_variant.featured_image %}
+{% assign first_image = product.selected_or_first_available_variant.featured_image %}
 
 <div class="product__media-2-container">
-    <picture class="product__media-2-image">
-        <img
-                alt="{{- image.alt -}}"
-                class="image"
-                src="{{- image | img_url: 'master' -}}"
-        />
-    </picture>
+    {%- for variant in product.variants -%}
+        {% assign variant_image = variant.image %}
+
+        <picture class="product__media-2-image {% if variant_image == first_image %} product__media-2-image--visible{% endif %}" data-variant-id="{{- variant.id -}}">
+            <img
+                    alt="{{- variant_image.alt -}}"
+                    class="image"
+                    src="{{- variant_image | img_url: 'master' -}}"
+            />
+        </picture>
+    {%- endfor -%}
 </div>

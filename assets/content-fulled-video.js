@@ -99,9 +99,9 @@ class ContentFulledVideo {
             const incommingId = +event.detail;
             const currentId = +this.container.dataset.isBoxVariantId;
             const isBox = incommingId === currentId;
-            
+
             if (bottomVariants) {
-                if (isBox && isBox === true) {
+                if (isBox === false) {
                     bottomVariants.classList.add(this.classes.hidden);
                 } else {
                     bottomVariants.classList.remove(this.classes.hidden);

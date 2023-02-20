@@ -188,13 +188,11 @@
         </div>
         
         {%- if selected_product_variants != blank -%}
-            <div class="content-fulled-video__bottom js-content-fulled-video-bottom-container">
+            <div class="content-fulled-video__bottom js-content-fulled-video-bottom-container {% unless is_box_variant_id == product.selected_or_first_available_variant.id %} hidden{%- endunless -%}">
                 <div class="content-fulled-video-bottom__title">
                     {%- if bottom_title_icon != blank -%}
                         <span class="content-fulled-video-bottom__icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="43" viewBox="0 0 21 43">
-                                <text id="_" data-name="" transform="translate(0 35)" fill="#38393e" font-size="32" font-family="SegoeUI, Segoe UI" letter-spacing="0.1em"><tspan x="0" y="0"></tspan></text>
-                            </svg>
+                            
                         </span>
                     {%- endif -%}
                     

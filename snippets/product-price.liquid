@@ -37,7 +37,7 @@
 
         <span class="product__price-sale js-product-price-sale">
             {%- unless product.price_varies == false and product.compare_at_price_varies -%}
-                {{- compare_at_price | money -}}
+                {{- compare_at_price | money_without_trailing_zeros -}}
             {%- endunless -%}
         </span>
     </div>

@@ -25,7 +25,7 @@
         opacity: 0.5;
     }
 
-    &__container {
+    .content-fulled-video__container {
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -37,11 +37,11 @@
         }
     }
 
-    &__header {
+    .content-fulled-video__header {
         text-align: center;
     }
 
-    &__above-title {
+    .content-fulled-video__above-title {
         font-size: 16px;
         font-weight: 700;
         color: $color-tertiary;
@@ -49,7 +49,7 @@
         letter-spacing: 3px;
     }
 
-    &__title {
+    .content-fulled-video__title {
         font-family: $font-walsheim-regular;
         font-weight: 700;
         text-transform: uppercase;
@@ -68,7 +68,7 @@
         }
     }
 
-    &__body {
+    .content-fulled-video__body {
         display: flex;
 
         @include breakpoint(ultra-small) {
@@ -84,7 +84,7 @@
         }
     }
 
-    &__tabs {
+    .content-fulled-video__tabs {
         position: relative;
 
         @include breakpoint(ultra-small) {
@@ -103,7 +103,7 @@
         }
     }
 
-    &__tabs-radio {
+    .content-fulled-video__tabs-radio {
         position: absolute;
         opacity: 0;
         pointer-events: none;
@@ -113,7 +113,7 @@
         margin: 0;
     }
 
-    &__tabs-radio:checked + &__tabs-content {
+    .content-fulled-video__tabs-radio:checked + .content-fulled-video__tabs-content {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
@@ -123,7 +123,7 @@
         transition-timing-function: ease-in-out;
     }
 
-    &__tabs-radio:not(:checked) + &__tabs-content {
+    .content-fulled-video__tabs-radio:not(:checked) + .content-fulled-video__tabs-content {
         position: absolute;
         bottom: 0;
         opacity: 0;
@@ -132,7 +132,7 @@
         transform: translateY(-10px);
     }
 
-    &__tabs-content {
+    .content-fulled-video__tabs-content {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -140,7 +140,7 @@
         width: 100%;
     }
 
-    &__tabs-headings {
+    .content-fulled-video__tabs-headings {
         position: relative;
         display: inline-flex;
         gap: 58px;
@@ -177,7 +177,7 @@
         }
     }
 
-    &__tabs-label {
+    .content-fulled-video__tabs-label {
         display: flex;
         position: relative;
         line-height: 21px;
@@ -186,7 +186,7 @@
         cursor: pointer;
         padding-bottom: 20px;
 
-        &--active {
+        &.content-fulled-video__tabs-label--active {
           color: $color-tertiary; 
           transition-property: color;
           transition-duration: 0.3s;
@@ -203,7 +203,7 @@
         }
     }
  
-    &__content-title {
+    .content-fulled-video__content-title {
         font-family: $font-walsheim-regular;
         font-weight: 700;
         text-transform: uppercase;
@@ -215,7 +215,7 @@
         letter-spacing: 2px;
     }
 
-    &__content-text {
+    .content-fulled-video__content-text {
         overflow: auto;
         line-height: 1.8;
         letter-spacing: 0;
@@ -248,7 +248,7 @@
         }
     }
 
-    &__video-wrapper {
+    .content-fulled-video__video-wrapper {
         position: relative;
         width: 100%;
 
@@ -271,7 +271,7 @@
         }
     }
 
-    &__play-button {
+    .content-fulled-video__play-button {
         width: 100%;
         height: 100%;
         border: none;
@@ -280,7 +280,7 @@
         background-color: transparent;
     }
 
-    &__icon-wrapper {
+    .content-fulled-video__icon-wrapper {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -305,7 +305,7 @@
         }
     }
 
-    &__image-wrap {
+    .content-fulled-video__image-wrap {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -330,7 +330,7 @@
         }
     }
 
-    &__bottom {
+    .content-fulled-video__bottom {
         display: flex;
 
         @include breakpoint(ultra-small) {
@@ -347,10 +347,8 @@
             align-items: center;
             flex-direction: row;
         }
-    }
 
-    &-bottom {
-        &__title {
+        .content-fulled-video-bottom__title {
             display: flex;
             gap: 36px;
             font-weight: 700;
@@ -364,7 +362,8 @@
             }
         }
 
-        &__icon-wrapper {
+        .content-fulled-video-bottom__icon-wrapper {
+            font-family: 'Font Awesome 6 Pro';
             max-width: 21px;
             min-width: 21px;
             height: 43px;
@@ -375,7 +374,7 @@
             }
         }
 
-        &__blocks {
+        .content-fulled-video-bottom__blocks {
             display: flex;
             column-gap: 10px;
             overflow: auto;
@@ -396,7 +395,7 @@
             }
         }
 
-        &__block {
+        .content-fulled-video-bottom__block {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -419,7 +418,7 @@
             }
         }
 
-        &__block-image-wrap {
+        .content-fulled-video-bottom__block-image-wrap {
             position: relative;
             display: flex;
             align-items: flex-end;
@@ -429,18 +428,20 @@
             margin-bottom: -20px;
         }
 
-        &__block-image {
+        .content-fulled-video-bottom__block-image {
             position: absolute;
+            display: block;
             height: 100%;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            object-fit: cover;
+            //transform: translate(-50%) translateY(25%) scale(50%);
+            object-fit: contain;
             width: max-content;
             z-index: 2;
         }
 
-        &__block-title {
+        .content-fulled-video-bottom__block-title {
             position: relative;
             display: flex;
             align-items: center;
@@ -464,7 +465,7 @@
             }
         }
 
-        &__block-title-text {
+        .content-fulled-video-bottom__block-title-text {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -473,9 +474,9 @@
         }
     }
 
-    &-bottom__title,
-    &__tabs-content,
-    &__header {
+    .content-fulled-video-bottom__title,
+    .content-fulled-video__tabs-content,
+    .content-fulled-video__header {
         @include breakpoint(ultra-small) {
             padding-left: 30px;
             padding-right: 30px;

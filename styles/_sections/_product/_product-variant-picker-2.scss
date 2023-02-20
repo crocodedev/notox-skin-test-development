@@ -92,6 +92,7 @@
 }
 
 .product__variant-picker-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -139,7 +139,7 @@ class Review {
         4
 
         this.ratingStars.forEach((star, starIndex) => {
-            if (starIndex + 1 <= this.reviewRating) {
+            if (starIndex + 1 <= Math.round(this.reviewRating)) {
                 star.classList.add(this.modifiers.starFull);
             }
         });

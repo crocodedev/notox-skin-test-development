@@ -71,6 +71,10 @@ class Product {
         this.changeQuantity();
         this.changeButtonBuy();
         this.updateQuantityInput();
+
+        document.dispatchEvent(new CustomEvent("variant:isbox", {
+            detail: this.activeVariantId,
+        }));
     }
 
     changeUrl() {
@@ -95,7 +99,8 @@ class Product {
         }
 
         if (this.productImage) {
-            this.productImage.querySelector('img').src = this.activeVariant.image.src;
+            this.productImage.querySelector(`[data-variant-id].product__media-2-image--visible`).classList.remove('product__media-2-image--visible');
+            this.productImage.querySelector(`[data-variant-id="${this.activeVariant.id}"]`).classList.add('product__media-2-image--visible');
         }
     }
 
