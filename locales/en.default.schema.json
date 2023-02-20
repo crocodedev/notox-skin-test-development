@@ -3560,6 +3560,12 @@
         },
         "slide_right_side_heading": {
           "label": "Slide right side heading"
+        },
+        "enable_autoplay": {
+          "label": "Enable autoplay"
+        },
+        "autoplay_delay": {
+          "label": "Autoplay delay"
         }
       },
       "blocks": {
